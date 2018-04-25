@@ -16,7 +16,9 @@
 - 添加依赖库
 如果使用了Cocoapods集成的SDK，可以忽略此步骤
 AdSupport.framework
+
 SystemConfiguration.framework
+
 CoreTelephony.framework
 
 #### 初始化SDK
