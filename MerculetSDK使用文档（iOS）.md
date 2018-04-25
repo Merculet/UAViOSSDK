@@ -8,6 +8,7 @@
 [进入官网](http://merculet.io/)，按照步骤提示注册应用，可获得appKey、accountKey和accountSecret。
 #### 导入SDK
 - 下载SDK并集成
+
 拖动文件夹到工程中，拖到工程中后，弹出以下对话框，勾选“Copy items into destination group's folder(if needed)”，并点击“Finish”按钮，如图：
 
 ![image.png](https://github.com/Merculet/UAViOSSDK/blob/master/files2.png)
