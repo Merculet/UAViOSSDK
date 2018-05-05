@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import <MerculetSDK/MWAPI.h>
+#import "MWAPI.h"
 
 @interface ViewController ()
 
@@ -29,7 +29,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     
 }
 - (IBAction)cancel:(id)sender {
@@ -40,27 +39,100 @@
 - (IBAction)change:(id)sender {
     
     [self.view endEditing:YES];
-    NSString *userId = @"XXX";// 必填
-    NSString *invitation = @"XXX";// 选填
+    NSString *userId = self.userOpenT.text;// 必填
+    NSString *invitation = self.invitationT.text;// 选填
     
     [MWAPI setUserOpenId:userId invitationCode:invitation];
     
 }
 
-// 点击1
-- (IBAction)click1:(id)sender {
-    [MWAPI setCustomAction:@"eeeee" attributes:@{@"11":@"22"}];
+/// 点击事件
+- (IBAction)click1:(UIButton *)sender {
+    
+    NSString *customAction;
+    NSDictionary *attributes;
+    switch (sender.tag) {
+        case 1:// 分享
+            customAction = @"s_share";
+            attributes = @{
+                           @"sp_content_type": @"分享",
+                           @"sp_content_id"  : @"分享内容ID：10086",
+                           @"31231"          : @"31231"
+                           };
+            break;
+        case 2:// 充值
+            customAction = @"s_recharge";
+            attributes = @{
+                           @"sp_content_type": @"充值",
+                           @"sp_amount"  : @"充值数量：10086万元",
+                           };
+            break;
+        case 3:// 评价
+            customAction = @"s_comment";
+            attributes = @{
+                           @"sp_content_type": @"评价",
+                           @"sp_content_id"  : @"评价内容ID：10086",
+                           };
+            break;
+        case 4:// 转发
+            customAction = @"s_forward";
+            attributes = @{
+                           @"sp_content_type": @"转发",
+                           @"sp_content_id"  : @"转发内容ID：10086",
+                           };
+            break;
+        case 5:// 打赏
+            customAction = @"s_reward";
+            attributes = @{
+                           @"sp_amount": @11000.63333,
+                           @"sp_content_type": @"打赏",
+                           @"sp_content_id"  : @"打赏内容ID：10086",
+                           @"st_test": @"真有钱"
+                           };
+            break;
+        case 6:// 关注
+            customAction = @"s_follow";
+            attributes = @{
+                           @"sp_content_type": @"关注",
+                           @"sp_content_id"  : @"关注内容ID：10086",
+                           };
+            break;
+        case 7:// 收藏
+            customAction = @"s_collection";
+            attributes = @{
+                           @"sp_content_type": @"收藏",
+                           @"sp_content_id"  : @"收藏内容ID：10086",
+                           };
+            break;
+        case 8:// 点赞
+            customAction = @"s_like";
+            attributes = @{
+                           @"sp_content_type": @"点赞",
+                           @"sp_content_id"  : @"点赞内容ID：10086",
+                           };
+            break;
+        case 9:// 评论
+            customAction = @"s_comment";
+            attributes = @{
+                           @"sp_content_type": @"评论",
+                           @"sp_content_id"  : @"评论内容ID：10086",
+                           };
+            break;
+        case 10:// 播放
+            customAction = @"s_playing";
+            attributes = @{
+                           @"sp_content_type": @"播放",
+                           @"sp_content_id"  : @"播放内容ID：10086",
+                           @"sp_duration": @22233
+                           };
+            break;
+        default:
+            break;
+    }
+    
+    [MWAPI setCustomAction:customAction attributes:attributes];
 }
 
-// 点击2
-- (IBAction)click2:(id)sender {
-    [MWAPI setCustomAction:@"aaaaa" attributes:@{@"33":@"44"}];
-}
-
-// 点击3
-- (IBAction)click3:(id)sender {
-    [MWAPI setCustomAction:@"ooooo" attributes:@{@"55":@"66"}];
-}
 
 
 @end

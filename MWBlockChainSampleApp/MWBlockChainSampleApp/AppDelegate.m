@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import <MerculetSDK/MWApi.h>
+#import "MWApi.h"
 
 @interface AppDelegate ()
 
@@ -19,9 +19,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     
-        NSString * appkey = @"fb61da1dc41f4e1f8d978a9e7547edda";
-        NSString * accountKey = @"4a0fa34013cc4ffba60c240ad7afe453";
-        NSString * accountSecret = @"5838f70dbe2e4044a3fffd5d709f23c2";
+        NSString * appkey = @"382edbadb6d14c7b88a300990166c50e";
+        NSString * accountKey = @"7fe4196d1ee942d68d4df1b9574d1635";
+        NSString * accountSecret = @"2c0bc26591f44828a4b441e8d2c73ff7";
     
     // 注册
     [MWAPI registerApp:appkey accountKey:accountKey accountSecret:accountSecret];
