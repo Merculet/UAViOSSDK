@@ -1,11 +1,13 @@
 
 # MerculetSDK使用文档（iOS）
 
-----
 
 # 快速集成
-#### 获取appKey、accountKey
-[进入官网](http://merculet.io/)，按照步骤提示注册应用，可获得appKey和accountKey。
+#### 获取appkey、account_key、account_secret
+[进入官网](http://merculet.io/)，按照步骤提示注册应用，可获得appkey、account_key、account_secret。
+
+#### 获取Token
+基于上述三个数值，接入方需要调用Merculet的签发Token的接口。
 
 #### 导入SDK
 - 下载SDK并集成
@@ -21,24 +23,30 @@ CoreTelephony.framework
 
 #### 初始化SDK
 在AppDelegate中，添加头文件引用
+
 ```objc
 #import <MerculetSDK/MWApi.h>
 ```
+
 在application:didFinishLaunchingWithOptions:方法中调用registerApp方法来初始化SDK，如下代码：
+
 ```objc
 #import "AppDelegate.h"
 #import <MerculetSDK/MWApi.h>
 @implementation AppDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-//初始化SDK，必写
-NSString * appkey = @"fb61da1dc41f4e1f8d978a9e7547edda";
-NSString * accountKey = @"4a0fa34013cc4ffba60c240ad7afe453";
-
-[MWAPI registerApp:appkey accountKey:accountKey]; 
+//初始化SDK
+[MWAPI registerApp]; 
 
 return YES;
 }
+```
+
+初始化完成之后，需要向sdk设置token
+
+```objc
+[MWAPI setToken:token];
 ```
 
 # 自定义事件统计
@@ -69,6 +77,3 @@ eventName、KeyValue参数需要先在后台管理上注册，才能参与正常
 # 注意事项
 #### 支持ATS
 苹果：2017 年1月1日后所有iOS应用必须启用ATS。 SDK已启用ATS。
-
-
-
