@@ -15,16 +15,18 @@
 #pragma mark -
 #pragma mark - init
 
+
 /**
  *  注册app
  *  需要在 application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions 中调用
- *  @param appKey            后台注册的appkey
- *  @param accountKey        后台注册的accountKey
- *  @param accountSecret     后台注册的accountSecret
  */
-+ (void)registerApp:(nonnull NSString *)appKey
-         accountKey:(nonnull NSString *)accountKey
-      accountSecret:(nonnull NSString *)accountSecret;
++ (void)registerApp;
+
+/**
+ *  向sdk设置token
+ *  必须是没有失效的token
+ */
++ (void)setToken:(NSString *)token;
 
 /**
  *  注册或者切换用户账号

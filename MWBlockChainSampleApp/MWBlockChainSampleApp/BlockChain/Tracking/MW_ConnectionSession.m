@@ -76,12 +76,12 @@
 {
     @try {
         
-        [MWLog logForDev:[[MWCommonService sharedInstance] getuserOpenid]];
-        if (![[MWCommonService sharedInstance] getuserOpenid].length) {
-            // 不存在用户，将动作删除
-            [self.eventList removeAllObjects];
-            return;
-        }
+//        [MWLog logForDev:[[MWCommonService sharedInstance] getuserOpenid]];
+//        if (![[MWCommonService sharedInstance] getuserOpenid].length) {
+//            // 不存在用户，将动作删除
+//            [self.eventList removeAllObjects];
+//            return;
+//        }
         
             @synchronized(self)
             {

@@ -49,14 +49,13 @@
         //初始化session manager
         [MW_ConnectionSessionManager sharedInstance];
         [MWSendStrategyManager sharedInstance];
-        
     }
     return self;
 }
 
-- (void)registerApp:(nonnull NSString *)appKey
-         accountKey:(nonnull NSString *)accountKey
-      accountSecret:(nonnull NSString *)accountSecret
+- (void)registerApp:(nullable NSString *)appKey
+         accountKey:(nullable NSString *)accountKey
+      accountSecret:(nullable NSString *)accountSecret
 {
     @try {
         if ([MWCommonUtil isBlank:appKey])
@@ -65,15 +64,21 @@
         }
 
         // 保存更新相关配置
-        [self.commonService saveAndUpdateAppKey:appKey];
-        [self.commonService saveAndUpdateAccountKey:accountKey];
-        [self.commonService saveAndUpdateAccountSecret:accountSecret];
+//        [self.commonService saveAndUpdateAppKey:appKey];
+//        [self.commonService saveAndUpdateAccountKey:accountKey];
+//        [self.commonService saveAndUpdateAccountSecret:accountSecret];
         
     } @catch (NSException *exception) {
         
     } @finally {
         
     }
+}
+
+- (void)setToken:(nullable NSString *)token {
+    if ([MWCommonUtil isBlank:token]) {return;}
+    
+    [[MWCommonService sharedInstance] saveAndUpdateMWToken:token];
 }
 
 - (void)setUserOpenId:(nonnull NSString *)userOpenId {
@@ -93,7 +98,6 @@
 }
 
 - (void)setInvitationCode:(nullable NSString *)invitation_code {
-    
     if ([MWCommonUtil isNotBlank:invitation_code]) {
         [self.commonService saveAndUpdateInvitationCode:invitation_code];
     } else {

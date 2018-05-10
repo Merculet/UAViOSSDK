@@ -12,9 +12,11 @@
 
 +(nonnull id) sharedInstance;
 
-- (void)registerApp:(nonnull NSString *)appKey
-         accountKey:(nonnull NSString *)accountKey
-      accountSecret:(nonnull NSString *)accountSecret;
+- (void)registerApp:(nullable NSString *)appKey
+         accountKey:(nullable NSString *)accountKey
+      accountSecret:(nullable NSString *)accountSecret;
+
+- (void)setToken:(nullable NSString *)token;
 
 - (void)setUserOpenId:(nonnull NSString *)userOpenId;
 

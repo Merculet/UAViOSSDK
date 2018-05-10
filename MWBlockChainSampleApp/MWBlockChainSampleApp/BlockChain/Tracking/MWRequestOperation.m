@@ -14,6 +14,7 @@
 #import "MWDictionaryUtils.h"
 #import "MWLog.h"
 #import "MWCommonUtil.h"
+#import "MWEncryption.h"
 
 #define EVENT_REQUEST_KEY       @"EVENT_REQUEST_KEY"
 
@@ -60,29 +61,23 @@ static NSDictionary *_tokenDic;
 
 - (void)gotoAction {
     
-
+    /// 将请求的参数序列化，并加上key
+    
+    
+    NSString *jsonString = [MWDictionaryUtils dictionaryToJson:_paramDic];
+    NSDictionary *headers = [self headersWithParams:jsonString];
+    
+    if ([MWCommonUtil isBlank:headers] || [MWCommonUtil isBlank:jsonString]) {return;}
+    
+    NSDictionary *bodyParam = @{@"info": jsonString};
+    
     NSString *urlString = [MW_RELEASE stringByAppendingString:MW_TRACKING_URL];
     MWURLRequestManager *manager = [[MWURLRequestManager alloc] init];
-    NSDictionary *headers = [self headers];
-    if ([MWCommonUtil isBlank:headers])  {
-        
-        [self newToken];
-        return;
-        
-    }
-    [manager POST:urlString headers:headers parameters:_paramDic success:^(NSURLResponse *response, id responseObject, NSData *data) {
-            
-            // 检测token是否失效
-            if ([responseObject isKindOfClass:[NSDictionary class]]) {
-                id statusObj = [responseObject objectForKey:@"code"];
-                NSInteger status = [statusObj integerValue];
-                if (status == 1) {
-                    // 重新获取token后
-//                    [MWLog logcurrentThread];
-                    [self newToken];
-                    return;
-                }
-            }
+    
+    [manager POST:urlString
+          headers:headers
+       parameters:bodyParam
+          success:^(NSURLResponse *response, id responseObject, NSData *data) {
         
             if (![MWHttpResponse statusOK:responseObject])
             {
@@ -120,64 +115,92 @@ static NSDictionary *_tokenDic;
     return self;
 }
 
-- (NSDictionary *)headers {
+- (NSMutableDictionary *)headersWithParams:(NSString *)jsonString {
     
-    if ([MWCommonUtil isNotBlank:_tokenDic]) {
-        return _tokenDic;
+    NSMutableDictionary *headers = [NSMutableDictionary dictionary];
+    NSString *token = [[MWCommonService sharedInstance] getMWToken];
+    NSString *sign = [MWEncryption generateString:jsonString];
+    if (token.length && sign.length) {
+        [headers setValue:token forKey:@"mw-token"];
+        [headers setValue:sign forKey:@"mw-sign"];
+        return headers;
     } else {
-        NSString *token = [[MWCommonService sharedInstance] getMWToken];
-        if (token.length) {
-            NSDictionary *dic = @{@"mw-token" : token};
-            _tokenDic = dic;
-            return _tokenDic;
-        } else {
-            return nil;
-        }
+        return nil;
     }
 }
 
-// 请求最新的token
-- (void)newToken {
-
-    [MWLog logcurrentThread];
-    
-    NSDictionary *dic = [MWCompositeEvent getLoginToken];
-    NSString *urlString = [MW_RELEASE stringByAppendingString:MW_Login_Token_API];
-    MWURLRequestManager *manager = [[MWURLRequestManager alloc] init];
-    [manager POST:urlString parameters:dic success:^(NSURLResponse *response, id responseObject, NSData *data) {
-        
-        [MWLog logcurrentThread];
-        
-        // 将token保存下来
-        if (![MWHttpResponse statusOK:responseObject])
-        {
-            if (self.delegate && [self.delegate respondsToSelector:@selector(requestFail:withParamDic:)])
-            {
-                [self.delegate requestFail:self withParamDic:_paramDic];
-            }
-            return ;
-        }
-        
-        @try {
-            [[MWCommonService sharedInstance] saveAndUpdateMWToken:Value([responseObject objectForKey:@"data"])];
-            // token请求到了 进行请求
-            NSString *string = [responseObject objectForKey:@"data"];
-            if (string.length) {
-                NSDictionary *dic = @{@"mw-token" : Value(string)};
-                _tokenDic = dic;
-                [self gotoAction];
-            }
-        }@catch(NSException *exception) {
-            
-        }
-        
-        
-    } failure:^(NSURLResponse *response, NSError *error) {
-        if (self.delegate && [self.delegate respondsToSelector:@selector(requestFail:withParamDic:)])
-        {
-            [self.delegate requestFail:self withParamDic:_paramDic];
-        }
-    }];
-}
-
 @end
+
+//            // 检测token是否失效
+//            if ([responseObject isKindOfClass:[NSDictionary class]]) {
+//                id statusObj = [responseObject objectForKey:@"code"];
+//                NSInteger status = [statusObj integerValue];
+//                if (status == 1) {
+//                    // 重新获取token后
+////                    [MWLog logcurrentThread];
+//                    [self newToken];
+//                    return;
+//                }
+//            }
+
+//- (NSDictionary *)headers {
+//
+//    if ([MWCommonUtil isNotBlank:_tokenDic]) {
+//        return _tokenDic;
+//    } else {
+//        NSString *token = [[MWCommonService sharedInstance] getMWToken];
+//        if (token.length) {
+//            NSDictionary *dic = @{@"mw-token" : token};
+//            _tokenDic = dic;
+//            return _tokenDic;
+//        } else {
+//            return nil;
+//        }
+//    }
+//}
+
+
+//// 请求最新的token
+//- (void)newToken {
+//
+//    [MWLog logcurrentThread];
+//
+//    NSDictionary *dic = [MWCompositeEvent getLoginToken];
+//    NSString *urlString = [MW_RELEASE stringByAppendingString:MW_Login_Token_API];
+//    MWURLRequestManager *manager = [[MWURLRequestManager alloc] init];
+//    [manager POST:urlString parameters:dic success:^(NSURLResponse *response, id responseObject, NSData *data) {
+//
+//        [MWLog logcurrentThread];
+//
+//        // 将token保存下来
+//        if (![MWHttpResponse statusOK:responseObject])
+//        {
+//            if (self.delegate && [self.delegate respondsToSelector:@selector(requestFail:withParamDic:)])
+//            {
+//                [self.delegate requestFail:self withParamDic:_paramDic];
+//            }
+//            return ;
+//        }
+//
+//        @try {
+//            [[MWCommonService sharedInstance] saveAndUpdateMWToken:Value([responseObject objectForKey:@"data"])];
+//            // token请求到了 进行请求
+//            NSString *string = [responseObject objectForKey:@"data"];
+//            if (string.length) {
+//                NSDictionary *dic = @{@"mw-token" : Value(string)};
+//                _tokenDic = dic;
+//                [self gotoAction];
+//            }
+//        }@catch(NSException *exception) {
+//
+//        }
+//
+//
+//    } failure:^(NSURLResponse *response, NSError *error) {
+//        if (self.delegate && [self.delegate respondsToSelector:@selector(requestFail:withParamDic:)])
+//        {
+//            [self.delegate requestFail:self withParamDic:_paramDic];
+//        }
+//    }];
+//}
+

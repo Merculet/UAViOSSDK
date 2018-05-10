@@ -14,7 +14,7 @@
 		00C684BE20908BFB00C5259D /* MW_ConnectionSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C6849520908BFB00C5259D /* MW_ConnectionSession.m */; };
 		00C684BF20908BFB00C5259D /* MWCompositeEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C6849620908BFB00C5259D /* MWCompositeEvent.m */; };
 		00C684C020908BFB00C5259D /* MWEventInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C6849720908BFB00C5259D /* MWEventInfo.m */; };
-		00C684C120908BFB00C5259D /* MW_ConnectionSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C6849820908BFB00C5259D /* MW_ConnectionSessionManager.m */; };
+		00C684C120908BFB00C5259D /* MW_ConnectionSessionManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 00C6849820908BFB00C5259D /* MW_ConnectionSessionManager.mm */; };
 		00C684C220908BFB00C5259D /* MWSendStrategyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C6849920908BFB00C5259D /* MWSendStrategyManager.m */; };
 		00C684C320908BFB00C5259D /* MWCommonActionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C6849A20908BFB00C5259D /* MWCommonActionManager.m */; };
 		00C684C420908BFB00C5259D /* MWTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C6849B20908BFB00C5259D /* MWTimerManager.m */; };
@@ -63,7 +63,7 @@
 		00C6849520908BFB00C5259D /* MW_ConnectionSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MW_ConnectionSession.m; sourceTree = "<group>"; };
 		00C6849620908BFB00C5259D /* MWCompositeEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWCompositeEvent.m; sourceTree = "<group>"; };
 		00C6849720908BFB00C5259D /* MWEventInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWEventInfo.m; sourceTree = "<group>"; };
-		00C6849820908BFB00C5259D /* MW_ConnectionSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MW_ConnectionSessionManager.m; sourceTree = "<group>"; };
+		00C6849820908BFB00C5259D /* MW_ConnectionSessionManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MW_ConnectionSessionManager.mm; sourceTree = "<group>"; };
 		00C6849920908BFB00C5259D /* MWSendStrategyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWSendStrategyManager.m; sourceTree = "<group>"; };
 		00C6849A20908BFB00C5259D /* MWCommonActionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWCommonActionManager.m; sourceTree = "<group>"; };
 		00C6849B20908BFB00C5259D /* MWTimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTimerManager.m; sourceTree = "<group>"; };
@@ -120,6 +120,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00077F0320A4513A00587AE9 /* 加密 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "加密";
+			sourceTree = "<group>";
+		};
 		00C6848720908BFB00C5259D /* BlockChain */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,7 +174,7 @@
 				00C6849E20908BFB00C5259D /* MW_ConnectionSession.h */,
 				00C6849520908BFB00C5259D /* MW_ConnectionSession.m */,
 				00C684A320908BFB00C5259D /* MW_ConnectionSessionManager.h */,
-				00C6849820908BFB00C5259D /* MW_ConnectionSessionManager.m */,
+				00C6849820908BFB00C5259D /* MW_ConnectionSessionManager.mm */,
 				00C684A220908BFB00C5259D /* MWSendStrategyManager.h */,
 				00C6849920908BFB00C5259D /* MWSendStrategyManager.m */,
 				00C684A120908BFB00C5259D /* MWCommonActionManager.h */,
@@ -197,17 +204,17 @@
 				00C684B620908BFB00C5259D /* MWLog.h */,
 				00C684AC20908BFB00C5259D /* MWLog.m */,
 				00C684AD20908BFB00C5259D /* MWNSFileManagerUtils.h */,
-				00C684AE20908BFB00C5259D /* MWCommonUtil.h */,
+				00C684B820908BFB00C5259D /* MWNSStringUtils.m */,
+				00C684B920908BFB00C5259D /* MWDeviceUtil.h */,
 				00C684AF20908BFB00C5259D /* MWDeviceUtil.m */,
-				00C684B020908BFB00C5259D /* MWNSStringUtils.h */,
+				00C684B720908BFB00C5259D /* MWReachability.h */,
 				00C684B120908BFB00C5259D /* MWReachability.m */,
 				00C684B220908BFB00C5259D /* MWDictionaryUtils.h */,
 				00C684B320908BFB00C5259D /* MWNSKeyedArchiverUtils.m */,
 				00C684B420908BFB00C5259D /* MWCommonUtil.m */,
+				00C684AE20908BFB00C5259D /* MWCommonUtil.h */,
 				00C684B520908BFB00C5259D /* MWNSFileManagerUtils.m */,
-				00C684B720908BFB00C5259D /* MWReachability.h */,
-				00C684B820908BFB00C5259D /* MWNSStringUtils.m */,
-				00C684B920908BFB00C5259D /* MWDeviceUtil.h */,
+				00C684B020908BFB00C5259D /* MWNSStringUtils.h */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -232,6 +239,7 @@
 		4ACEBA9B204F8D5400C5A2B8 /* MWBlockChainSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				00077F0320A4513A00587AE9 /* 加密 */,
 				00C6848720908BFB00C5259D /* BlockChain */,
 				4ACEBA9C204F8D5400C5A2B8 /* AppDelegate.h */,
 				4ACEBA9D204F8D5400C5A2B8 /* AppDelegate.m */,
@@ -332,7 +340,7 @@
 				4ACEBAA1204F8D5400C5A2B8 /* ViewController.m in Sources */,
 				00C684BF20908BFB00C5259D /* MWCompositeEvent.m in Sources */,
 				00C684CA20908BFB00C5259D /* MWReachability.m in Sources */,
-				00C684C120908BFB00C5259D /* MW_ConnectionSessionManager.m in Sources */,
+				00C684C120908BFB00C5259D /* MW_ConnectionSessionManager.mm in Sources */,
 				00C684C420908BFB00C5259D /* MWTimerManager.m in Sources */,
 				00C684BB20908BFB00C5259D /* MWURLRequestManager.m in Sources */,
 				00C684C320908BFB00C5259D /* MWCommonActionManager.m in Sources */,
@@ -490,6 +498,11 @@
 				INFOPLIST_FILE = MWBlockChainSampleApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MWBlockChainSampleApp/加密",
+					"$(PROJECT_DIR)/MWBlockChainSampleApp/加密/Release-iphonesimulator",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mw.MWBlockChainSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -506,6 +519,11 @@
 				INFOPLIST_FILE = MWBlockChainSampleApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MWBlockChainSampleApp/加密",
+					"$(PROJECT_DIR)/MWBlockChainSampleApp/加密/Release-iphonesimulator",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mw.MWBlockChainSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

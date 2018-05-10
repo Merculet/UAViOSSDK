@@ -18,13 +18,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    
-        NSString * appkey = @"382edbadb6d14c7b88a300990166c50e";
-        NSString * accountKey = @"7fe4196d1ee942d68d4df1b9574d1635";
-        NSString * accountSecret = @"2c0bc26591f44828a4b441e8d2c73ff7";
-    
     // 注册
-    [MWAPI registerApp:appkey accountKey:accountKey accountSecret:accountSecret];
+    [MWAPI registerApp];
+    
     
     return YES;
 }

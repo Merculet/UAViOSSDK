@@ -38,8 +38,8 @@
         }
 //        MWAppInfo *appInfo = [[MWAppInfo alloc] init];
         NSDictionary *dic = @{
-                              MW_POST_KEY_EVENT_app_key:Value([[MWCommonService sharedInstance] getAppKey]),
-                              MW_POST_KEY_EVENT_external_user_id:Value([[MWCommonService sharedInstance] getuserOpenid]),
+//                              MW_POST_KEY_EVENT_app_key:Value([[MWCommonService sharedInstance] getAppKey]),
+//                              MW_POST_KEY_EVENT_external_user_id:Value([[MWCommonService sharedInstance] getuserOpenid]),
                               MW_POST_KEY_EVENT_device_info:Value_class([MWDeviceUtil getIDFA]),
                               MW_POST_KEY_EVENT_actions:events
                               };

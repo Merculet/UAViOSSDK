@@ -31,6 +31,15 @@
     }
 }
 
++ (void)registerApp
+{
+    [MWAPI registerApp:@"" accountKey:@"" accountSecret:@""];
+}
+
++ (void)setToken:(NSString *)token {
+    [[MWFacade sharedInstance] setToken: token];
+}
+
 + (void)setUserOpenId:(nonnull NSString *)userOpenId invitationCode:(nullable NSString*)invitationCode
 {
     [[MWFacade sharedInstance] setInvitationCode:invitationCode];

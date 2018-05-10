@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "MWAPI.h"
+//#import "MWEncryption.h"
 
 @interface ViewController ()
 
@@ -30,7 +31,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [MWAPI setToken:@"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4NTQ5MDU4MmVkZTg0MTdiODNiZTdiOTc5NTI0NGNiMyIsImlhdCI6MTUyNTk1NDYzMCwiZXhwIjoxNTI2MTI3NDMwLCJhcHAiOiIwYmI5YjlkNDA3MmQ0N2JhOGViOGFmN2M4YzQ3NmRkMyIsImV4dGVybmFsX3VzZXJfaWQiOiJ6aG91dGFvMSJ9.EGogLjHPkIvKrIUdl8iOVbsP4xtN7cc0bGmtdOOhVEU"];
 }
+
 - (IBAction)cancel:(id)sender {
     [MWAPI cancelUserOpenId];
 }

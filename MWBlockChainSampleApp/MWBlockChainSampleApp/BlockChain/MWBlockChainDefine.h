@@ -9,14 +9,16 @@
 #ifndef MWBlockChainDefine_h
 #define MWBlockChainDefine_h
 
-// 域名
+// 域名-国内
 #define MW_RELEASE @""
+// 域名-国外
+//#define MW_RELEASE @""
 
 // behaviour/tracking
-#define MW_TRACKING_URL @"api/v1/behaviour/tracking"
+#define MW_TRACKING_URL @"/api/v1/behaviour/sdkTracking"
 
 // token
-#define MW_Login_Token_API @"api/v1/security/login"
+#define MW_Login_Token_API @""
 
 #import "MWCommonService.h"
 

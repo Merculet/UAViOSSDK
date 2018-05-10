@@ -100,7 +100,7 @@
 //            NSData *postData = [NSJSONSerialization dataWithJSONObject:parameters options:0 error:nil];
 //            [request setHTTPBody:postData];
             NSString *parseParamsResult =[self jsonString:parameters];
-            [MWLog log:[NSString stringWithFormat:@"%@",parseParamsResult]];
+//            [MWLog log:[NSString stringWithFormat:@"%@",parseParamsResult]];
             NSData *postData = [parseParamsResult dataUsingEncoding:NSUTF8StringEncoding];
             [request setHTTPBody:postData];
         }
