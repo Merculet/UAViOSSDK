@@ -22,50 +22,51 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		00C684622090747300C5259D /* MW_ConnectionSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 00C684602090747300C5259D /* MW_ConnectionSessionManager.h */; };
-		00C684632090747300C5259D /* MW_ConnectionSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C684612090747300C5259D /* MW_ConnectionSessionManager.m */; };
-		4A1BFBB520569BC300CF1183 /* MW_ConnectionSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A1BFBB120569BC300CF1183 /* MW_ConnectionSession.h */; };
-		4A1BFBB620569BC300CF1183 /* MW_ConnectionSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1BFBB220569BC300CF1183 /* MW_ConnectionSession.m */; };
-		4A1BFBD82056A92F00CF1183 /* MWCommonService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1BFBD42056A92F00CF1183 /* MWCommonService.m */; };
-		4A1BFBD92056A92F00CF1183 /* MWCommonService.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A1BFBD52056A92F00CF1183 /* MWCommonService.h */; };
-		4A1BFBDE2056E59700CF1183 /* MWSendStrategyManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A1BFBDA2056E59600CF1183 /* MWSendStrategyManager.h */; };
-		4A1BFBDF2056E59700CF1183 /* MWTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1BFBDB2056E59600CF1183 /* MWTimerManager.m */; };
-		4A1BFBE02056E59700CF1183 /* MWSendStrategyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1BFBDC2056E59700CF1183 /* MWSendStrategyManager.m */; };
-		4A1BFBE12056E59700CF1183 /* MWTimerManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A1BFBDD2056E59700CF1183 /* MWTimerManager.h */; };
-		4A1BFBE42056EF9F00CF1183 /* MWCommonActionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A1BFBE22056EF9F00CF1183 /* MWCommonActionManager.h */; };
-		4A1BFBE52056EF9F00CF1183 /* MWCommonActionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1BFBE32056EF9F00CF1183 /* MWCommonActionManager.m */; };
-		4A1BFBE82057AF4600CF1183 /* MWNSStringUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A1BFBE62057AF4600CF1183 /* MWNSStringUtils.h */; };
-		4A1BFBE92057AF4600CF1183 /* MWNSStringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1BFBE72057AF4600CF1183 /* MWNSStringUtils.m */; };
-		4A2592D02056941A008E280E /* MWFacade.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A25927420569419008E280E /* MWFacade.h */; };
-		4A2592D12056941A008E280E /* MWHttpResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A25927620569419008E280E /* MWHttpResponse.m */; };
-		4A2592D22056941A008E280E /* MWURLRequestManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A25927720569419008E280E /* MWURLRequestManager.h */; };
-		4A2592D32056941A008E280E /* MWHttpResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A25927820569419008E280E /* MWHttpResponse.h */; };
-		4A2592D42056941A008E280E /* MWURLRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A25927920569419008E280E /* MWURLRequestManager.m */; };
-		4A2592D72056941A008E280E /* MWAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A25927E20569419008E280E /* MWAPI.m */; };
-		4A2592D82056941A008E280E /* MWAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A25927F20569419008E280E /* MWAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4A2592D92056941A008E280E /* MWRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A25928120569419008E280E /* MWRequestOperation.m */; };
-		4A2592DB2056941A008E280E /* MWCompositeEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A25928320569419008E280E /* MWCompositeEvent.m */; };
-		4A2592DC2056941A008E280E /* MWEventInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A25928420569419008E280E /* MWEventInfo.m */; };
-		4A2592DD2056941A008E280E /* MWEventInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A25928520569419008E280E /* MWEventInfo.h */; };
-		4A2592DE2056941A008E280E /* MWCompositeEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A25928620569419008E280E /* MWCompositeEvent.h */; };
-		4A2592E02056941A008E280E /* MWRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A25928820569419008E280E /* MWRequestOperation.h */; };
-		4A2592E12056941A008E280E /* MWTrackingDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A25928920569419008E280E /* MWTrackingDefine.h */; };
-		4A2592E22056941A008E280E /* MWBlockChain.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A25928D20569419008E280E /* MWBlockChain.h */; };
-		4A25930A2056941A008E280E /* MWFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2592BF20569419008E280E /* MWFacade.m */; };
-		4A25930C2056941A008E280E /* MWNSKeyedArchiverUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A2592C220569419008E280E /* MWNSKeyedArchiverUtils.h */; };
-		4A25930D2056941A008E280E /* MWDictionaryUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2592C320569419008E280E /* MWDictionaryUtils.m */; };
-		4A25930E2056941A008E280E /* MWLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2592C420569419008E280E /* MWLog.m */; };
-		4A25930F2056941A008E280E /* MWNSFileManagerUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A2592C520569419008E280E /* MWNSFileManagerUtils.h */; };
-		4A2593102056941A008E280E /* MWCommonUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A2592C620569419008E280E /* MWCommonUtil.h */; };
-		4A2593112056941A008E280E /* MWDeviceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2592C720569419008E280E /* MWDeviceUtil.m */; };
-		4A2593122056941A008E280E /* MWReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2592C820569419008E280E /* MWReachability.m */; };
-		4A2593132056941A008E280E /* MWDictionaryUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A2592C920569419008E280E /* MWDictionaryUtils.h */; };
-		4A2593142056941A008E280E /* MWNSKeyedArchiverUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2592CA20569419008E280E /* MWNSKeyedArchiverUtils.m */; };
-		4A2593152056941A008E280E /* MWCommonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2592CB20569419008E280E /* MWCommonUtil.m */; };
-		4A2593162056941A008E280E /* MWNSFileManagerUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2592CC20569419008E280E /* MWNSFileManagerUtils.m */; };
-		4A2593172056941A008E280E /* MWLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A2592CD20569419008E280E /* MWLog.h */; };
-		4A2593182056941A008E280E /* MWReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A2592CE20569419008E280E /* MWReachability.h */; };
-		4A2593192056941A008E280E /* MWDeviceUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A2592CF20569419008E280E /* MWDeviceUtil.h */; };
+		00077FEA20A4956F00587AE9 /* MWFacade.h in Headers */ = {isa = PBXBuildFile; fileRef = 00077FB220A4956F00587AE9 /* MWFacade.h */; };
+		00077FEB20A4956F00587AE9 /* MWHttpResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 00077FB420A4956F00587AE9 /* MWHttpResponse.m */; };
+		00077FEC20A4956F00587AE9 /* MWURLRequestManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 00077FB520A4956F00587AE9 /* MWURLRequestManager.h */; };
+		00077FED20A4956F00587AE9 /* MWHttpResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 00077FB620A4956F00587AE9 /* MWHttpResponse.h */; };
+		00077FEE20A4956F00587AE9 /* MWURLRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00077FB720A4956F00587AE9 /* MWURLRequestManager.m */; };
+		00077FEF20A4956F00587AE9 /* MWAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 00077FB920A4956F00587AE9 /* MWAPI.m */; };
+		00077FF020A4956F00587AE9 /* MWAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 00077FBA20A4956F00587AE9 /* MWAPI.h */; };
+		00077FF120A4956F00587AE9 /* MWBlockChainDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 00077FBB20A4956F00587AE9 /* MWBlockChainDefine.h */; };
+		00077FF220A4956F00587AE9 /* MWTimerManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 00077FBD20A4956F00587AE9 /* MWTimerManager.h */; };
+		00077FF320A4956F00587AE9 /* MWRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 00077FBE20A4956F00587AE9 /* MWRequestOperation.m */; };
+		00077FF420A4956F00587AE9 /* MW_ConnectionSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 00077FBF20A4956F00587AE9 /* MW_ConnectionSession.m */; };
+		00077FF520A4956F00587AE9 /* MWCompositeEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 00077FC020A4956F00587AE9 /* MWCompositeEvent.m */; };
+		00077FF620A4956F00587AE9 /* MWEventInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 00077FC120A4956F00587AE9 /* MWEventInfo.m */; };
+		00077FF720A4956F00587AE9 /* MWSendStrategyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00077FC220A4956F00587AE9 /* MWSendStrategyManager.m */; };
+		00077FF820A4956F00587AE9 /* MWCommonActionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00077FC320A4956F00587AE9 /* MWCommonActionManager.m */; };
+		00077FF920A4956F00587AE9 /* MW_ConnectionSessionManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 00077FC420A4956F00587AE9 /* MW_ConnectionSessionManager.mm */; };
+		00077FFA20A4956F00587AE9 /* MWTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00077FC520A4956F00587AE9 /* MWTimerManager.m */; };
+		00077FFB20A4956F00587AE9 /* MWEventInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 00077FC620A4956F00587AE9 /* MWEventInfo.h */; };
+		00077FFC20A4957000587AE9 /* MWCompositeEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 00077FC720A4956F00587AE9 /* MWCompositeEvent.h */; };
+		00077FFD20A4957000587AE9 /* MW_ConnectionSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 00077FC820A4956F00587AE9 /* MW_ConnectionSession.h */; };
+		00077FFE20A4957000587AE9 /* MWRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 00077FC920A4956F00587AE9 /* MWRequestOperation.h */; };
+		00077FFF20A4957000587AE9 /* MWTrackingDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 00077FCA20A4956F00587AE9 /* MWTrackingDefine.h */; };
+		0007800020A4957000587AE9 /* MWCommonActionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 00077FCB20A4956F00587AE9 /* MWCommonActionManager.h */; };
+		0007800120A4957000587AE9 /* MWSendStrategyManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 00077FCC20A4956F00587AE9 /* MWSendStrategyManager.h */; };
+		0007800220A4957000587AE9 /* MW_ConnectionSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 00077FCD20A4956F00587AE9 /* MW_ConnectionSessionManager.h */; };
+		0007800320A4957000587AE9 /* MWBlockChain.h in Headers */ = {isa = PBXBuildFile; fileRef = 00077FCE20A4956F00587AE9 /* MWBlockChain.h */; };
+		0007800420A4957000587AE9 /* MWFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 00077FCF20A4956F00587AE9 /* MWFacade.m */; };
+		0007800520A4957000587AE9 /* MWCommonService.h in Headers */ = {isa = PBXBuildFile; fileRef = 00077FD120A4956F00587AE9 /* MWCommonService.h */; };
+		0007800620A4957000587AE9 /* MWCommonService.m in Sources */ = {isa = PBXBuildFile; fileRef = 00077FD220A4956F00587AE9 /* MWCommonService.m */; };
+		0007800720A4957000587AE9 /* MWNSKeyedArchiverUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 00077FD420A4956F00587AE9 /* MWNSKeyedArchiverUtils.h */; };
+		0007800820A4957000587AE9 /* MWDictionaryUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 00077FD520A4956F00587AE9 /* MWDictionaryUtils.m */; };
+		0007800920A4957000587AE9 /* MWLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 00077FD620A4956F00587AE9 /* MWLog.m */; };
+		0007800A20A4957000587AE9 /* MWNSFileManagerUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 00077FD720A4956F00587AE9 /* MWNSFileManagerUtils.h */; };
+		0007800B20A4957000587AE9 /* MWCommonUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 00077FD820A4956F00587AE9 /* MWCommonUtil.h */; };
+		0007800C20A4957000587AE9 /* MWDeviceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 00077FD920A4956F00587AE9 /* MWDeviceUtil.m */; };
+		0007800D20A4957000587AE9 /* MWNSStringUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 00077FDA20A4956F00587AE9 /* MWNSStringUtils.h */; };
+		0007800E20A4957000587AE9 /* MWReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 00077FDB20A4956F00587AE9 /* MWReachability.m */; };
+		0007800F20A4957000587AE9 /* MWDictionaryUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 00077FDC20A4956F00587AE9 /* MWDictionaryUtils.h */; };
+		0007801020A4957000587AE9 /* MWNSKeyedArchiverUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 00077FDD20A4956F00587AE9 /* MWNSKeyedArchiverUtils.m */; };
+		0007801120A4957000587AE9 /* MWCommonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 00077FDE20A4956F00587AE9 /* MWCommonUtil.m */; };
+		0007801220A4957000587AE9 /* MWNSFileManagerUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 00077FDF20A4956F00587AE9 /* MWNSFileManagerUtils.m */; };
+		0007801320A4957000587AE9 /* MWLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 00077FE020A4956F00587AE9 /* MWLog.h */; };
+		0007801420A4957000587AE9 /* MWReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 00077FE120A4956F00587AE9 /* MWReachability.h */; };
+		0007801520A4957000587AE9 /* MWNSStringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 00077FE220A4956F00587AE9 /* MWNSStringUtils.m */; };
+		0007801620A4957000587AE9 /* MWDeviceUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 00077FE320A4956F00587AE9 /* MWDeviceUtil.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,55 +80,52 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00C684602090747300C5259D /* MW_ConnectionSessionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MW_ConnectionSessionManager.h; sourceTree = "<group>"; };
-		00C684612090747300C5259D /* MW_ConnectionSessionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MW_ConnectionSessionManager.m; sourceTree = "<group>"; };
-		4A1BFBB120569BC300CF1183 /* MW_ConnectionSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MW_ConnectionSession.h; sourceTree = "<group>"; };
-		4A1BFBB220569BC300CF1183 /* MW_ConnectionSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MW_ConnectionSession.m; sourceTree = "<group>"; };
-		4A1BFBB72056A64500CF1183 /* MWBlockChainDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MWBlockChainDefine.h; sourceTree = "<group>"; };
-		4A1BFBD42056A92F00CF1183 /* MWCommonService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWCommonService.m; sourceTree = "<group>"; };
-		4A1BFBD52056A92F00CF1183 /* MWCommonService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWCommonService.h; sourceTree = "<group>"; };
-		4A1BFBDA2056E59600CF1183 /* MWSendStrategyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWSendStrategyManager.h; sourceTree = "<group>"; };
-		4A1BFBDB2056E59600CF1183 /* MWTimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTimerManager.m; sourceTree = "<group>"; };
-		4A1BFBDC2056E59700CF1183 /* MWSendStrategyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWSendStrategyManager.m; sourceTree = "<group>"; };
-		4A1BFBDD2056E59700CF1183 /* MWTimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTimerManager.h; sourceTree = "<group>"; };
-		4A1BFBE22056EF9F00CF1183 /* MWCommonActionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MWCommonActionManager.h; sourceTree = "<group>"; };
-		4A1BFBE32056EF9F00CF1183 /* MWCommonActionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MWCommonActionManager.m; sourceTree = "<group>"; };
-		4A1BFBE62057AF4600CF1183 /* MWNSStringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWNSStringUtils.h; sourceTree = "<group>"; };
-		4A1BFBE72057AF4600CF1183 /* MWNSStringUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWNSStringUtils.m; sourceTree = "<group>"; };
-		4A25927420569419008E280E /* MWFacade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFacade.h; sourceTree = "<group>"; };
-		4A25927620569419008E280E /* MWHttpResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWHttpResponse.m; sourceTree = "<group>"; };
-		4A25927720569419008E280E /* MWURLRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWURLRequestManager.h; sourceTree = "<group>"; };
-		4A25927820569419008E280E /* MWHttpResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWHttpResponse.h; sourceTree = "<group>"; };
-		4A25927920569419008E280E /* MWURLRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWURLRequestManager.m; sourceTree = "<group>"; };
-		4A25927C20569419008E280E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4A25927E20569419008E280E /* MWAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWAPI.m; sourceTree = "<group>"; };
-		4A25927F20569419008E280E /* MWAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWAPI.h; sourceTree = "<group>"; };
-		4A25928120569419008E280E /* MWRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWRequestOperation.m; sourceTree = "<group>"; };
-		4A25928320569419008E280E /* MWCompositeEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWCompositeEvent.m; sourceTree = "<group>"; };
-		4A25928420569419008E280E /* MWEventInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWEventInfo.m; sourceTree = "<group>"; };
-		4A25928520569419008E280E /* MWEventInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWEventInfo.h; sourceTree = "<group>"; };
-		4A25928620569419008E280E /* MWCompositeEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWCompositeEvent.h; sourceTree = "<group>"; };
-		4A25928820569419008E280E /* MWRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWRequestOperation.h; sourceTree = "<group>"; };
-		4A25928920569419008E280E /* MWTrackingDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTrackingDefine.h; sourceTree = "<group>"; };
-		4A25928D20569419008E280E /* MWBlockChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWBlockChain.h; sourceTree = "<group>"; };
-		4A2592BF20569419008E280E /* MWFacade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWFacade.m; sourceTree = "<group>"; };
-		4A2592C020569419008E280E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4A2592C220569419008E280E /* MWNSKeyedArchiverUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWNSKeyedArchiverUtils.h; sourceTree = "<group>"; };
-		4A2592C320569419008E280E /* MWDictionaryUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWDictionaryUtils.m; sourceTree = "<group>"; };
-		4A2592C420569419008E280E /* MWLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWLog.m; sourceTree = "<group>"; };
-		4A2592C520569419008E280E /* MWNSFileManagerUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWNSFileManagerUtils.h; sourceTree = "<group>"; };
-		4A2592C620569419008E280E /* MWCommonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWCommonUtil.h; sourceTree = "<group>"; };
-		4A2592C720569419008E280E /* MWDeviceUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWDeviceUtil.m; sourceTree = "<group>"; };
-		4A2592C820569419008E280E /* MWReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWReachability.m; sourceTree = "<group>"; };
-		4A2592C920569419008E280E /* MWDictionaryUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWDictionaryUtils.h; sourceTree = "<group>"; };
-		4A2592CA20569419008E280E /* MWNSKeyedArchiverUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWNSKeyedArchiverUtils.m; sourceTree = "<group>"; };
-		4A2592CB20569419008E280E /* MWCommonUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWCommonUtil.m; sourceTree = "<group>"; };
-		4A2592CC20569419008E280E /* MWNSFileManagerUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWNSFileManagerUtils.m; sourceTree = "<group>"; };
-		4A2592CD20569419008E280E /* MWLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWLog.h; sourceTree = "<group>"; };
-		4A2592CE20569419008E280E /* MWReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWReachability.h; sourceTree = "<group>"; };
-		4A2592CF20569419008E280E /* MWDeviceUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWDeviceUtil.h; sourceTree = "<group>"; };
+		00077FB220A4956F00587AE9 /* MWFacade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFacade.h; sourceTree = "<group>"; };
+		00077FB420A4956F00587AE9 /* MWHttpResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWHttpResponse.m; sourceTree = "<group>"; };
+		00077FB520A4956F00587AE9 /* MWURLRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWURLRequestManager.h; sourceTree = "<group>"; };
+		00077FB620A4956F00587AE9 /* MWHttpResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWHttpResponse.h; sourceTree = "<group>"; };
+		00077FB720A4956F00587AE9 /* MWURLRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWURLRequestManager.m; sourceTree = "<group>"; };
+		00077FB920A4956F00587AE9 /* MWAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWAPI.m; sourceTree = "<group>"; };
+		00077FBA20A4956F00587AE9 /* MWAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWAPI.h; sourceTree = "<group>"; };
+		00077FBB20A4956F00587AE9 /* MWBlockChainDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWBlockChainDefine.h; sourceTree = "<group>"; };
+		00077FBD20A4956F00587AE9 /* MWTimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTimerManager.h; sourceTree = "<group>"; };
+		00077FBE20A4956F00587AE9 /* MWRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWRequestOperation.m; sourceTree = "<group>"; };
+		00077FBF20A4956F00587AE9 /* MW_ConnectionSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MW_ConnectionSession.m; sourceTree = "<group>"; };
+		00077FC020A4956F00587AE9 /* MWCompositeEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWCompositeEvent.m; sourceTree = "<group>"; };
+		00077FC120A4956F00587AE9 /* MWEventInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWEventInfo.m; sourceTree = "<group>"; };
+		00077FC220A4956F00587AE9 /* MWSendStrategyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWSendStrategyManager.m; sourceTree = "<group>"; };
+		00077FC320A4956F00587AE9 /* MWCommonActionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWCommonActionManager.m; sourceTree = "<group>"; };
+		00077FC420A4956F00587AE9 /* MW_ConnectionSessionManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MW_ConnectionSessionManager.mm; sourceTree = "<group>"; };
+		00077FC520A4956F00587AE9 /* MWTimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTimerManager.m; sourceTree = "<group>"; };
+		00077FC620A4956F00587AE9 /* MWEventInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWEventInfo.h; sourceTree = "<group>"; };
+		00077FC720A4956F00587AE9 /* MWCompositeEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWCompositeEvent.h; sourceTree = "<group>"; };
+		00077FC820A4956F00587AE9 /* MW_ConnectionSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MW_ConnectionSession.h; sourceTree = "<group>"; };
+		00077FC920A4956F00587AE9 /* MWRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWRequestOperation.h; sourceTree = "<group>"; };
+		00077FCA20A4956F00587AE9 /* MWTrackingDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTrackingDefine.h; sourceTree = "<group>"; };
+		00077FCB20A4956F00587AE9 /* MWCommonActionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWCommonActionManager.h; sourceTree = "<group>"; };
+		00077FCC20A4956F00587AE9 /* MWSendStrategyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWSendStrategyManager.h; sourceTree = "<group>"; };
+		00077FCD20A4956F00587AE9 /* MW_ConnectionSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MW_ConnectionSessionManager.h; sourceTree = "<group>"; };
+		00077FCE20A4956F00587AE9 /* MWBlockChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWBlockChain.h; sourceTree = "<group>"; };
+		00077FCF20A4956F00587AE9 /* MWFacade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWFacade.m; sourceTree = "<group>"; };
+		00077FD120A4956F00587AE9 /* MWCommonService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWCommonService.h; sourceTree = "<group>"; };
+		00077FD220A4956F00587AE9 /* MWCommonService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWCommonService.m; sourceTree = "<group>"; };
+		00077FD420A4956F00587AE9 /* MWNSKeyedArchiverUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWNSKeyedArchiverUtils.h; sourceTree = "<group>"; };
+		00077FD520A4956F00587AE9 /* MWDictionaryUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWDictionaryUtils.m; sourceTree = "<group>"; };
+		00077FD620A4956F00587AE9 /* MWLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWLog.m; sourceTree = "<group>"; };
+		00077FD720A4956F00587AE9 /* MWNSFileManagerUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWNSFileManagerUtils.h; sourceTree = "<group>"; };
+		00077FD820A4956F00587AE9 /* MWCommonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWCommonUtil.h; sourceTree = "<group>"; };
+		00077FD920A4956F00587AE9 /* MWDeviceUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWDeviceUtil.m; sourceTree = "<group>"; };
+		00077FDA20A4956F00587AE9 /* MWNSStringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWNSStringUtils.h; sourceTree = "<group>"; };
+		00077FDB20A4956F00587AE9 /* MWReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWReachability.m; sourceTree = "<group>"; };
+		00077FDC20A4956F00587AE9 /* MWDictionaryUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWDictionaryUtils.h; sourceTree = "<group>"; };
+		00077FDD20A4956F00587AE9 /* MWNSKeyedArchiverUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWNSKeyedArchiverUtils.m; sourceTree = "<group>"; };
+		00077FDE20A4956F00587AE9 /* MWCommonUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWCommonUtil.m; sourceTree = "<group>"; };
+		00077FDF20A4956F00587AE9 /* MWNSFileManagerUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWNSFileManagerUtils.m; sourceTree = "<group>"; };
+		00077FE020A4956F00587AE9 /* MWLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWLog.h; sourceTree = "<group>"; };
+		00077FE120A4956F00587AE9 /* MWReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWReachability.h; sourceTree = "<group>"; };
+		00077FE220A4956F00587AE9 /* MWNSStringUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWNSStringUtils.m; sourceTree = "<group>"; };
+		00077FE320A4956F00587AE9 /* MWDeviceUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWDeviceUtil.h; sourceTree = "<group>"; };
 		4ACEBA85204F8CD900C5A2B8 /* MerculetSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MerculetSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4ACEBB8F205169CA00C5A2B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,103 +139,110 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4A1BFBD12056A91600CF1183 /* Service */ = {
+		00077FA920A4956F00587AE9 /* MWBlockChain */ = {
 			isa = PBXGroup;
 			children = (
-				4A1BFBD52056A92F00CF1183 /* MWCommonService.h */,
-				4A1BFBD42056A92F00CF1183 /* MWCommonService.m */,
+				00077FAA20A4956F00587AE9 /* 加密 */,
+				00077FB120A4956F00587AE9 /* BlockChain */,
 			);
-			path = Service;
+			path = MWBlockChain;
 			sourceTree = "<group>";
 		};
-		4A25927320569419008E280E /* MWBlockChain */ = {
+		00077FAA20A4956F00587AE9 /* 加密 */ = {
 			isa = PBXGroup;
 			children = (
-				4A1BFBB72056A64500CF1183 /* MWBlockChainDefine.h */,
-				4A25928D20569419008E280E /* MWBlockChain.h */,
-				4A25927420569419008E280E /* MWFacade.h */,
-				4A2592BF20569419008E280E /* MWFacade.m */,
-				4A1BFBD12056A91600CF1183 /* Service */,
-				4A25927520569419008E280E /* Network */,
-				4A25927D20569419008E280E /* openApi */,
-				4A25928020569419008E280E /* Tracking */,
-				4A2592C020569419008E280E /* Info.plist */,
-				4A2592C120569419008E280E /* Utility */,
 			);
-			name = MWBlockChain;
+			path = "加密";
 			sourceTree = "<group>";
 		};
-		4A25927520569419008E280E /* Network */ = {
+		00077FB120A4956F00587AE9 /* BlockChain */ = {
 			isa = PBXGroup;
 			children = (
-				4A25927820569419008E280E /* MWHttpResponse.h */,
-				4A25927620569419008E280E /* MWHttpResponse.m */,
-				4A25927720569419008E280E /* MWURLRequestManager.h */,
-				4A25927920569419008E280E /* MWURLRequestManager.m */,
+				00077FB220A4956F00587AE9 /* MWFacade.h */,
+				00077FB320A4956F00587AE9 /* Network */,
+				00077FB820A4956F00587AE9 /* openApi */,
+				00077FBB20A4956F00587AE9 /* MWBlockChainDefine.h */,
+				00077FBC20A4956F00587AE9 /* Tracking */,
+				00077FCE20A4956F00587AE9 /* MWBlockChain.h */,
+				00077FCF20A4956F00587AE9 /* MWFacade.m */,
+				00077FD020A4956F00587AE9 /* Service */,
+				00077FD320A4956F00587AE9 /* Utility */,
+			);
+			path = BlockChain;
+			sourceTree = "<group>";
+		};
+		00077FB320A4956F00587AE9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				00077FB420A4956F00587AE9 /* MWHttpResponse.m */,
+				00077FB520A4956F00587AE9 /* MWURLRequestManager.h */,
+				00077FB620A4956F00587AE9 /* MWHttpResponse.h */,
+				00077FB720A4956F00587AE9 /* MWURLRequestManager.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
 		};
-		4A25927A20569419008E280E /* MWBlockChainResource */ = {
+		00077FB820A4956F00587AE9 /* openApi */ = {
 			isa = PBXGroup;
 			children = (
-				4A25927C20569419008E280E /* Info.plist */,
-			);
-			path = MWBlockChainResource;
-			sourceTree = "<group>";
-		};
-		4A25927D20569419008E280E /* openApi */ = {
-			isa = PBXGroup;
-			children = (
-				4A25927F20569419008E280E /* MWAPI.h */,
-				4A25927E20569419008E280E /* MWAPI.m */,
+				00077FB920A4956F00587AE9 /* MWAPI.m */,
+				00077FBA20A4956F00587AE9 /* MWAPI.h */,
 			);
 			path = openApi;
 			sourceTree = "<group>";
 		};
-		4A25928020569419008E280E /* Tracking */ = {
+		00077FBC20A4956F00587AE9 /* Tracking */ = {
 			isa = PBXGroup;
 			children = (
-				4A1BFBE22056EF9F00CF1183 /* MWCommonActionManager.h */,
-				4A1BFBE32056EF9F00CF1183 /* MWCommonActionManager.m */,
-				4A1BFBDA2056E59600CF1183 /* MWSendStrategyManager.h */,
-				4A1BFBDC2056E59700CF1183 /* MWSendStrategyManager.m */,
-				4A1BFBDD2056E59700CF1183 /* MWTimerManager.h */,
-				4A1BFBDB2056E59600CF1183 /* MWTimerManager.m */,
-				4A25928920569419008E280E /* MWTrackingDefine.h */,
-				4A1BFBB120569BC300CF1183 /* MW_ConnectionSession.h */,
-				4A1BFBB220569BC300CF1183 /* MW_ConnectionSession.m */,
-				4A25928820569419008E280E /* MWRequestOperation.h */,
-				4A25928120569419008E280E /* MWRequestOperation.m */,
-				4A25928620569419008E280E /* MWCompositeEvent.h */,
-				4A25928320569419008E280E /* MWCompositeEvent.m */,
-				4A25928420569419008E280E /* MWEventInfo.m */,
-				4A25928520569419008E280E /* MWEventInfo.h */,
-				00C684602090747300C5259D /* MW_ConnectionSessionManager.h */,
-				00C684612090747300C5259D /* MW_ConnectionSessionManager.m */,
+				00077FBD20A4956F00587AE9 /* MWTimerManager.h */,
+				00077FBE20A4956F00587AE9 /* MWRequestOperation.m */,
+				00077FBF20A4956F00587AE9 /* MW_ConnectionSession.m */,
+				00077FC020A4956F00587AE9 /* MWCompositeEvent.m */,
+				00077FC120A4956F00587AE9 /* MWEventInfo.m */,
+				00077FC220A4956F00587AE9 /* MWSendStrategyManager.m */,
+				00077FC320A4956F00587AE9 /* MWCommonActionManager.m */,
+				00077FC420A4956F00587AE9 /* MW_ConnectionSessionManager.mm */,
+				00077FC520A4956F00587AE9 /* MWTimerManager.m */,
+				00077FC620A4956F00587AE9 /* MWEventInfo.h */,
+				00077FC720A4956F00587AE9 /* MWCompositeEvent.h */,
+				00077FC820A4956F00587AE9 /* MW_ConnectionSession.h */,
+				00077FC920A4956F00587AE9 /* MWRequestOperation.h */,
+				00077FCA20A4956F00587AE9 /* MWTrackingDefine.h */,
+				00077FCB20A4956F00587AE9 /* MWCommonActionManager.h */,
+				00077FCC20A4956F00587AE9 /* MWSendStrategyManager.h */,
+				00077FCD20A4956F00587AE9 /* MW_ConnectionSessionManager.h */,
 			);
 			path = Tracking;
 			sourceTree = "<group>";
 		};
-		4A2592C120569419008E280E /* Utility */ = {
+		00077FD020A4956F00587AE9 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				4A1BFBE62057AF4600CF1183 /* MWNSStringUtils.h */,
-				4A1BFBE72057AF4600CF1183 /* MWNSStringUtils.m */,
-				4A2592C920569419008E280E /* MWDictionaryUtils.h */,
-				4A2592C320569419008E280E /* MWDictionaryUtils.m */,
-				4A2592C520569419008E280E /* MWNSFileManagerUtils.h */,
-				4A2592CC20569419008E280E /* MWNSFileManagerUtils.m */,
-				4A2592CF20569419008E280E /* MWDeviceUtil.h */,
-				4A2592C720569419008E280E /* MWDeviceUtil.m */,
-				4A2592CA20569419008E280E /* MWNSKeyedArchiverUtils.m */,
-				4A2592C220569419008E280E /* MWNSKeyedArchiverUtils.h */,
-				4A2592CB20569419008E280E /* MWCommonUtil.m */,
-				4A2592C620569419008E280E /* MWCommonUtil.h */,
-				4A2592CD20569419008E280E /* MWLog.h */,
-				4A2592C420569419008E280E /* MWLog.m */,
-				4A2592CE20569419008E280E /* MWReachability.h */,
-				4A2592C820569419008E280E /* MWReachability.m */,
+				00077FD120A4956F00587AE9 /* MWCommonService.h */,
+				00077FD220A4956F00587AE9 /* MWCommonService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		00077FD320A4956F00587AE9 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				00077FD420A4956F00587AE9 /* MWNSKeyedArchiverUtils.h */,
+				00077FD520A4956F00587AE9 /* MWDictionaryUtils.m */,
+				00077FD620A4956F00587AE9 /* MWLog.m */,
+				00077FD720A4956F00587AE9 /* MWNSFileManagerUtils.h */,
+				00077FD820A4956F00587AE9 /* MWCommonUtil.h */,
+				00077FD920A4956F00587AE9 /* MWDeviceUtil.m */,
+				00077FDA20A4956F00587AE9 /* MWNSStringUtils.h */,
+				00077FDB20A4956F00587AE9 /* MWReachability.m */,
+				00077FDC20A4956F00587AE9 /* MWDictionaryUtils.h */,
+				00077FDD20A4956F00587AE9 /* MWNSKeyedArchiverUtils.m */,
+				00077FDE20A4956F00587AE9 /* MWCommonUtil.m */,
+				00077FDF20A4956F00587AE9 /* MWNSFileManagerUtils.m */,
+				00077FE020A4956F00587AE9 /* MWLog.h */,
+				00077FE120A4956F00587AE9 /* MWReachability.h */,
+				00077FE220A4956F00587AE9 /* MWNSStringUtils.m */,
+				00077FE320A4956F00587AE9 /* MWDeviceUtil.h */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -245,9 +250,7 @@
 		4ACEBA7B204F8CD900C5A2B8 = {
 			isa = PBXGroup;
 			children = (
-				4A25927A20569419008E280E /* MWBlockChainResource */,
-				4A25927320569419008E280E /* MWBlockChain */,
-				4ACEBB8E205169CA00C5A2B8 /* MWBlockChainResource */,
+				00077FA920A4956F00587AE9 /* MWBlockChain */,
 				4ACEBA86204F8CD900C5A2B8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -260,14 +263,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4ACEBB8E205169CA00C5A2B8 /* MWBlockChainResource */ = {
-			isa = PBXGroup;
-			children = (
-				4ACEBB8F205169CA00C5A2B8 /* Info.plist */,
-			);
-			path = MWBlockChainResource;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -275,29 +270,30 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A2592D82056941A008E280E /* MWAPI.h in Headers */,
-				4A2592E02056941A008E280E /* MWRequestOperation.h in Headers */,
-				4A1BFBE82057AF4600CF1183 /* MWNSStringUtils.h in Headers */,
-				4A2592D22056941A008E280E /* MWURLRequestManager.h in Headers */,
-				4A1BFBE42056EF9F00CF1183 /* MWCommonActionManager.h in Headers */,
-				00C684622090747300C5259D /* MW_ConnectionSessionManager.h in Headers */,
-				4A2592DD2056941A008E280E /* MWEventInfo.h in Headers */,
-				4A1BFBB520569BC300CF1183 /* MW_ConnectionSession.h in Headers */,
-				4A2592D02056941A008E280E /* MWFacade.h in Headers */,
-				4A2592D32056941A008E280E /* MWHttpResponse.h in Headers */,
-				4A2593172056941A008E280E /* MWLog.h in Headers */,
-				4A2593132056941A008E280E /* MWDictionaryUtils.h in Headers */,
-				4A2592E22056941A008E280E /* MWBlockChain.h in Headers */,
-				4A1BFBE12056E59700CF1183 /* MWTimerManager.h in Headers */,
-				4A25930C2056941A008E280E /* MWNSKeyedArchiverUtils.h in Headers */,
-				4A2593182056941A008E280E /* MWReachability.h in Headers */,
-				4A1BFBDE2056E59700CF1183 /* MWSendStrategyManager.h in Headers */,
-				4A25930F2056941A008E280E /* MWNSFileManagerUtils.h in Headers */,
-				4A2593192056941A008E280E /* MWDeviceUtil.h in Headers */,
-				4A2592E12056941A008E280E /* MWTrackingDefine.h in Headers */,
-				4A1BFBD92056A92F00CF1183 /* MWCommonService.h in Headers */,
-				4A2592DE2056941A008E280E /* MWCompositeEvent.h in Headers */,
-				4A2593102056941A008E280E /* MWCommonUtil.h in Headers */,
+				0007800D20A4957000587AE9 /* MWNSStringUtils.h in Headers */,
+				0007801320A4957000587AE9 /* MWLog.h in Headers */,
+				00077FED20A4956F00587AE9 /* MWHttpResponse.h in Headers */,
+				0007800B20A4957000587AE9 /* MWCommonUtil.h in Headers */,
+				00077FF220A4956F00587AE9 /* MWTimerManager.h in Headers */,
+				0007800720A4957000587AE9 /* MWNSKeyedArchiverUtils.h in Headers */,
+				00077FEC20A4956F00587AE9 /* MWURLRequestManager.h in Headers */,
+				00077FF120A4956F00587AE9 /* MWBlockChainDefine.h in Headers */,
+				0007801420A4957000587AE9 /* MWReachability.h in Headers */,
+				0007800120A4957000587AE9 /* MWSendStrategyManager.h in Headers */,
+				0007800A20A4957000587AE9 /* MWNSFileManagerUtils.h in Headers */,
+				00077FFF20A4957000587AE9 /* MWTrackingDefine.h in Headers */,
+				00077FF020A4956F00587AE9 /* MWAPI.h in Headers */,
+				00077FEA20A4956F00587AE9 /* MWFacade.h in Headers */,
+				00077FFD20A4957000587AE9 /* MW_ConnectionSession.h in Headers */,
+				0007800F20A4957000587AE9 /* MWDictionaryUtils.h in Headers */,
+				0007800320A4957000587AE9 /* MWBlockChain.h in Headers */,
+				0007800020A4957000587AE9 /* MWCommonActionManager.h in Headers */,
+				00077FFE20A4957000587AE9 /* MWRequestOperation.h in Headers */,
+				0007800520A4957000587AE9 /* MWCommonService.h in Headers */,
+				0007801620A4957000587AE9 /* MWDeviceUtil.h in Headers */,
+				00077FFB20A4956F00587AE9 /* MWEventInfo.h in Headers */,
+				0007800220A4957000587AE9 /* MW_ConnectionSessionManager.h in Headers */,
+				00077FFC20A4957000587AE9 /* MWCompositeEvent.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,27 +387,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A2592DC2056941A008E280E /* MWEventInfo.m in Sources */,
-				4A2593122056941A008E280E /* MWReachability.m in Sources */,
-				4A1BFBE02056E59700CF1183 /* MWSendStrategyManager.m in Sources */,
-				4A1BFBE92057AF4600CF1183 /* MWNSStringUtils.m in Sources */,
-				00C684632090747300C5259D /* MW_ConnectionSessionManager.m in Sources */,
-				4A2592DB2056941A008E280E /* MWCompositeEvent.m in Sources */,
-				4A2593112056941A008E280E /* MWDeviceUtil.m in Sources */,
-				4A2592D72056941A008E280E /* MWAPI.m in Sources */,
-				4A2592D92056941A008E280E /* MWRequestOperation.m in Sources */,
-				4A25930D2056941A008E280E /* MWDictionaryUtils.m in Sources */,
-				4A1BFBB620569BC300CF1183 /* MW_ConnectionSession.m in Sources */,
-				4A2592D12056941A008E280E /* MWHttpResponse.m in Sources */,
-				4A25930A2056941A008E280E /* MWFacade.m in Sources */,
-				4A1BFBE52056EF9F00CF1183 /* MWCommonActionManager.m in Sources */,
-				4A1BFBD82056A92F00CF1183 /* MWCommonService.m in Sources */,
-				4A2592D42056941A008E280E /* MWURLRequestManager.m in Sources */,
-				4A2593152056941A008E280E /* MWCommonUtil.m in Sources */,
-				4A25930E2056941A008E280E /* MWLog.m in Sources */,
-				4A1BFBDF2056E59700CF1183 /* MWTimerManager.m in Sources */,
-				4A2593162056941A008E280E /* MWNSFileManagerUtils.m in Sources */,
-				4A2593142056941A008E280E /* MWNSKeyedArchiverUtils.m in Sources */,
+				0007801520A4957000587AE9 /* MWNSStringUtils.m in Sources */,
+				0007800920A4957000587AE9 /* MWLog.m in Sources */,
+				00077FF620A4956F00587AE9 /* MWEventInfo.m in Sources */,
+				00077FF820A4956F00587AE9 /* MWCommonActionManager.m in Sources */,
+				0007800620A4957000587AE9 /* MWCommonService.m in Sources */,
+				0007800820A4957000587AE9 /* MWDictionaryUtils.m in Sources */,
+				0007801020A4957000587AE9 /* MWNSKeyedArchiverUtils.m in Sources */,
+				00077FEF20A4956F00587AE9 /* MWAPI.m in Sources */,
+				00077FFA20A4956F00587AE9 /* MWTimerManager.m in Sources */,
+				0007801120A4957000587AE9 /* MWCommonUtil.m in Sources */,
+				00077FF720A4956F00587AE9 /* MWSendStrategyManager.m in Sources */,
+				00077FF520A4956F00587AE9 /* MWCompositeEvent.m in Sources */,
+				0007800C20A4957000587AE9 /* MWDeviceUtil.m in Sources */,
+				0007800E20A4957000587AE9 /* MWReachability.m in Sources */,
+				0007800420A4957000587AE9 /* MWFacade.m in Sources */,
+				00077FF920A4956F00587AE9 /* MW_ConnectionSessionManager.mm in Sources */,
+				00077FF420A4956F00587AE9 /* MW_ConnectionSession.m in Sources */,
+				00077FF320A4956F00587AE9 /* MWRequestOperation.m in Sources */,
+				00077FEB20A4956F00587AE9 /* MWHttpResponse.m in Sources */,
+				0007801220A4957000587AE9 /* MWNSFileManagerUtils.m in Sources */,
+				00077FEE20A4956F00587AE9 /* MWURLRequestManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
