@@ -21,7 +21,7 @@ AdSupport.framework
 SystemConfiguration.framework
 CoreTelephony.framework
 
-- 注意
+- 注意:
 将SDK拖进项目后，编译项目会发现工程报错，需开发者手动将工程中一个文件的后缀名.m换成.mm即可。
 
 #### 初始化SDK
