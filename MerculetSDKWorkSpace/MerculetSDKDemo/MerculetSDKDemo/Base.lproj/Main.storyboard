@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JDU-zw-YXt">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="B33-nf-bpI">
+            <objects>
+                <viewController id="AZF-E0-RbY" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ogp-7c-SCI"/>
+                        <viewControllerLayoutGuide type="bottom" id="mtQ-yn-u4w"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SWq-7C-2Gt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5zd-PY-DNL">
+                                <rect key="frame" x="20" y="74" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ROCNESD" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7yA-va-cO9">
+                                <rect key="frame" x="82" y="70" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="cCT-SD-eYe"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="邀请码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Z0-la-2QZ">
+                                <rect key="frame" x="20" y="110" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ROCNESD" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lkr-zS-D37">
+                                <rect key="frame" x="82" y="105.5" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="ACE-On-ilj"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhK-mL-B7v">
+                                <rect key="frame" x="20" y="179.5" width="97" height="35"/>
+                                <color key="backgroundColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="03u-gz-5ru"/>
+                                </constraints>
+                                <state key="normal" title="登录\切换用户">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="change:" destination="AZF-E0-RbY" eventType="touchUpInside" id="sd5-Xu-Kwx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LiB-pn-TVZ">
+                                <rect key="frame" x="258" y="179.5" width="97" height="35"/>
+                                <color key="backgroundColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="bzb-x6-Owj"/>
+                                </constraints>
+                                <state key="normal" title="注销用户">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancel:" destination="AZF-E0-RbY" eventType="touchUpInside" id="RKL-NM-lCr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxh-q9-NMS">
+                                <rect key="frame" x="20" y="467" width="98.5" height="30"/>
+                                <color key="backgroundColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="分享">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="click1:" destination="AZF-E0-RbY" eventType="touchUpInside" id="90G-U2-VBX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lnl-Wi-cam">
+                                <rect key="frame" x="138.5" y="467" width="98" height="30"/>
+                                <color key="backgroundColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="充值">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="click1:" destination="AZF-E0-RbY" eventType="touchUpInside" id="Vae-ZE-ZBr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7T-ux-oNt">
+                                <rect key="frame" x="256.5" y="467" width="98.5" height="30"/>
+                                <color key="backgroundColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="评价">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="click1:" destination="AZF-E0-RbY" eventType="touchUpInside" id="yIm-CK-966"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2G-6h-4Q1">
+                                <rect key="frame" x="20" y="517" width="98.5" height="30"/>
+                                <color key="backgroundColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="转发">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="click1:" destination="AZF-E0-RbY" eventType="touchUpInside" id="g3N-Tk-gPA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kq9-Vo-tfQ">
+                                <rect key="frame" x="138.5" y="517" width="98" height="30"/>
+                                <color key="backgroundColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="打赏">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="click1:" destination="AZF-E0-RbY" eventType="touchUpInside" id="YYb-eD-fiZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Sf-mO-u7q">
+                                <rect key="frame" x="256.5" y="517" width="98.5" height="30"/>
+                                <color key="backgroundColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="关注">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="click1:" destination="AZF-E0-RbY" eventType="touchUpInside" id="ba4-sn-3cj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LPl-y8-hWf">
+                                <rect key="frame" x="20" y="567" width="98.5" height="30"/>
+                                <color key="backgroundColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="收藏">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="click1:" destination="AZF-E0-RbY" eventType="touchUpInside" id="C8o-yz-eyt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHe-dx-4HD">
+                                <rect key="frame" x="138.5" y="567" width="98" height="30"/>
+                                <color key="backgroundColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="点赞">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="click1:" destination="AZF-E0-RbY" eventType="touchUpInside" id="vFf-dH-Zyq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tta-cM-WJn">
+                                <rect key="frame" x="20" y="617" width="98.5" height="30"/>
+                                <color key="backgroundColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="播放">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="click1:" destination="AZF-E0-RbY" eventType="touchUpInside" id="sxA-tO-4NO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HoZ-r9-B4t">
+                                <rect key="frame" x="138.5" y="617" width="98" height="30"/>
+                                <color key="backgroundColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QwA-Hi-88T">
+                                <rect key="frame" x="256.5" y="617" width="98.5" height="30"/>
+                                <color key="backgroundColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aa7-Ul-2uc">
+                                <rect key="frame" x="256.5" y="567" width="98.5" height="30"/>
+                                <color key="backgroundColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="评论">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="click1:" destination="AZF-E0-RbY" eventType="touchUpInside" id="xp9-ek-YZ7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="LiB-pn-TVZ" secondAttribute="trailing" constant="20" id="01B-iY-N0R"/>
+                            <constraint firstItem="Kq9-Vo-tfQ" firstAttribute="leading" secondItem="B2G-6h-4Q1" secondAttribute="trailing" constant="20" id="0Cb-XQ-XTj"/>
+                            <constraint firstItem="lkr-zS-D37" firstAttribute="leading" secondItem="0Z0-la-2QZ" secondAttribute="trailing" constant="10" id="0Nv-NO-bPW"/>
+                            <constraint firstItem="mtQ-yn-u4w" firstAttribute="top" secondItem="QwA-Hi-88T" secondAttribute="bottom" constant="20" id="20H-Kd-sOH"/>
+                            <constraint firstItem="5zd-PY-DNL" firstAttribute="leading" secondItem="SWq-7C-2Gt" secondAttribute="leading" constant="20" id="2dk-ZF-YEu"/>
+                            <constraint firstItem="0Z0-la-2QZ" firstAttribute="leading" secondItem="SWq-7C-2Gt" secondAttribute="leading" constant="20" id="2jj-aP-Nxb"/>
+                            <constraint firstItem="tta-cM-WJn" firstAttribute="width" secondItem="Sxh-q9-NMS" secondAttribute="width" id="3jZ-g9-C9z"/>
+                            <constraint firstAttribute="trailing" secondItem="aa7-Ul-2uc" secondAttribute="trailing" constant="20" id="3l1-0S-Fav"/>
+                            <constraint firstItem="Sxh-q9-NMS" firstAttribute="leading" secondItem="SWq-7C-2Gt" secondAttribute="leading" constant="20" id="4Uk-1x-SDi"/>
+                            <constraint firstItem="aa7-Ul-2uc" firstAttribute="width" secondItem="Sxh-q9-NMS" secondAttribute="width" id="4cA-wc-EdT"/>
+                            <constraint firstItem="tta-cM-WJn" firstAttribute="leading" secondItem="SWq-7C-2Gt" secondAttribute="leading" constant="20" id="4xK-B8-EmP"/>
+                            <constraint firstItem="Lnl-Wi-cam" firstAttribute="width" secondItem="Sxh-q9-NMS" secondAttribute="width" id="6fU-Qo-tAj"/>
+                            <constraint firstItem="mtQ-yn-u4w" firstAttribute="top" secondItem="tta-cM-WJn" secondAttribute="bottom" constant="20" id="9uX-aO-el3"/>
+                            <constraint firstItem="B2G-6h-4Q1" firstAttribute="height" secondItem="Sxh-q9-NMS" secondAttribute="height" id="CKR-0q-bv1"/>
+                            <constraint firstItem="b7T-ux-oNt" firstAttribute="height" secondItem="Sxh-q9-NMS" secondAttribute="height" id="Cqs-H8-k7e"/>
+                            <constraint firstItem="B2G-6h-4Q1" firstAttribute="width" secondItem="Sxh-q9-NMS" secondAttribute="width" id="E3p-u6-nig"/>
+                            <constraint firstItem="b7T-ux-oNt" firstAttribute="width" secondItem="Sxh-q9-NMS" secondAttribute="width" id="EzQ-Py-Lw2"/>
+                            <constraint firstItem="Kq9-Vo-tfQ" firstAttribute="top" secondItem="Lnl-Wi-cam" secondAttribute="bottom" constant="20" id="GFI-zm-hz3"/>
+                            <constraint firstItem="Lnl-Wi-cam" firstAttribute="leading" secondItem="Sxh-q9-NMS" secondAttribute="trailing" constant="20" id="Gfu-ml-Vpj"/>
+                            <constraint firstItem="2Sf-mO-u7q" firstAttribute="width" secondItem="Sxh-q9-NMS" secondAttribute="width" id="JDP-Lk-MHO"/>
+                            <constraint firstItem="QwA-Hi-88T" firstAttribute="width" secondItem="Sxh-q9-NMS" secondAttribute="width" id="KTF-BS-9qU"/>
+                            <constraint firstItem="lkr-zS-D37" firstAttribute="centerY" secondItem="0Z0-la-2QZ" secondAttribute="centerY" id="KXQ-5x-C1I"/>
+                            <constraint firstItem="vhK-mL-B7v" firstAttribute="top" secondItem="lkr-zS-D37" secondAttribute="bottom" constant="44" id="LAm-LL-eMI"/>
+                            <constraint firstItem="QwA-Hi-88T" firstAttribute="top" secondItem="aa7-Ul-2uc" secondAttribute="bottom" constant="20" id="LUD-O5-zIo"/>
+                            <constraint firstItem="B2G-6h-4Q1" firstAttribute="leading" secondItem="SWq-7C-2Gt" secondAttribute="leading" constant="20" id="Lhw-Aa-eci"/>
+                            <constraint firstItem="b7T-ux-oNt" firstAttribute="leading" secondItem="Lnl-Wi-cam" secondAttribute="trailing" constant="20" id="MUq-IG-og7"/>
+                            <constraint firstItem="LiB-pn-TVZ" firstAttribute="width" secondItem="vhK-mL-B7v" secondAttribute="width" id="Mfr-IK-489"/>
+                            <constraint firstItem="5zd-PY-DNL" firstAttribute="top" secondItem="Ogp-7c-SCI" secondAttribute="bottom" constant="10" id="P4d-GJ-ADa"/>
+                            <constraint firstItem="HoZ-r9-B4t" firstAttribute="top" secondItem="eHe-dx-4HD" secondAttribute="bottom" constant="20" id="QeC-DA-GDb"/>
+                            <constraint firstItem="HoZ-r9-B4t" firstAttribute="leading" secondItem="tta-cM-WJn" secondAttribute="trailing" constant="20" id="Qia-wb-R7G"/>
+                            <constraint firstItem="LPl-y8-hWf" firstAttribute="height" secondItem="Sxh-q9-NMS" secondAttribute="height" id="ReP-QD-pKg"/>
+                            <constraint firstItem="HoZ-r9-B4t" firstAttribute="height" secondItem="Sxh-q9-NMS" secondAttribute="height" id="SCP-pH-j4d"/>
+                            <constraint firstItem="2Sf-mO-u7q" firstAttribute="leading" secondItem="Kq9-Vo-tfQ" secondAttribute="trailing" constant="20" id="SST-6V-mom"/>
+                            <constraint firstItem="eHe-dx-4HD" firstAttribute="height" secondItem="Sxh-q9-NMS" secondAttribute="height" id="Sl0-6H-tK6"/>
+                            <constraint firstItem="2Sf-mO-u7q" firstAttribute="height" secondItem="Sxh-q9-NMS" secondAttribute="height" id="V3Y-V7-cU2"/>
+                            <constraint firstItem="LiB-pn-TVZ" firstAttribute="top" secondItem="vhK-mL-B7v" secondAttribute="top" id="X5x-FT-QgY"/>
+                            <constraint firstItem="mtQ-yn-u4w" firstAttribute="top" secondItem="HoZ-r9-B4t" secondAttribute="bottom" constant="20" id="YAt-l0-zZV"/>
+                            <constraint firstAttribute="trailing" secondItem="b7T-ux-oNt" secondAttribute="trailing" constant="20" id="YVL-bZ-BEM"/>
+                            <constraint firstItem="QwA-Hi-88T" firstAttribute="height" secondItem="Sxh-q9-NMS" secondAttribute="height" id="aRk-dg-C25"/>
+                            <constraint firstItem="7yA-va-cO9" firstAttribute="leading" secondItem="5zd-PY-DNL" secondAttribute="trailing" constant="10" id="aSv-7A-DxP"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vhK-mL-B7v" secondAttribute="trailing" constant="20" symbolic="YES" id="asN-3n-EKR"/>
+                            <constraint firstItem="eHe-dx-4HD" firstAttribute="leading" secondItem="LPl-y8-hWf" secondAttribute="trailing" constant="20" id="bNZ-9q-YLL"/>
+                            <constraint firstItem="aa7-Ul-2uc" firstAttribute="top" secondItem="2Sf-mO-u7q" secondAttribute="bottom" constant="20" id="bdA-qf-1IL"/>
+                            <constraint firstItem="Kq9-Vo-tfQ" firstAttribute="width" secondItem="Sxh-q9-NMS" secondAttribute="width" id="f1K-ya-cQk"/>
+                            <constraint firstItem="eHe-dx-4HD" firstAttribute="top" secondItem="Kq9-Vo-tfQ" secondAttribute="bottom" constant="20" id="fuk-rd-ths"/>
+                            <constraint firstItem="7yA-va-cO9" firstAttribute="centerY" secondItem="5zd-PY-DNL" secondAttribute="centerY" id="ha7-5f-B6b"/>
+                            <constraint firstItem="LPl-y8-hWf" firstAttribute="leading" secondItem="SWq-7C-2Gt" secondAttribute="leading" constant="20" id="hss-u1-hMh"/>
+                            <constraint firstItem="aa7-Ul-2uc" firstAttribute="leading" secondItem="eHe-dx-4HD" secondAttribute="trailing" constant="20" id="kZ2-Yc-tEn"/>
+                            <constraint firstItem="Kq9-Vo-tfQ" firstAttribute="height" secondItem="Sxh-q9-NMS" secondAttribute="height" id="kjK-rZ-d6h"/>
+                            <constraint firstAttribute="trailing" secondItem="2Sf-mO-u7q" secondAttribute="trailing" constant="20" id="mHV-bl-XAo"/>
+                            <constraint firstItem="LPl-y8-hWf" firstAttribute="top" secondItem="B2G-6h-4Q1" secondAttribute="bottom" constant="20" id="mYV-Bs-DBb"/>
+                            <constraint firstItem="HoZ-r9-B4t" firstAttribute="width" secondItem="Sxh-q9-NMS" secondAttribute="width" id="n2H-oW-1Gy"/>
+                            <constraint firstItem="Lnl-Wi-cam" firstAttribute="height" secondItem="Sxh-q9-NMS" secondAttribute="height" id="rBu-LJ-ImD"/>
+                            <constraint firstItem="aa7-Ul-2uc" firstAttribute="height" secondItem="Sxh-q9-NMS" secondAttribute="height" id="tec-4Q-zc1"/>
+                            <constraint firstItem="tta-cM-WJn" firstAttribute="top" secondItem="LPl-y8-hWf" secondAttribute="bottom" constant="20" id="u4o-Hf-4fQ"/>
+                            <constraint firstItem="LPl-y8-hWf" firstAttribute="width" secondItem="Sxh-q9-NMS" secondAttribute="width" id="uWR-AB-ila"/>
+                            <constraint firstItem="eHe-dx-4HD" firstAttribute="width" secondItem="Sxh-q9-NMS" secondAttribute="width" id="ugC-Vp-xvn"/>
+                            <constraint firstAttribute="trailing" secondItem="QwA-Hi-88T" secondAttribute="trailing" constant="20" id="v80-Ko-P1r"/>
+                            <constraint firstItem="0Z0-la-2QZ" firstAttribute="top" secondItem="7yA-va-cO9" secondAttribute="bottom" constant="10" id="w94-An-Vn6"/>
+                            <constraint firstItem="tta-cM-WJn" firstAttribute="height" secondItem="Sxh-q9-NMS" secondAttribute="height" id="wZR-Jo-2sf"/>
+                            <constraint firstItem="B2G-6h-4Q1" firstAttribute="top" secondItem="Sxh-q9-NMS" secondAttribute="bottom" constant="20" id="xIP-YJ-c61"/>
+                            <constraint firstItem="vhK-mL-B7v" firstAttribute="leading" secondItem="SWq-7C-2Gt" secondAttribute="leading" constant="20" id="xwa-zp-FYb"/>
+                            <constraint firstItem="2Sf-mO-u7q" firstAttribute="top" secondItem="b7T-ux-oNt" secondAttribute="bottom" constant="20" id="yx8-eo-yEZ"/>
+                            <constraint firstItem="QwA-Hi-88T" firstAttribute="leading" secondItem="HoZ-r9-B4t" secondAttribute="trailing" constant="20" id="zYa-Mq-2bs"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="u0C-hL-JHQ" appends="YES" id="VRk-o0-Lfc"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="cfs-oU-Wxy"/>
+                    <connections>
+                        <outlet property="invitationT" destination="lkr-zS-D37" id="Zt7-wQ-NP8"/>
+                        <outlet property="userOpenT" destination="7yA-va-cO9" id="AhC-yC-fYu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tly-d2-ngV" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="u0C-hL-JHQ">
+                    <connections>
+                        <action selector="touch:" destination="AZF-E0-RbY" id="tgB-kU-pS7"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-1047" y="99"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JXq-S0-9af">
+            <objects>
+                <navigationController id="JDU-zw-YXt" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EsC-fe-hnz">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="AZF-E0-RbY" kind="relationship" relationship="rootViewController" id="Rqv-WO-2am"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bcF-jH-dza" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1983" y="99"/>
+        </scene>
+    </scenes>
+</document>
