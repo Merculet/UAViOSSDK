@@ -14,7 +14,7 @@
 
 拖动文件夹到工程中，拖到工程中后，弹出以下对话框，勾选“Copy items into destination group's folder(if needed)”，并点击“Finish”按钮，如图：
 
-![image.png](https://github.com/Merculet/UAViOSSDK/blob/master/files2.png)
+![image.png](https://sdk.mlinks.cc/merculet_doc_image_001.png)
 
 - 添加依赖库
 
