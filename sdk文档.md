@@ -3,13 +3,13 @@
 
 
 # 快速集成
-#### 获取appkey、account_key、account_secret
+## 获取appkey、account_key、account_secret
 [进入官网](http://merculet.io/)，按照步骤提示注册应用，可获得appkey、account_key、account_secret。
 
-#### 获取Token
+## 获取Token
 基于上述三个数值，接入方需要调用Merculet的签发Token的接口。
 
-#### 导入SDK
+## 导入SDK
 - 下载SDK并集成
 
 拖动文件夹到工程中，拖到工程中后，弹出以下对话框，勾选“Copy items into destination group's folder(if needed)”，并点击“Finish”按钮，如图：
@@ -17,14 +17,20 @@
 ![image.png](https://github.com/Merculet/UAViOSSDK/blob/master/files2.png)
 
 - 添加依赖库
+
+
 AdSupport.framework
+
+
 SystemConfiguration.framework
+
+
 CoreTelephony.framework
 
-- 注意:
-将SDK拖进项目后，编译项目会发现工程报错，需开发者手动将工程中一个文件的后缀名.m换成.mm即可。
 
-#### 初始化SDK
+libc++.tbd
+
+## 初始化SDK
 在AppDelegate中，添加头文件引用
 
 ```objc
@@ -53,7 +59,7 @@ return YES;
 ```
 
 # 自定义事件统计
-#### 自定义事件统计
+## 自定义事件统计
 - 传入用户的userId（必填项）和邀请码（选填项）
 由于SDK是跟踪用户的行为的，所以确保在传入了userId，否则SDK不会收集任何信息
 
@@ -70,7 +76,7 @@ NSString *invitation = @"XXX";// 选填
 [MWAPI cancelUserOpenId];
 ```
 
-#### 统计指定行为
+## 统计指定行为
 eventName、KeyValue参数需要先在后台管理上注册，才能参与正常的数据统计
 
 ```objc
@@ -78,5 +84,5 @@ eventName、KeyValue参数需要先在后台管理上注册，才能参与正常
 ```
 
 # 注意事项
-#### 支持ATS
-苹果：2017 年1月1日后所有iOS应用必须启用ATS。 SDK已启用ATS。
+## 支持ATS
+苹果：2017 年1月1日后所有iOS应用必须启用ATS。SDK已启用ATS。
