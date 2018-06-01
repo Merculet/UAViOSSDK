@@ -12,7 +12,7 @@
 ## 导入SDK
 - 下载SDK并集成
 
-拖动文件夹到工程中，拖到工程中后，弹出以下对话框，勾选“Copy items into destination group's folder(if needed)”，并点击“Finish”按钮，如图：
+将库拖动到工程中，拖到工程中后，弹出以下对话框，勾选“Copy items into destination group's folder(if needed)”，并点击“Finish”按钮，如图：
 
 ![image.png](https://sdk.mlinks.cc/merculet_doc_image_001.png)
 
@@ -48,30 +48,21 @@ libc++.tbd
 //初始化SDK
 [MWAPI registerApp]; 
 
+// 切换至国内的API
+[MWAPI setChinaEnable:YES];
+
 return YES;
 }
 ```
 
-初始化完成之后，需要向sdk设置token
-
-```objc
-[MWAPI setToken:token];
-```
-
 # 自定义事件统计
 ## 自定义事件统计
-- 传入用户的userId（必填项）和邀请码（选填项）
-由于SDK是跟踪用户的行为的，所以确保在传入了userId，否则SDK不会收集任何信息
-
+- 传入初始化完成之后，需要向sdk设置token
 ```objc
-NSString *userId = @"XXX";// 必填
-NSString *invitation = @"XXX";// 选填
-[MWAPI setUserOpenId:userId invitationCode:invitation];
+[MWAPI setToken:@"XXX"];
 ```
 
 -  取消对用户的追踪 
-不能将userOpenId直接设置成nil或空字符串
-
 ```objc
 [MWAPI cancelUserOpenId];
 ```
@@ -81,6 +72,13 @@ eventName、KeyValue参数需要先在后台管理上注册，才能参与正常
 
 ```objc
 [MWAPI setCustomAction:@"eventName" attributes:@{@"key1":@"value1",@"key2":@"value2",…}];
+```
+
+## 国内外域名切换
+默认是国外域名。
+
+```objc
+[MWAPI setChinaEnable: YES]; // 切换至国内API
 ```
 
 # 注意事项
