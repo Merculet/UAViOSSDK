@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = "MerculetSDK"
-s.version      = "1.0.2"
+s.version      = "1.0.3"
 s.summary      = "MerculetSDK for Cocoapods convenience."
 s.homepage     = "http://open.mbc.magicwindow.cn/"
 s.license      = "MIT"
@@ -11,5 +11,5 @@ s.ios.deployment_target = "7.0"
 s.requires_arc = true
 s.ios.vendored_frameworks = 'MerculetSDK.framework'
 s.frameworks = "AdSupport","CoreTelephony","CoreFoundation","SystemConfiguration"
-s.library   = "c++.tbd"
+s.library   = "c++"
 end
