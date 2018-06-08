@@ -10,7 +10,7 @@
 
 @interface MW_ConnectionSessionManager : NSObject
 
-@property (nonatomic,assign) BOOL willTerminate;
+@property (nonatomic, assign) BOOL willTerminate;
 
 - (void)initTokneWithUserOpenid: (nonnull NSString *)userObpenid;
 

@@ -110,9 +110,7 @@ static NSString *MWTimer = @"MWTimer";
             [application endBackgroundTask:bgTask];
             NSLog(@"====任务完成了。。。。。。。。。。。。。。。===>");
             [application endBackgroundTask:bgTask];
-            
         });
-        
     }];
     
     [self stopTimer];
@@ -122,8 +120,6 @@ static NSString *MWTimer = @"MWTimer";
             [self uploadEvent];
         });
     });
-    
-    
 }
 
 //重新进来后响应
@@ -132,7 +128,6 @@ static NSString *MWTimer = @"MWTimer";
     [self startTimer];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        
         [self uploadEvent];
     });
 }

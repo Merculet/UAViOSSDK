@@ -11,12 +11,23 @@
 		000781D820A9663300587AE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 000781D720A9663300587AE9 /* Assets.xcassets */; };
 		000781DB20A9663300587AE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 000781D920A9663300587AE9 /* LaunchScreen.storyboard */; };
 		000781DE20A9663300587AE9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 000781DD20A9663300587AE9 /* main.m */; };
-		0012E19D20AD35CD0022CD4A /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0012E19620AD2FB50022CD4A /* libc++.tbd */; };
-		0012E20020ADA8C60022CD4A /* libMerculetEncrypte.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0012E1FF20ADA8C60022CD4A /* libMerculetEncrypte.a */; };
-		0012E20220ADA8C60022CD4A /* libMerculetSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0012E20120ADA8C60022CD4A /* libMerculetSDK.a */; };
+		00114C2920B5516100CD2AC6 /* MerculetSDKDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00114C2820B5516100CD2AC6 /* MerculetSDKDemoTests.m */; };
 		0012E25320ADC8F90022CD4A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0012E25120ADC8F80022CD4A /* AppDelegate.m */; };
 		0012E25620ADC9100022CD4A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0012E25420ADC90F0022CD4A /* ViewController.m */; };
+		0051106C20C5243A00E415BC /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0012E19620AD2FB50022CD4A /* libc++.tbd */; };
+		008FD9D220CA8D9500EEC40A /* MerculetSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 008FD9D120CA8D9500EEC40A /* MerculetSDK.framework */; };
+		00F39B4520BD4DE400F81C78 /* MWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F39B4420BD4DE400F81C78 /* MWViewController.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00114C2B20B5516100CD2AC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 000781C320A9663200587AE9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 000781CA20A9663200587AE9;
+			remoteInfo = MerculetSDKDemo;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		000781CB20A9663200587AE9 /* MerculetSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MerculetSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -25,19 +36,18 @@
 		000781DA20A9663300587AE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		000781DC20A9663300587AE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		000781DD20A9663300587AE9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		00114C2620B5516100CD2AC6 /* MerculetSDKDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MerculetSDKDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00114C2820B5516100CD2AC6 /* MerculetSDKDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MerculetSDKDemoTests.m; sourceTree = "<group>"; };
+		00114C2A20B5516100CD2AC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0012E19620AD2FB50022CD4A /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		0012E19A20AD310C0022CD4A /* libMerculetSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libMerculetSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		0012E1B320AD969A0022CD4A /* libMerculetSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libMerculetSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		0012E1F320AD9B580022CD4A /* libMerculetSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libMerculetSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		0012E1F920ADA6290022CD4A /* libMerculetEncrypte.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libMerculetEncrypte.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		0012E1FB20ADA88C0022CD4A /* libMerculetEncrypte.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libMerculetEncrypte.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		0012E1FD20ADA88D0022CD4A /* libMerculetSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libMerculetSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		0012E1FF20ADA8C60022CD4A /* libMerculetEncrypte.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libMerculetEncrypte.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		0012E20120ADA8C60022CD4A /* libMerculetSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libMerculetSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0012E25120ADC8F80022CD4A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0012E25220ADC8F80022CD4A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0012E25420ADC90F0022CD4A /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0012E25520ADC90F0022CD4A /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		0031730D20B50FA0007AF36C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		008FD9D120CA8D9500EEC40A /* MerculetSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MerculetSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		00F39B4320BD4DE400F81C78 /* MWViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MWViewController.h; sourceTree = "<group>"; };
+		00F39B4420BD4DE400F81C78 /* MWViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MWViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,9 +55,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0012E20020ADA8C60022CD4A /* libMerculetEncrypte.a in Frameworks */,
-				0012E20220ADA8C60022CD4A /* libMerculetSDK.a in Frameworks */,
-				0012E19D20AD35CD0022CD4A /* libc++.tbd in Frameworks */,
+				008FD9D220CA8D9500EEC40A /* MerculetSDK.framework in Frameworks */,
+				0051106C20C5243A00E415BC /* libc++.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00114C2320B5516100CD2AC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				000781CD20A9663200587AE9 /* MerculetSDKDemo */,
+				00114C2720B5516100CD2AC6 /* MerculetSDKDemoTests */,
 				000781CC20A9663200587AE9 /* Products */,
 				0007829020A96F2D00587AE9 /* Frameworks */,
 			);
@@ -67,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				000781CB20A9663200587AE9 /* MerculetSDKDemo.app */,
+				00114C2620B5516100CD2AC6 /* MerculetSDKDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,13 +94,15 @@
 			children = (
 				0012E25120ADC8F80022CD4A /* AppDelegate.m */,
 				0012E25220ADC8F80022CD4A /* AppDelegate.h */,
-				0012E25420ADC90F0022CD4A /* ViewController.m */,
 				0012E25520ADC90F0022CD4A /* ViewController.h */,
+				0012E25420ADC90F0022CD4A /* ViewController.m */,
 				000781D420A9663200587AE9 /* Main.storyboard */,
 				000781D720A9663300587AE9 /* Assets.xcassets */,
 				000781D920A9663300587AE9 /* LaunchScreen.storyboard */,
 				000781DC20A9663300587AE9 /* Info.plist */,
 				000781DD20A9663300587AE9 /* main.m */,
+				00F39B4320BD4DE400F81C78 /* MWViewController.h */,
+				00F39B4420BD4DE400F81C78 /* MWViewController.m */,
 			);
 			path = MerculetSDKDemo;
 			sourceTree = "<group>";
@@ -90,17 +110,20 @@
 		0007829020A96F2D00587AE9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0012E1FF20ADA8C60022CD4A /* libMerculetEncrypte.a */,
-				0012E20120ADA8C60022CD4A /* libMerculetSDK.a */,
-				0012E1FB20ADA88C0022CD4A /* libMerculetEncrypte.a */,
-				0012E1FD20ADA88D0022CD4A /* libMerculetSDK.a */,
-				0012E1F920ADA6290022CD4A /* libMerculetEncrypte.a */,
-				0012E1F320AD9B580022CD4A /* libMerculetSDK.a */,
-				0012E1B320AD969A0022CD4A /* libMerculetSDK.a */,
-				0012E19A20AD310C0022CD4A /* libMerculetSDK.a */,
+				008FD9D120CA8D9500EEC40A /* MerculetSDK.framework */,
+				0031730D20B50FA0007AF36C /* XCTest.framework */,
 				0012E19620AD2FB50022CD4A /* libc++.tbd */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		00114C2720B5516100CD2AC6 /* MerculetSDKDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				00114C2820B5516100CD2AC6 /* MerculetSDKDemoTests.m */,
+				00114C2A20B5516100CD2AC6 /* Info.plist */,
+			);
+			path = MerculetSDKDemoTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +146,24 @@
 			productReference = 000781CB20A9663200587AE9 /* MerculetSDKDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		00114C2520B5516100CD2AC6 /* MerculetSDKDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00114C2F20B5516100CD2AC6 /* Build configuration list for PBXNativeTarget "MerculetSDKDemoTests" */;
+			buildPhases = (
+				00114C2220B5516100CD2AC6 /* Sources */,
+				00114C2320B5516100CD2AC6 /* Frameworks */,
+				00114C2420B5516100CD2AC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00114C2C20B5516100CD2AC6 /* PBXTargetDependency */,
+			);
+			name = MerculetSDKDemoTests;
+			productName = MerculetSDKDemoTests;
+			productReference = 00114C2620B5516100CD2AC6 /* MerculetSDKDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -134,6 +175,11 @@
 				TargetAttributes = {
 					000781CA20A9663200587AE9 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
+					};
+					00114C2520B5516100CD2AC6 = {
+						CreatedOnToolsVersion = 9.3.1;
+						TestTargetID = 000781CA20A9663200587AE9;
 					};
 				};
 			};
@@ -151,6 +197,7 @@
 			projectRoot = "";
 			targets = (
 				000781CA20A9663200587AE9 /* MerculetSDKDemo */,
+				00114C2520B5516100CD2AC6 /* MerculetSDKDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -166,6 +213,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		00114C2420B5516100CD2AC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -173,13 +227,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00F39B4520BD4DE400F81C78 /* MWViewController.m in Sources */,
 				0012E25620ADC9100022CD4A /* ViewController.m in Sources */,
 				000781DE20A9663300587AE9 /* main.m in Sources */,
 				0012E25320ADC8F90022CD4A /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		00114C2220B5516100CD2AC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00114C2920B5516100CD2AC6 /* MerculetSDKDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00114C2C20B5516100CD2AC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 000781CA20A9663200587AE9 /* MerculetSDKDemo */;
+			targetProxy = 00114C2B20B5516100CD2AC6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		000781D420A9663200587AE9 /* Main.storyboard */ = {
@@ -315,16 +386,27 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PE79EJX2E2;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MerculetSDKDemo",
+				);
 				INFOPLIST_FILE = MerculetSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wangweilucky.MerculetSDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MerculetSDKDemo/MerculetSDKTests/MerculetSDKDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
 			};
@@ -334,18 +416,68 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PE79EJX2E2;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MerculetSDKDemo",
+				);
 				INFOPLIST_FILE = MerculetSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wangweilucky.MerculetSDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MerculetSDKDemo/MerculetSDKTests/MerculetSDKDemo-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
+			};
+			name = Release;
+		};
+		00114C2D20B5516100CD2AC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9F96TWFKQY;
+				INFOPLIST_FILE = MerculetSDKDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wangweilucky.MerculetSDKDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MerculetSDKDemo.app/MerculetSDKDemo";
+			};
+			name = Debug;
+		};
+		00114C2E20B5516100CD2AC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9F96TWFKQY;
+				INFOPLIST_FILE = MerculetSDKDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wangweilucky.MerculetSDKDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MerculetSDKDemo.app/MerculetSDKDemo";
 			};
 			name = Release;
 		};
@@ -366,6 +498,15 @@
 			buildConfigurations = (
 				000781E220A9663300587AE9 /* Debug */,
 				000781E320A9663300587AE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00114C2F20B5516100CD2AC6 /* Build configuration list for PBXNativeTarget "MerculetSDKDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00114C2D20B5516100CD2AC6 /* Debug */,
+				00114C2E20B5516100CD2AC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -19,6 +19,7 @@
 #define MW_CS_STRATEGY_ACCOUNR_SECRET          @"mw_acs"
 #define MW_CS_STRATEGY_USER_OPEN_ID            @"mw_uoi"
 #define MW_CS_STRATEGY_Invitation_Code         @"mw_ic"
+#define MW_CS_STRATEGY_ChinaEnable             @"mw_chinaEnable"
 
 
 #define MW_CS_STRATEGY_FP                      @"mw_fp"
@@ -53,20 +54,23 @@
     {
         self.webviewNotificationEnable = NO;
         self.barEditEnable = NO;
-        self.mwUrl = MW_RELEASE;
+        self.mwUrl = [self urlDomain];
     }
     return self;
 }
 
-
-
-- (void)saveAndUpdateMWToken:(NSString *)token
-{
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults setObject:token forKey:MW_CS_Token];
-    [userDefaults synchronize];
-}
-
+//- (void)setChinaEnable:(BOOL)enable
+//{
+//    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+//    [userDefaults setBool:enable forKey:MW_CS_STRATEGY_ChinaEnable];
+//    [userDefaults synchronize];
+//}
+//
+//- (BOOL)getChinaEnable
+//{
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    return [defaults boolForKey:MW_CS_STRATEGY_ChinaEnable];
+//}
 
 - (void)saveAndUpdateAppKey:(NSString *)appKey
 {
@@ -170,6 +174,19 @@
     return [defaults stringForKey:MW_CS_Token];
 }
 
+- (void)saveAndUpdateMWToken:(NSString *)token
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:token forKey:MW_CS_Token];
+    [userDefaults synchronize];
+}
+
+- (void)removeMWToken
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults removeObjectForKey:MW_CS_Token];
+}
+
 - (NSString *)getAppKey
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -267,6 +284,16 @@
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     return [defaults objectForKey:MW_CS_UA];
+}
+
+// 默认是国外的
+- (NSString *)urlDomain {
+    
+    NSString *urlDomain = [NSString string];
+    urlDomain = MW_RELEASE_API;
+//    urlDomain = ENCHINA ? MW_RELEASE_API_CHINA : MW_RELEASE_API_NONCHINA;
+    return urlDomain;
+//    return MW_RELEASE_API;
 }
 
 @end

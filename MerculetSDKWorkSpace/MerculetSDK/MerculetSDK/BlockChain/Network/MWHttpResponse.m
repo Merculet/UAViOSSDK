@@ -8,11 +8,12 @@
 
 #import "MWHttpResponse.h"
 #import "MWLog.h"
+#import "MWAPI.h"
 //#import "MWUncaughtExceptionHandler.h"
 
 #define MW_RECEIVE_STATUS                       @"status"
 #define MW_RECEIVE_CODE                         @"code"
-#define MW_RECEIVE_ERROR_MESSAGE                @"msg"
+#define MW_RECEIVE_ERROR_MESSAGE                @"message"
 #define MW_RECEIVE_DATA                         @"data"
 
 @implementation MWHttpResponse
@@ -35,7 +36,9 @@
         }
         
         if (statusObj == nil) return NO;
-        
+//        
+//        [self pushTokenExpired:@(998) message:@"test"];
+//        return NO;
         
         NSInteger status = [statusObj integerValue];
         if (status != 0)
@@ -49,7 +52,7 @@
             {
                 [MWLog log:[NSString stringWithFormat:@"status = %li",(long)status]];
             }
-            
+            [self pushTokenExpired:status message:errorMsg];
             return NO;
         }
         return YES;
@@ -105,7 +108,23 @@
     } @finally {
         
     }
+}
 
++ (void)pushTokenExpired:(NSInteger)code message:(NSString *)message {
+    @try {
+        if (code == 998 || code == 999) {
+            NSMutableDictionary *userInfo = [NSMutableDictionary dictionary];
+            [userInfo setValue:@(code) forKey:MW_RECEIVE_CODE];
+            if (message != nil && message.length != 0) {
+                [userInfo setValue:message forKey:MW_RECEIVE_ERROR_MESSAGE];
+            }
+            [[NSNotificationCenter defaultCenter] postNotificationName:MWTokenExpiredNotification object:self userInfo:userInfo];
+        }
+    } @catch(NSException *exception) {
+        
+    } @finally {
+        
+    }
 }
 
 @end

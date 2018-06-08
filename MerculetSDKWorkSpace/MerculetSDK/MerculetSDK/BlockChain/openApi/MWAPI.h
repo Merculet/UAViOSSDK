@@ -10,6 +10,8 @@
 
 #define DEPRECATED(_version) __attribute__((deprecated))
 
+extern NSString * _Nonnull const MWTokenExpiredNotification;
+
 @interface MWAPI : NSObject
 
 #pragma mark -
@@ -26,15 +28,8 @@
  *  向sdk设置token
  *  必须是没有失效的token
  */
-+ (void)setToken:(nullable NSString *)token;
++ (void)setToken:(nullable NSString *)token userID:(nullable NSString *)userID;
 
-/**
- *  注册或者切换用户账号
- *  可以在切换用户账号的时候调用
- *  @param userOpenId        用户名
- *  @param invitationCode    邀请码
- */
-+ (void)setUserOpenId:(nonnull NSString *)userOpenId invitationCode:(nullable NSString*)invitationCode;
 
 /**
  *  取消追踪当前用户
@@ -46,6 +41,11 @@
  *  show debug
  */
 + (void)showLogEnable:(BOOL)enable;
+
+/**
+ *  设置是否是国内API
+ */
++ (void)setChinaEnable:(BOOL)enable __attribute__((deprecated("the method can't play")));
 
 
 #pragma mark -

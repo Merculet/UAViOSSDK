@@ -25,7 +25,7 @@
 //+ (NSString *)jsonString:(id)object;
 
 //判断string中是否包含str字符
-+ (BOOL)string:(NSString *)string hasContainsString:(NSString *)str;
+//+ (BOOL)string:(NSString *)string hasContainsString:(NSString *)str;
 
 
 @end

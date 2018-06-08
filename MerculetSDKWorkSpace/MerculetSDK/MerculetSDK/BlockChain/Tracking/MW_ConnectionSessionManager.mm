@@ -44,6 +44,10 @@
 }
 
 - (void)recordCustomEventDic: (nonnull NSDictionary *)eventDic {
+    // 如果没有token，将不保存数据
+    NSString *token = [[MWCommonService sharedInstance] getMWToken];
+    if ([MWCommonUtil isBlank:token]) {return;}
+    
     [self.session recordEventDic:eventDic];
 }
 

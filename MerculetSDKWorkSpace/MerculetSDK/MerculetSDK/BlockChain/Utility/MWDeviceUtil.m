@@ -68,7 +68,7 @@ typedef enum
 {
     NSString *idfa = NSClassFromString(@"ASIdentifierManager")?[[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString]:nil;
     if ([MWCommonUtil isNotBlank:idfa]) {
-        return @{MW_POST_KEY_EVENT_device_info_IDFA: idfa};
+        return @{MW_POST_KEY_EVENT_device_info_IDFA: idfa, MW_POST_KEY_EVENT_device_info_OS: Value_class(@"1")};
     }
     return nil;
 }

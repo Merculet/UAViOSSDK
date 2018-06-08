@@ -20,7 +20,9 @@
 @interface MWRequestOperation : NSOperation<NSCoding>
 
 // 定义一个operation事件
-- (id)initWithParamDic:(NSDictionary *)paramDic delegate:(id<MWRequestOperationDelegate> ) delegate;
+- (id)initWithParamDic:(NSDictionary *)paramDic
+              delegate:(id<MWRequestOperationDelegate>)delegate;
+
 @property (nonatomic,weak) id<MWRequestOperationDelegate> delegate;
 //@property (nonatomic)RequestTag tag;
 

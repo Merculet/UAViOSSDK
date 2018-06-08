@@ -7,7 +7,4 @@
    <FileRef
       location = "group:MerculetSDK/MerculetSDK.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:MerculetEncrypte/MerculetEncrypte.xcodeproj">
-   </FileRef>
 </Workspace>

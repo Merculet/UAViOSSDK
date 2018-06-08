@@ -44,6 +44,7 @@
     
     
     NSDictionary *dic = @{MW_POST_KEY_EVENT_device_info_IDFA:Value_class(self.idfa),
+                          MW_POST_KEY_EVENT_device_info_OS: Value_class(@"1")
                           };
     return dic;
 }

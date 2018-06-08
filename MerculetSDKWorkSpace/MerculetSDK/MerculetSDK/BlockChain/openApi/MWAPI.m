@@ -10,6 +10,9 @@
 #import "MWFacade.h"
 #import "MWLog.h"
 
+
+NSString * const MWTokenExpiredNotification = @"MWTokenExpiredNotification";
+
 @interface MWAPI ()
 
 @end
@@ -37,14 +40,8 @@
     [MWAPI registerApp:@"" accountKey:@"" accountSecret:@""];
 }
 
-+ (void)setToken:(nullable NSString *)token {
-    [[MWFacade sharedInstance] setToken: token];
-}
-
-+ (void)setUserOpenId:(nonnull NSString *)userOpenId invitationCode:(nullable NSString*)invitationCode
-{
-    [[MWFacade sharedInstance] setInvitationCode:invitationCode];
-    [[MWFacade sharedInstance] setUserOpenId:userOpenId];
++ (void)setToken:(nullable NSString *)token userID:(nullable NSString *)userID {
+    [[MWFacade sharedInstance] setToken:token userOpenId:userID];
 }
 
 
@@ -55,6 +52,13 @@
 
 + (void)showLogEnable:(BOOL)enable {
     [MWLog setDevLogEnable:enable];
+}
+
+/**
+ *  设置是否是国内API
+ */
++ (void)setChinaEnable:(BOOL)enable {
+    [[MWFacade sharedInstance] setChinaEnable:enable];
 }
 
 #pragma mark -

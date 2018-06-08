@@ -15,6 +15,7 @@
 #import "MWCommonUtil.h"
 #import "MWSendStrategyManager.h"
 #import "MWBlockChainDefine.h"
+#import "MWSQLiteManager.h"
 
 
 @interface MWFacade ()
@@ -24,6 +25,7 @@
 @property (nonatomic, strong) NSMutableDictionary *adDic;
 //设置后台环境
 @property (nonatomic, strong) NSString *mwUrl;
+
 
 @end
 
@@ -45,10 +47,10 @@
     {
        self.commonService = [MWCommonService sharedInstance];
         
-        
         //初始化session manager
         [MW_ConnectionSessionManager sharedInstance];
         [MWSendStrategyManager sharedInstance];
+        [MWSQLiteManager share];// 初始化数据库
     }
     return self;
 }
@@ -75,26 +77,36 @@
     }
 }
 
-- (void)setToken:(nullable NSString *)token {
-    if ([MWCommonUtil isBlank:token]) {return;}
+- (void)setToken:(nullable NSString *)token userOpenId:(nonnull NSString *)userOpenId {
     
+    // 移除配置信息和内存中的数据
+    [self removeConfig];
+    
+    if ([MWCommonUtil isBlank:token]) {
+        [MWLog log:@"token不能为空"];
+        return;
+    }
+    if ([MWCommonUtil isBlank:userOpenId]) {
+        [MWLog log:@"userOpenId不能为空"];
+        return;
+    }
+
+    self.isLoginout = NO;
+    // 保存新的userOpenId 和 token
+    [[MWCommonService sharedInstance] saveAndUpdateUserOpenID:userOpenId];
     [[MWCommonService sharedInstance] saveAndUpdateMWToken:token];
 }
 
-- (void)setUserOpenId:(nonnull NSString *)userOpenId {
-    
-    // 移除配置信息和内存中的数据
-//    [self removeConfig];
-    
-    if ([MWCommonUtil isNotBlank:userOpenId]) {
-        [[MW_ConnectionSessionManager sharedInstance] initTokneWithUserOpenid:userOpenId];
-    } else {
-        [MWLog logForDev:@"userOpenId不能为空"];
-    }
-}
 
 - (void)cancelUserOpenId {
-    [[MWCommonService sharedInstance] removeuserOpenid];
+    
+    // 去掉本地的userOpenId 和 token
+    NSString *token = [[MWCommonService sharedInstance] getMWToken];
+    NSString *userID = [[MWCommonService sharedInstance] getuserOpenid];
+    self.isLoginout = YES;
+    self.preToken = token;
+    self.preuserID = userID;
+    [[MW_ConnectionSessionManager sharedInstance] tick];
 }
 
 - (void)setInvitationCode:(nullable NSString *)invitation_code {
@@ -103,6 +115,10 @@
     } else {
         [MWLog logForDev:@"invitation_code没有值"];
     }
+}
+
+- (void)setChinaEnable:(BOOL)enable  {
+     [[MWCommonService sharedInstance] setChinaEnable:enable];
 }
 
 - (void)setCustomEvent:(nonnull NSString *)eventId attributes:(nullable NSDictionary *)attributes {
@@ -137,10 +153,14 @@
         
         NSMutableDictionary *parameter = [[NSMutableDictionary alloc] init];
         [parameter setValue:eventId forKey:@"action"];
-        
-        NSDictionary *dic = [MWDictionaryUtils reviewDic:attributes];
+        NSMutableDictionary *attributesMutable = [NSMutableDictionary dictionaryWithDictionary:attributes];
+        NSDate* dat = [NSDate dateWithTimeIntervalSinceNow:0];
+        NSTimeInterval timestamp = [dat timeIntervalSince1970]*1000;
+        NSString *timeString = [NSString stringWithFormat:@"%0.f", timestamp];
+        [attributesMutable setValue:timeString forKey:@"sp_timestamp"];
+        NSDictionary *dic = [MWDictionaryUtils reviewDic:attributesMutable];
         if ([MWCommonUtil isNotBlank:dic]) {
-            [parameter setValue:attributes forKey:@"actions_params"];
+            [parameter setValue:attributesMutable forKey:@"action_params"];
         }
         
         [[MW_ConnectionSessionManager sharedInstance] recordCustomEventDic:parameter];
@@ -174,7 +194,8 @@
 - (void)removeConfig {
     
     // 移除内存中的数据
-    [[MW_ConnectionSessionManager sharedInstance] tick];
+    [[MWCommonService sharedInstance] removeMWToken];
+    [[MWCommonService sharedInstance] removeuserOpenid];
 }
 
 @end

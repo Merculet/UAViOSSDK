@@ -1,4 +1,4 @@
-//
+
 //  MMA_ConnectionSession.m
 //  MobileTracking
 //
@@ -19,6 +19,9 @@
 #import "MWLog.h"
 #import "MWReachability.h"
 #import "MWCommonService.h"
+#import "MWFacade.h"
+#import "MWTrackingDefine.h"
+#import "MWSQLiteManager.h"
 
 #define MAX_COUNT           5000    //设置发送tracking数据requestlist的阀值
 
@@ -29,23 +32,11 @@
 
 @property (nonatomic,strong) NSMutableArray *eventList;
 @property (nonatomic,strong) NSOperationQueue *sendQueue;
-@property (nonatomic,strong) NSMutableArray *requestList;
+@property (nonatomic,strong) NSMutableArray<NSDictionary *> *requestList; // 元素包含：device_info、actions、mw-token这三个key
 
 @end
 
 @implementation MW_ConnectionSession
-
-//static MW_ConnectionSession *s_sharedConnectionQueue = nil;
-
-//+ (MW_ConnectionSession *)sharedInstance
-//{
-//    if (s_sharedConnectionQueue == nil)
-//    {
-//        s_sharedConnectionQueue = [[MW_ConnectionSession alloc] init];
-//    }
-//    
-//    return s_sharedConnectionQueue;
-//}
 
 - (instancetype)initWithType:(MW_ConnectionSessionType)type
 {
@@ -75,21 +66,16 @@
 - (void) tick
 {
     @try {
-        
-//        [MWLog logForDev:[[MWCommonService sharedInstance] getuserOpenid]];
-//        if (![[MWCommonService sharedInstance] getuserOpenid].length) {
-//            // 不存在用户，将动作删除
-//            [self.eventList removeAllObjects];
-//            return;
-//        }
-        
             @synchronized(self)
             {
+                // 将内存中的事件数组 -> 一个发送事件request
                 if ([MWCommonUtil isNotBlank:self.eventList])
                 {
                     NSArray *list = [self.eventList mutableCopy];
                     [self.eventList removeAllObjects];
+                    
                     NSDictionary *paramDic = [self getRequestParamDicWithEvents:list];
+    
                     if ([MWCommonUtil isNotBlank:paramDic])
                     {
                         [self.requestList addObject:paramDic];
@@ -97,6 +83,7 @@
                     }
                 }
                 
+                // 将数据保存下来
                 if([MWReachability getNetworkStatus] == NotReachable || _willTerminate)
                 {
                     [MWLog log:@"###no network" ];
@@ -109,17 +96,21 @@
                     return;
                 }
                 
-                NSArray *localList = [self getArrayFromArchive: [self getPath]];
+                // 根据userID拼接本地的数据将数据上传
+                NSString *userID = [[MWCommonService sharedInstance] getuserOpenid];
+                NSArray<NSDictionary *> *localList = [[MWSQLiteManager share] queryRequestDicsWithUserId:userID];
                 if ([MWCommonUtil isNotBlank:localList])
                 {
-                    [self.requestList addObjectsFromArray: localList];
-                    [MWNSKeyedArchiverUtils clearArchive: [self getPath]];
-                    [self ensureRequestListsWithMethodName:@"tick 2"];
+                    [self.requestList addObjectsFromArray:localList];
+                    [[MWSQLiteManager share] deleteWithUserId:userID];// 删除数据库数据
+                }
+                // 账号变更了 需要将数据删除
+                if ([[MWFacade sharedInstance] isLoginout]) {
+                    [[MWFacade sharedInstance] removeConfig];
                 }
                 
                 //list
                 [self sendList];
-                
             }
         
     } @catch (NSException *exception) {
@@ -192,11 +183,9 @@
 {
     @try {
         MWRequestOperation * operation = [[MWRequestOperation alloc] initWithParamDic:paramDic delegate:self];
-        [self.sendQueue addOperation:  operation];
+        [self.sendQueue addOperation:operation];
     } @catch (NSException *exception) {
-//        [MWUncaughtExceptionHandler mwSDKException:exception WithMethodName:@"sendurllocal:"];
     } @finally {
-        
     }
 }
 
@@ -245,7 +234,6 @@
 {
     @try {
         return [self.requestList count];
-        
     } @catch (NSException *exception) {
 //        [MWUncaughtExceptionHandler mwSDKException:exception WithMethodName:@"requestCount"];
     } @finally {
@@ -253,27 +241,26 @@
     }
 }
 
--(void )writeArray:(NSMutableArray *)array ToArchive:(NSString *)path
-{
-    @try {
-        @synchronized(self)
-        {
-            NSMutableArray *list = [array mutableCopy];
-            [array removeAllObjects];
-            if (list.count > MAX_COUNT)
-            {
-                [list removeObjectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(MAX_COUNT, array.count-MAX_COUNT)]];
-            }
-            
-            [MWNSKeyedArchiverUtils archiveObject:list toPath:path];
-        }
-        
-    } @catch (NSException *exception) {
-//        [MWUncaughtExceptionHandler mwSDKException:exception WithMethodName:@"writeArray:ToArchive:"];
-    } @finally {
-        
-    }
-}
+//-(void )writeArray:(NSMutableArray *)array ToArchive:(NSString *)path
+//{
+//    @try {
+//        @synchronized(self)
+//        {
+//            NSMutableArray *list = [array mutableCopy];
+//            [array removeAllObjects];
+//            if (list.count > MAX_COUNT)
+//            {
+//                [list removeObjectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(MAX_COUNT, array.count-MAX_COUNT)]];
+//            }
+//            [MWNSKeyedArchiverUtils archiveObject:list toPath:path];
+//        }
+//
+//    } @catch (NSException *exception) {
+////        [MWUncaughtExceptionHandler mwSDKException:exception WithMethodName:@"writeArray:ToArchive:"];
+//    } @finally {
+//
+//    }
+//}
 
 -(NSArray *)getArrayFromArchive:(NSString *)path
 {
@@ -286,26 +273,33 @@
     //TODO*** -[NSFileManager fileSystemRepresentationWithPath:]: unable to allocate memory for length (1072) ( queuePersistent)
     @try {
         [MWLog log:@"##queuePersistent"];
-        
-        // 将新事件添加在本地数据之后
-        
-        NSArray *archiveArr = [self getArrayFromArchive: [self getPath] ];
-        if (archiveArr != nil)
+        @synchronized(self)
         {
-            NSMutableArray *arr = [NSMutableArray arrayWithArray:archiveArr];
-            [arr addObjectsFromArray: _requestList];
-            self.requestList = arr;
-            [self ensureRequestListsWithMethodName:@"queuePersistent"];
+            NSString *userID = [[MWCommonService sharedInstance] getuserOpenid];
+            @autoreleasepool {
+                [self.requestList enumerateObjectsUsingBlock:^(NSDictionary * _Nonnull insertDic, NSUInteger idx, BOOL * _Nonnull stop) {
+                    [[MWSQLiteManager share] insertWithRequestDic:insertDic byUserId:userID];
+                }];
+            }
+            [self.requestList removeAllObjects];
         }
         
-        [MWNSKeyedArchiverUtils clearArchive: [self getPath]];
-        [self writeArray: self.requestList ToArchive: [self getPath]];
-        
-        [self.requestList removeAllObjects];
     } @catch (NSException *exception) {
-//        [MWUncaughtExceptionHandler mwSDKException:exception WithMethodName:@"queuePersistent"];
     } @finally {
+    }
+}
+
+- (void) queuePersistentWithRequestDic:(NSDictionary *)dic userID:(NSString *)userID
+{
+    //TODO*** -[NSFileManager fileSystemRepresentationWithPath:]: unable to allocate memory for length (1072) ( queuePersistent)
+    @try {
         
+        @synchronized (self) {
+            [[MWSQLiteManager share] insertWithRequestDic:dic byUserId:userID];
+        }
+        
+    } @catch (NSException *exception) {
+    } @finally {
     }
 }
 
@@ -321,7 +315,14 @@
 {
     if ([MWCommonUtil isNotBlank:paramDic])
     {
-        [self.requestList addObject:paramDic];
+        // 账号切换了存在本地，没有切换账号就放在发送队列中
+        if ([[MWFacade sharedInstance] isLoginout]) {
+            [MWLog log:@"##queuePersistent"];
+            NSString *preUserId = [[MWFacade sharedInstance] preuserID];
+            [self queuePersistentWithRequestDic:paramDic userID:preUserId];
+        } else {
+            [self.requestList addObject:paramDic];
+        }
     }
 }
 

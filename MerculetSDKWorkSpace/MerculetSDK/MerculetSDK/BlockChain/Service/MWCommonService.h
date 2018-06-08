@@ -29,7 +29,7 @@
 - (void)saveAndUpdateAccountSecret:(NSString *)accountSecret;
 - (void)saveAndUpdateUserOpenID:(NSString *)userOpenID;
 - (void)saveAndUpdateInvitationCode:(NSString *)invitationCode;
-- (void)saveAndUpdateMWToken:(NSString *)token;
+
 
 - (void)removeInvitationCode;
 
@@ -37,6 +37,8 @@
 - (NSData *)getStrategyConfig;
 - (NSDate *)getStrategyLastUpdateTime;
 
+//- (void)setChinaEnable:(BOOL)enable;
+//- (BOOL)getChinaEnable;
 
 - (void)saveAndUpdateCampaignConfig:(NSData *)data;
 - (NSData *)getCampaignConfig;
@@ -50,6 +52,8 @@
 - (NSString *)getuserOpenid;
 - (NSString *)getInvitationCode;
 - (NSString *)getMWToken;
+- (void)saveAndUpdateMWToken:(NSString *)token;
+- (void)removeMWToken;
 
 
 - (void)removeuserOpenid;
@@ -65,6 +69,9 @@
 //userAgent
 - (void)saveUserAgent:(NSString *)agent;
 - (NSString *)getUserAgent;
+
+/// 获取域名
+- (NSString *)urlDomain;
 
 // 保存配置文件、获取配置
 //+(void)saveStrValueInUD:(NSString *)str forKey:(NSString *)key;

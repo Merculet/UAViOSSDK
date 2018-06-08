@@ -10,22 +10,25 @@
 
 @interface MWFacade : NSObject
 
+// 是否强制发送数据
+@property (nonatomic, assign) BOOL isLoginout;
+@property (atomic, copy)  NSString *preToken;
+@property (atomic, copy)  NSString *preuserID;
+
+
 +(nonnull id) sharedInstance;
 
 - (void)registerApp:(nullable NSString *)appKey
          accountKey:(nullable NSString *)accountKey
       accountSecret:(nullable NSString *)accountSecret;
 
-- (void)setToken:(nullable NSString *)token;
-
-- (void)setUserOpenId:(nonnull NSString *)userOpenId;
+- (void)setToken:(nullable NSString *)token userOpenId:(nonnull NSString *)userOpenId;
 
 - (void)setInvitationCode:(nullable NSString *)invitation_code;
 
 - (void)cancelUserOpenId;
 
-
-
+- (void)setChinaEnable:(BOOL)enable;
 
 // 事件
 - (void)registerWithInvitationCode:(nonnull NSString *)invitationCode;
@@ -35,5 +38,8 @@
 - (void)signin;
 
 - (void)setCustomEvent:(nonnull NSString *)eventId attributes:(nullable NSDictionary *)attributes;
+
+// 切换用户时需要删除的东西
+- (void)removeConfig;
 
 @end

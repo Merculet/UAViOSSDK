@@ -34,7 +34,10 @@ libc++.tbd
 在AppDelegate中，添加头文件引用
 
 ```objc
+// 国际版本
 #import <MerculetSDK/MWApi.h>
+// 国内版本
+#import <MagicWindowUAVSDK/MWAPI.h>
 ```
 
 在application:didFinishLaunchingWithOptions:方法中调用registerApp方法来初始化SDK，如下代码：
@@ -45,11 +48,9 @@ libc++.tbd
 @implementation AppDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-//初始化SDK
+// 初始化SDK
 [MWAPI registerApp]; 
-
-// 切换至国内的API
-[MWAPI setChinaEnable:YES];
+// 
 
 return YES;
 }
@@ -59,7 +60,12 @@ return YES;
 ## 自定义事件统计
 - 传入初始化完成之后，需要向sdk设置token
 ```objc
-[MWAPI setToken:@"XXX"];
+[MWAPI setToken:@"xxx" userID:@"xxx"];
+```
+
+- token失效的时会以**通知**的形式告知，NSNotificationName为**MWTokenExpiredNotification**
+```objc
+[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(xxx) name:MWTokenExpiredNotification object:nil];
 ```
 
 -  取消对用户的追踪 
@@ -72,13 +78,6 @@ eventName、KeyValue参数需要先在后台管理上注册，才能参与正常
 
 ```objc
 [MWAPI setCustomAction:@"eventName" attributes:@{@"key1":@"value1",@"key2":@"value2",…}];
-```
-
-## 国内外域名切换
-默认是国外域名。
-
-```objc
-[MWAPI setChinaEnable: YES]; // 切换至国内API
 ```
 
 # 注意事项

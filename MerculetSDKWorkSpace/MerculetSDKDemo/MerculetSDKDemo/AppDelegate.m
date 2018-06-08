@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "MWAPI.h"
+#import <MerculetSDK/MWAPI.h>
+//#import <MagicWindowUAVSDK/MWAPI.h>
 
 @interface AppDelegate ()
 
@@ -21,11 +22,20 @@
     
     // 注册
     [MWAPI registerApp];
-//    [MWAPI showLogEnable:YES];
+    
+    // log
+    [MWAPI showLogEnable:YES];
+    
+    // 设置国内
+//    [MWAPI setChinaEnable:YES];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushTokenExpired) name:MWTokenExpiredNotification object:nil];
     
     return YES;
 }
 
+- (void)pushTokenExpired {
+    NSLog(@"token 失效");
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

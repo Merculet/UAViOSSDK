@@ -86,7 +86,7 @@
                     [request addValue:headers[obj] forHTTPHeaderField:obj];
                 }
             }];
-//            [MWLog log:[NSString stringWithFormat:@"url = %@,header = %@",url,request.allHTTPHeaderFields]];
+            [MWLog logForDev:[NSString stringWithFormat:@"url = %@,header = %@",url,request.allHTTPHeaderFields]];
         }
         
         
@@ -100,7 +100,7 @@
 //            NSData *postData = [NSJSONSerialization dataWithJSONObject:parameters options:0 error:nil];
 //            [request setHTTPBody:postData];
             NSString *parseParamsResult =[self jsonString:parameters];
-//            [MWLog log:[NSString stringWithFormat:@"%@",parseParamsResult]];
+            [MWLog logForDev:[NSString stringWithFormat:@"%@",parseParamsResult]];
             NSData *postData = [parseParamsResult dataUsingEncoding:NSUTF8StringEncoding];
             [request setHTTPBody:postData];
         }
@@ -213,7 +213,7 @@
                     }
                     return;
                 }
-//                [MWLog log:[NSString stringWithFormat:@"data = %@",object]];
+                [MWLog logForDev:[NSString stringWithFormat:@"data = %@",object]];
                 success(response,object,data);
             }
         }];
@@ -249,7 +249,7 @@
             NSURL *url = [NSURL URLWithString:urlString];
             
             NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:TIME_OUT];
-            [request setHTTPMethod:@"POST"];
+            [request setHTTPMethod:@"GET"];
             [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
             
             //header

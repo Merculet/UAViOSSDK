@@ -15,27 +15,34 @@
 #import "MWLog.h"
 #import "MWCommonUtil.h"
 #import "MerculetEncrypteHelper.h"
+#import "MWFacade.h"
+#import "MWNSKeyedArchiverUtils.h"
+#import "MWTrackingDefine.h"
+#import "MWFacade.h"
 
 #define EVENT_REQUEST_KEY       @"EVENT_REQUEST_KEY"
 
-static NSDictionary *_tokenDic;
+//static NSDictionary *_tokenDic;
 
 @interface MWRequestOperation()
-
 @property (nonatomic,retain) NSDictionary *paramDic;
-
+@property (nonatomic,retain) NSMutableDictionary *paramMutiDic;
 @end
 
 @implementation MWRequestOperation
 
 #pragma mark -
 #pragma mark - Public
-- (id)initWithParamDic:(NSDictionary *)paramDic delegate:(id<MWRequestOperationDelegate>)delegate
+- (id)initWithParamDic:(NSDictionary *)paramDic
+              delegate:(id<MWRequestOperationDelegate>)delegate
 {
-    if (self = [super init])
+    if(self = [super init])
     {
         _paramDic = paramDic;
         _delegate = delegate;
+        self.paramMutiDic = [NSMutableDictionary dictionaryWithDictionary:paramDic];
+        [self.paramMutiDic removeObjectForKey:MW_POST_KEY_EVENT_MW_UserID];
+        
     }
     return self;
 }
@@ -62,18 +69,20 @@ static NSDictionary *_tokenDic;
 - (void)gotoAction {
     
     /// 将请求的参数序列化，并加上key
-    
-    
-    NSString *jsonString = [MWDictionaryUtils dictionaryToJson:_paramDic];
+    NSString *jsonString = [MWDictionaryUtils dictionaryToJson:self.paramMutiDic];
     NSDictionary *headers = [self headersWithParams:jsonString];
     
     if ([MWCommonUtil isBlank:headers] || [MWCommonUtil isBlank:jsonString]) {return;}
     
+    /// body
     NSDictionary *bodyParam = @{@"info": jsonString};
     
-    NSString *urlString = [MW_RELEASE stringByAppendingString:MW_TRACKING_URL];
-    MWURLRequestManager *manager = [[MWURLRequestManager alloc] init];
+    /// url
+    NSString *urlDomain = [[MWCommonService sharedInstance] urlDomain];
+    NSMutableString *url = [NSMutableString stringWithString:urlDomain];
+    NSString *urlString = [url stringByAppendingString:MW_TRACKING_URL];
     
+    MWURLRequestManager *manager = [[MWURLRequestManager alloc] init];
     [manager POST:urlString
           headers:headers
        parameters:bodyParam
@@ -102,6 +111,7 @@ static NSDictionary *_tokenDic;
         }];
 }
 
+
 - (void)encodeWithCoder:(NSCoder *)aCoder {
     
     [aCoder encodeObject:_paramDic forKey:EVENT_REQUEST_KEY];
@@ -118,11 +128,17 @@ static NSDictionary *_tokenDic;
 - (NSMutableDictionary *)headersWithParams:(NSString *)jsonString {
     
     NSMutableDictionary *headers = [NSMutableDictionary dictionary];
-    NSString *token = [[MWCommonService sharedInstance] getMWToken];
+    NSString *token = @"";
+    if ([[MWFacade sharedInstance] isLoginout]) {
+        token = [[MWFacade sharedInstance] preToken];
+    } else {
+        token = [[MWCommonService sharedInstance] getMWToken];
+    }
+    
     NSString *sign = [MerculetEncrypteHelper generateString:jsonString];
     if (token.length && sign.length) {
-        [headers setValue:token forKey:@"mw-token"];
-        [headers setValue:sign forKey:@"mw-sign"];
+        [headers setValue:token forKey:MW_POST_KEY_EVENT_MW_Token];
+        [headers setValue:sign  forKey:MW_POST_KEY_EVENT_MW_Sign];
         return headers;
     } else {
         return nil;

@@ -10,12 +10,12 @@
 #define MWBlockChainDefine_h
 
 // 域名-国内
-#define MW_RELEASE @""
+#define MW_RELEASE_API @"https://openapi.magicwindow.cn"
 // 域名-国外
-//#define MW_RELEASE @""
+//#define MW_RELEASE_API @"https://openapi.merculet.io"
 
 // behaviour/tracking
-#define MW_TRACKING_URL @"/v1/user/event/sdkBehaviour"
+#define MW_TRACKING_URL @"/v1/event/sdkBehaviour"
 
 // token
 #define MW_Login_Token_API @""
