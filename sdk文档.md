@@ -64,7 +64,7 @@ return YES;
 
 # 自定义事件统计
 ## 自定义事件统计
-- 传入初始化完成之后，需要向sdk设置token
+- 初始化完成之后，需要向sdk设置token、userId
 ```objc
 [MWAPI setToken:@"xxx" userID:@"xxx"];
 ```
