@@ -10,9 +10,16 @@
 基于上述三个数值，接入方需要调用Merculet的签发Token的接口。
 
 ## 导入SDK
-- 下载SDK并集成
+- pod方式集成
+```c
+pod 'MerculetSDK'// 国际版本
+or
+pod 'MagicWindowUAVSDK'// 国内版本
+```
 
-将库拖动到工程中，拖到工程中后，弹出以下对话框，勾选“Copy items into destination group's folder(if needed)”，并点击“Finish”按钮，如图：
+- 手动下载SDK并集成
+
+将MagicWindowUAVSDK.framework 或者 MerculetSDK.framework 拖动到工程中，拖到工程中后，弹出以下对话框，勾选“Copy items into destination group's folder(if needed)”，并点击“Finish”按钮，如图：
 
 ![image.png](https://sdk.mlinks.cc/merculet_doc_image_001.png)
 
@@ -50,7 +57,6 @@ libc++.tbd
 {
 // 初始化SDK
 [MWAPI registerApp]; 
-// 
 
 return YES;
 }
