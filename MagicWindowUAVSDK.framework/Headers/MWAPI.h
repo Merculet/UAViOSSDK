@@ -25,7 +25,7 @@ extern NSString * _Nonnull const MWTokenExpiredNotification;
 + (void)registerApp;
 
 /**
- *  向sdk设置token
+ *  向sdk设置token和userId
  *  必须是没有失效的token
  */
 + (void)setToken:(nullable NSString *)token userID:(nullable NSString *)userID;
@@ -41,11 +41,6 @@ extern NSString * _Nonnull const MWTokenExpiredNotification;
  *  show debug
  */
 + (void)showLogEnable:(BOOL)enable;
-
-/**
- *  设置是否是国内API
- */
-+ (void)setChinaEnable:(BOOL)enable __attribute__((deprecated("the method can't play")));
 
 
 #pragma mark -

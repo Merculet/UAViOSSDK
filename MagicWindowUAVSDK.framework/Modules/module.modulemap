@@ -1,4 +1,4 @@
-framework module MerculetSDK {
+framework module MagicWindowUAVSDK {
   umbrella header "MerculetSDK.h"
 
   export *
