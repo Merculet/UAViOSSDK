@@ -1,0 +1,6 @@
+framework module MagicWindowUAVSDK {
+  umbrella header "MagicWindowUAVSDK.h"
+
+  export *
+  module * { export * }
+}
