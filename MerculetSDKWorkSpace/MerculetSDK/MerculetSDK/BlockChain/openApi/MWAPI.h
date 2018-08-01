@@ -10,7 +10,20 @@
 
 #define DEPRECATED(_version) __attribute__((deprecated))
 
+typedef enum : NSUInteger {
+    MWSendConfigTypeNormal,
+    MWSendConfigTypeRealTime,
+} MWSendConfigType;
+
+/**
+ *  token失效回调回调
+ */
 extern NSString * _Nonnull const MWTokenExpiredNotification;
+/**
+ *  在实时模式下，发送网络请求成功回调
+ */
+extern NSString * _Nonnull const MWTokenExpiredRealTimeNotification;
+
 
 @interface MWAPI : NSObject
 
@@ -30,6 +43,12 @@ extern NSString * _Nonnull const MWTokenExpiredNotification;
  */
 + (void)setToken:(nullable NSString *)token userID:(nullable NSString *)userID;
 
+/**
+ *  设置发送模式
+ *  默认发送模式：MWSendConfigTypeNormal，
+ *  实时发送模式：MWSendConfigTypeRealTime
+ */
++ (void)setSendMode:(MWSendConfigType)sendType;
 
 /**
  *  取消追踪当前用户

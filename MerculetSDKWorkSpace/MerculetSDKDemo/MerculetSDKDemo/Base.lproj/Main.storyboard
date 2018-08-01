@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JDU-zw-YXt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JDU-zw-YXt">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -220,6 +220,13 @@
                                     <action selector="change2:" destination="AZF-E0-RbY" eventType="touchUpInside" id="U89-er-gf8"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xwd-KF-twN">
+                                <rect key="frame" x="334" y="84" width="31" height="30"/>
+                                <state key="normal" title="实时"/>
+                                <connections>
+                                    <action selector="realtimeAction:" destination="AZF-E0-RbY" eventType="touchUpInside" id="b77-G3-Uw2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
@@ -246,6 +253,7 @@
                             <constraint firstItem="b7T-ux-oNt" firstAttribute="width" secondItem="Sxh-q9-NMS" secondAttribute="width" id="EzQ-Py-Lw2"/>
                             <constraint firstItem="Kq9-Vo-tfQ" firstAttribute="top" secondItem="Lnl-Wi-cam" secondAttribute="bottom" constant="20" id="GFI-zm-hz3"/>
                             <constraint firstItem="Lnl-Wi-cam" firstAttribute="leading" secondItem="Sxh-q9-NMS" secondAttribute="trailing" constant="20" id="Gfu-ml-Vpj"/>
+                            <constraint firstItem="Xwd-KF-twN" firstAttribute="top" secondItem="Ogp-7c-SCI" secondAttribute="bottom" constant="20" id="Gkz-xI-JOT"/>
                             <constraint firstItem="6lJ-9M-yDP" firstAttribute="leading" secondItem="ZUD-Ir-9ra" secondAttribute="leading" id="GzW-gC-Fg0"/>
                             <constraint firstItem="2Sf-mO-u7q" firstAttribute="width" secondItem="Sxh-q9-NMS" secondAttribute="width" id="JDP-Lk-MHO"/>
                             <constraint firstItem="QwA-Hi-88T" firstAttribute="width" secondItem="Sxh-q9-NMS" secondAttribute="width" id="KTF-BS-9qU"/>
@@ -267,6 +275,7 @@
                             <constraint firstItem="LiB-pn-TVZ" firstAttribute="top" secondItem="vhK-mL-B7v" secondAttribute="top" id="X5x-FT-QgY"/>
                             <constraint firstItem="mtQ-yn-u4w" firstAttribute="top" secondItem="HoZ-r9-B4t" secondAttribute="bottom" constant="20" id="YAt-l0-zZV"/>
                             <constraint firstAttribute="trailing" secondItem="b7T-ux-oNt" secondAttribute="trailing" constant="20" id="YVL-bZ-BEM"/>
+                            <constraint firstAttribute="trailing" secondItem="Xwd-KF-twN" secondAttribute="trailing" constant="10" id="Zw4-FK-uTL"/>
                             <constraint firstItem="QwA-Hi-88T" firstAttribute="height" secondItem="Sxh-q9-NMS" secondAttribute="height" id="aRk-dg-C25"/>
                             <constraint firstItem="7yA-va-cO9" firstAttribute="leading" secondItem="5zd-PY-DNL" secondAttribute="trailing" constant="10" id="aSv-7A-DxP"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vhK-mL-B7v" secondAttribute="trailing" constant="20" symbolic="YES" id="asN-3n-EKR"/>
@@ -301,6 +310,7 @@
                     <navigationItem key="navigationItem" id="cfs-oU-Wxy"/>
                     <connections>
                         <outlet property="invitationT" destination="lkr-zS-D37" id="Zt7-wQ-NP8"/>
+                        <outlet property="realBtn" destination="Xwd-KF-twN" id="AqF-st-mIr"/>
                         <outlet property="userOpenT" destination="7yA-va-cO9" id="AhC-yC-fYu"/>
                     </connections>
                 </viewController>

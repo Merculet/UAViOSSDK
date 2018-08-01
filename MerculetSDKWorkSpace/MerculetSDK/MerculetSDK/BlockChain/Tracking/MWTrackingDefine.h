@@ -33,4 +33,8 @@
 #define MW_POST_KEY_EVENT_device_info_IDFA             @"idfa"      // idfa
 #define MW_POST_KEY_EVENT_device_info_OS               @"os"           // os
 
+// 发送配置信息
+#define SEND_STRATEGY_CHECK_INTERVAL        60
+#define SEND_STRATEGY_CHECK_NUM             30
+
 #endif /* MWTrackingDefine_h */

@@ -10,8 +10,10 @@
 #import "MWFacade.h"
 #import "MWLog.h"
 
-
+// token失效回调
 NSString * const MWTokenExpiredNotification = @"MWTokenExpiredNotification";
+// 在实时模式下，发送网络请求成功回调
+NSString * const MWTokenExpiredRealTimeNotification = @"MWTokenExpiredRealTimeNotification";
 
 @interface MWAPI ()
 
@@ -44,9 +46,11 @@ NSString * const MWTokenExpiredNotification = @"MWTokenExpiredNotification";
     [[MWFacade sharedInstance] setToken:token userOpenId:userID];
 }
 
++ (void)setSendMode:(MWSendConfigType)sendType {
+    [[MWFacade sharedInstance] setSendMode:sendType];
+}
 
 + (void)cancelUserOpenId {
-    
     [[MWFacade sharedInstance] cancelUserOpenId];
 }
 

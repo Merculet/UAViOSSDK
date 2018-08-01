@@ -22,6 +22,8 @@
 #import "MWFacade.h"
 #import "MWTrackingDefine.h"
 #import "MWSQLiteManager.h"
+#import "MWStrategyConfig.h"
+#import "MWAPI.h"
 
 #define MAX_COUNT           5000    //设置发送tracking数据requestlist的阀值
 
@@ -33,6 +35,7 @@
 @property (nonatomic,strong) NSMutableArray *eventList;
 @property (nonatomic,strong) NSOperationQueue *sendQueue;
 @property (nonatomic,strong) NSMutableArray<NSDictionary *> *requestList; // 元素包含：device_info、actions、mw-token这三个key
+@property (nonatomic,strong) MWSendConfig *sendConfig;
 
 @end
 
@@ -47,6 +50,8 @@
         self.requestList = [[NSMutableArray alloc] init];
         self.sendQueue = [[NSOperationQueue alloc]init];
         [self.sendQueue setMaxConcurrentOperationCount: 1];
+        MWStrategyConfig *mwConfig = [MWStrategyConfig sharedInstance];
+        self.sendConfig = mwConfig.sendConfig;
     }
 	return self;
 }
@@ -193,21 +198,30 @@
 {
     @try {
         @synchronized (self) {
-            if ([MWCommonUtil isNotBlank:event])
-            {
-                [self.eventList addObject: event];
-                
-//                MWStrategyConfig *mwConfig = [MWStrategyConfig sharedInstance];
-//                MWSendConfig *sendConfig = mwConfig.sendConfig;
-//                _sendSize = sendConfig.batchSize;
-                _sendSize = 30;
-//                _sendSize = 5;
-                
-                [MWLog logForDev:[NSString stringWithFormat:@"点击事件数量：%lu",(unsigned long)[self eventsCount]] ];
-                if ([self eventsCount] >= _sendSize)
-                {
+            
+            MWSendConfigType sendType = _sendConfig.sendType;
+            [self.eventList addObject: event];
+            
+            switch (sendType) {
+                    // 实时的发送
+                case MWSendConfigTypeRealTime:
                     [self tick];
-                }
+                    break;
+                    
+                default:
+                    // 根据配置文件来发送
+                    if ([MWCommonUtil isNotBlank:event])
+                    {
+//                        [self.eventList addObject: event];
+                        _sendSize = _sendConfig.batchSize;
+                        
+                        [MWLog logForDev:[NSString stringWithFormat:@"点击事件数量：%lu",(unsigned long)[self eventsCount]] ];
+                        if ([self eventsCount] >= _sendSize)
+                        {
+                            [self tick];
+                        }
+                    }
+                    break;
             }
         }
         
@@ -306,6 +320,23 @@
 #pragma mark - RequestOperationDelegate
 -(void)requestSuccess:(MWRequestOperation *)oper withParamDic:(NSDictionary *)paramDic
 {
+    // 发送请求成功后，回调出去
+    switch (self.sendConfig.sendType) {
+        case MWSendConfigTypeRealTime:
+        {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [[NSNotificationCenter defaultCenter] postNotificationName:MWTokenExpiredRealTimeNotification
+                                                                    object:nil
+                                                                  userInfo:paramDic];
+            });
+            break;
+        }
+            
+        default:
+            break;
+    }
+    
+    
     if ([self.requestList containsObject:paramDic]) {
         [self.requestList removeObject:paramDic];
     }

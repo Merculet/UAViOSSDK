@@ -7,17 +7,53 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		0051106320C51FEC00E415BC /* MerculetSDK-Universal */ = {
+		00A607832111585000EDE432 /* MerculetSDKBitcode-Universal */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 0051106420C51FED00E415BC /* Build configuration list for PBXAggregateTarget "MerculetSDK-Universal" */;
+			buildConfigurationList = 00A607862111585000EDE432 /* Build configuration list for PBXAggregateTarget "MerculetSDKBitcode-Universal" */;
 			buildPhases = (
-				0051106920C5205300E415BC /* ShellScript */,
+				00A6078F2111589600EDE432 /* ShellScript */,
 			);
 			dependencies = (
-				0051106820C51FF400E415BC /* PBXTargetDependency */,
+				00A607912111594700EDE432 /* PBXTargetDependency */,
+			);
+			name = "MerculetSDKBitcode-Universal";
+			productName = "MerculetSDKBitcode-Universal";
+		};
+		00A6078B2111588500EDE432 /* MagicWindowUAVSDKBitcode-Universal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 00A6078C2111588500EDE432 /* Build configuration list for PBXAggregateTarget "MagicWindowUAVSDKBitcode-Universal" */;
+			buildPhases = (
+				00A607972111597200EDE432 /* ShellScript */,
+			);
+			dependencies = (
+				00A607952111595700EDE432 /* PBXTargetDependency */,
+			);
+			name = "MagicWindowUAVSDKBitcode-Universal";
+			productName = "MagicWindowUAVSDKBitcode-Universal";
+		};
+		00A607A721117BF800EDE432 /* MagicWindowUAVSDK-Universal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 00A607AA21117BF800EDE432 /* Build configuration list for PBXAggregateTarget "MagicWindowUAVSDK-Universal" */;
+			buildPhases = (
+				00A607AD21117C0500EDE432 /* ShellScript */,
+			);
+			dependencies = (
+				00A607AC21117C0300EDE432 /* PBXTargetDependency */,
+			);
+			name = "MagicWindowUAVSDK-Universal";
+			productName = "MagicWindowUAVSDK-Universal-Temp";
+		};
+		00A607AE21117C8600EDE432 /* MerculetSDK-Universal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 00A607AF21117C8600EDE432 /* Build configuration list for PBXAggregateTarget "MerculetSDK-Universal" */;
+			buildPhases = (
+				00A607B421117C9300EDE432 /* ShellScript */,
+			);
+			dependencies = (
+				00A607B321117C9100EDE432 /* PBXTargetDependency */,
 			);
 			name = "MerculetSDK-Universal";
-			productName = "MerculetSDK-Universal";
+			productName = "MerculetSDK-Universal-Temp";
 		};
 /* End PBXAggregateTarget section */
 
@@ -30,7 +66,7 @@
 		00510FDF20C51D6B00E415BC /* MerculetSDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00510FDE20C51D6B00E415BC /* MerculetSDKTests.m */; };
 		00510FE120C51D6B00E415BC /* MerculetSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 00510FD320C51D6A00E415BC /* MerculetSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0051101F20C51E2500E415BC /* MWHttpResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 00510FEC20C51E2400E415BC /* MWHttpResponse.m */; };
-		0051102020C51E2500E415BC /* MWURLRequestManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 00510FED20C51E2400E415BC /* MWURLRequestManager.h */; };
+		0051102020C51E2500E415BC /* MWURLRequestManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 00510FED20C51E2400E415BC /* MWURLRequestManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0051102120C51E2500E415BC /* MWHttpResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 00510FEE20C51E2400E415BC /* MWHttpResponse.h */; };
 		0051102220C51E2500E415BC /* MWURLRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00510FEF20C51E2400E415BC /* MWURLRequestManager.m */; };
 		0051102320C51E2500E415BC /* MWAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 00510FF120C51E2400E415BC /* MWAPI.m */; };
@@ -74,6 +110,164 @@
 		0051104D20C51E2500E415BC /* MWDeviceUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051101E20C51E2500E415BC /* MWDeviceUtil.h */; };
 		0051106120C51EC100E415BC /* MWDictionaryUtilsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0051105F20C51EC100E415BC /* MWDictionaryUtilsTest.m */; };
 		0051106220C51EC100E415BC /* MWURLRequestManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0051106020C51EC100E415BC /* MWURLRequestManagerTest.m */; };
+		00A606D12111554000EDE432 /* MWEventInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 00510FF920C51E2400E415BC /* MWEventInfo.m */; };
+		00A606D22111554000EDE432 /* MWCompositeEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 00510FF820C51E2400E415BC /* MWCompositeEvent.m */; };
+		00A606D32111554000EDE432 /* MWReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0051101520C51E2500E415BC /* MWReachability.m */; };
+		00A606D42111554000EDE432 /* MWCommonService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0051100B20C51E2500E415BC /* MWCommonService.m */; };
+		00A606D52111554000EDE432 /* MWNSKeyedArchiverUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0051101820C51E2500E415BC /* MWNSKeyedArchiverUtils.m */; };
+		00A606D62111554000EDE432 /* MWAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 00510FF120C51E2400E415BC /* MWAPI.m */; };
+		00A606D72111554000EDE432 /* MWStrategyConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A80CB5210EEE0F0050B640 /* MWStrategyConfig.m */; };
+		00A606D82111554000EDE432 /* MWTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00510FFD20C51E2400E415BC /* MWTimerManager.m */; };
+		00A606D92111554000EDE432 /* MWNSStringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0051101D20C51E2500E415BC /* MWNSStringUtils.m */; };
+		00A606DA2111554000EDE432 /* MWSQLiteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 002E2BA420C8FD820047C3B9 /* MWSQLiteManager.m */; };
+		00A606DB2111554000EDE432 /* MWNSFileManagerUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0051101A20C51E2500E415BC /* MWNSFileManagerUtils.m */; };
+		00A606DC2111554000EDE432 /* MWRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 00510FF620C51E2400E415BC /* MWRequestOperation.m */; };
+		00A606DD2111554000EDE432 /* MWCommonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0051101920C51E2500E415BC /* MWCommonUtil.m */; };
+		00A606DE2111554000EDE432 /* MWLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 0051101020C51E2500E415BC /* MWLog.m */; };
+		00A606DF2111554000EDE432 /* MWFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 0051100A20C51E2500E415BC /* MWFacade.m */; };
+		00A606E02111554000EDE432 /* MWDictionaryUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0051100E20C51E2500E415BC /* MWDictionaryUtils.m */; };
+		00A606E12111554000EDE432 /* MW_ConnectionSessionManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 00510FFC20C51E2400E415BC /* MW_ConnectionSessionManager.mm */; };
+		00A606E22111554000EDE432 /* MWHttpResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 00510FEC20C51E2400E415BC /* MWHttpResponse.m */; };
+		00A606E32111554000EDE432 /* MWDeviceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0051101320C51E2500E415BC /* MWDeviceUtil.m */; };
+		00A606E42111554000EDE432 /* MWURLRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00510FEF20C51E2400E415BC /* MWURLRequestManager.m */; };
+		00A606E52111554000EDE432 /* MWSendStrategyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00510FFA20C51E2400E415BC /* MWSendStrategyManager.m */; };
+		00A606E62111554000EDE432 /* MW_ConnectionSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 00510FF720C51E2400E415BC /* MW_ConnectionSession.m */; };
+		00A606E82111554000EDE432 /* libMerculetEncrypte.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 002E2BE220CA7B810047C3B9 /* libMerculetEncrypte.a */; };
+		00A606EA2111554000EDE432 /* MWAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 00510FF220C51E2400E415BC /* MWAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00A606EB2111554000EDE432 /* MWNSStringUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051101420C51E2500E415BC /* MWNSStringUtils.h */; };
+		00A606EC2111554000EDE432 /* MWURLRequestManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 00510FED20C51E2400E415BC /* MWURLRequestManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00A606ED2111554000EDE432 /* MerculetEncrypteHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 002E2BE420CA7B870047C3B9 /* MerculetEncrypteHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00A606EE2111554000EDE432 /* MerculetSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 00510FD320C51D6A00E415BC /* MerculetSDK.h */; };
+		00A606EF2111554000EDE432 /* MW_ConnectionSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051100520C51E2400E415BC /* MW_ConnectionSessionManager.h */; };
+		00A606F02111554000EDE432 /* MWSQLiteManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 002E2BA320C8FD820047C3B9 /* MWSQLiteManager.h */; };
+		00A606F12111554000EDE432 /* MWLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051101B20C51E2500E415BC /* MWLog.h */; };
+		00A606F22111554000EDE432 /* MWCompositeEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 00510FFF20C51E2400E415BC /* MWCompositeEvent.h */; };
+		00A606F32111554000EDE432 /* MWStrategyConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A80CB4210EEE0F0050B640 /* MWStrategyConfig.h */; };
+		00A606F42111554000EDE432 /* MWSendStrategyManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051100420C51E2400E415BC /* MWSendStrategyManager.h */; };
+		00A606F52111554000EDE432 /* MWDeviceUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051101E20C51E2500E415BC /* MWDeviceUtil.h */; };
+		00A606F62111554000EDE432 /* MWCommonService.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051100820C51E2400E415BC /* MWCommonService.h */; };
+		00A606F72111554000EDE432 /* MWNSKeyedArchiverUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051100D20C51E2500E415BC /* MWNSKeyedArchiverUtils.h */; };
+		00A606F82111554000EDE432 /* MWReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051101C20C51E2500E415BC /* MWReachability.h */; };
+		00A606F92111554000EDE432 /* MW_ConnectionSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051100020C51E2400E415BC /* MW_ConnectionSession.h */; };
+		00A606FA2111554000EDE432 /* MWTrackingDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051100220C51E2400E415BC /* MWTrackingDefine.h */; };
+		00A606FB2111554000EDE432 /* MWRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051100120C51E2400E415BC /* MWRequestOperation.h */; };
+		00A606FC2111554000EDE432 /* MWTimerManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 00510FF520C51E2400E415BC /* MWTimerManager.h */; };
+		00A606FD2111554000EDE432 /* MWCommonUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051101220C51E2500E415BC /* MWCommonUtil.h */; };
+		00A606FE2111554000EDE432 /* MWBlockChainDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 00510FF320C51E2400E415BC /* MWBlockChainDefine.h */; };
+		00A606FF2111554000EDE432 /* MWDictionaryUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051101720C51E2500E415BC /* MWDictionaryUtils.h */; };
+		00A607002111554000EDE432 /* MWFacade.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051100920C51E2500E415BC /* MWFacade.h */; };
+		00A607012111554000EDE432 /* MWBlockChain.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051100620C51E2400E415BC /* MWBlockChain.h */; };
+		00A607022111554000EDE432 /* MWHttpResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 00510FEE20C51E2400E415BC /* MWHttpResponse.h */; };
+		00A607032111554000EDE432 /* MWNSFileManagerUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051101120C51E2500E415BC /* MWNSFileManagerUtils.h */; };
+		00A607042111554000EDE432 /* MWEventInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 00510FFE20C51E2400E415BC /* MWEventInfo.h */; };
+		00A6070D2111581F00EDE432 /* MWEventInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 00510FF920C51E2400E415BC /* MWEventInfo.m */; };
+		00A6070E2111581F00EDE432 /* MWCompositeEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 00510FF820C51E2400E415BC /* MWCompositeEvent.m */; };
+		00A6070F2111581F00EDE432 /* MWReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0051101520C51E2500E415BC /* MWReachability.m */; };
+		00A607102111581F00EDE432 /* MWCommonService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0051100B20C51E2500E415BC /* MWCommonService.m */; };
+		00A607112111581F00EDE432 /* MWNSKeyedArchiverUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0051101820C51E2500E415BC /* MWNSKeyedArchiverUtils.m */; };
+		00A607122111581F00EDE432 /* MWAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 00510FF120C51E2400E415BC /* MWAPI.m */; };
+		00A607132111581F00EDE432 /* MWStrategyConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A80CB5210EEE0F0050B640 /* MWStrategyConfig.m */; };
+		00A607142111581F00EDE432 /* MWTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00510FFD20C51E2400E415BC /* MWTimerManager.m */; };
+		00A607152111581F00EDE432 /* MWNSStringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0051101D20C51E2500E415BC /* MWNSStringUtils.m */; };
+		00A607162111581F00EDE432 /* MWSQLiteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 002E2BA420C8FD820047C3B9 /* MWSQLiteManager.m */; };
+		00A607172111581F00EDE432 /* MWNSFileManagerUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0051101A20C51E2500E415BC /* MWNSFileManagerUtils.m */; };
+		00A607182111581F00EDE432 /* MWRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 00510FF620C51E2400E415BC /* MWRequestOperation.m */; };
+		00A607192111581F00EDE432 /* MWCommonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0051101920C51E2500E415BC /* MWCommonUtil.m */; };
+		00A6071A2111581F00EDE432 /* MWLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 0051101020C51E2500E415BC /* MWLog.m */; };
+		00A6071B2111581F00EDE432 /* MWFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 0051100A20C51E2500E415BC /* MWFacade.m */; };
+		00A6071C2111581F00EDE432 /* MWDictionaryUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0051100E20C51E2500E415BC /* MWDictionaryUtils.m */; };
+		00A6071D2111581F00EDE432 /* MW_ConnectionSessionManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 00510FFC20C51E2400E415BC /* MW_ConnectionSessionManager.mm */; };
+		00A6071E2111581F00EDE432 /* MWHttpResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 00510FEC20C51E2400E415BC /* MWHttpResponse.m */; };
+		00A6071F2111581F00EDE432 /* MWDeviceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0051101320C51E2500E415BC /* MWDeviceUtil.m */; };
+		00A607202111581F00EDE432 /* MWURLRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00510FEF20C51E2400E415BC /* MWURLRequestManager.m */; };
+		00A607212111581F00EDE432 /* MWSendStrategyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00510FFA20C51E2400E415BC /* MWSendStrategyManager.m */; };
+		00A607222111581F00EDE432 /* MW_ConnectionSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 00510FF720C51E2400E415BC /* MW_ConnectionSession.m */; };
+		00A607242111581F00EDE432 /* libMerculetEncrypte.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 002E2BE220CA7B810047C3B9 /* libMerculetEncrypte.a */; };
+		00A607262111581F00EDE432 /* MWAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 00510FF220C51E2400E415BC /* MWAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00A607272111581F00EDE432 /* MWNSStringUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051101420C51E2500E415BC /* MWNSStringUtils.h */; };
+		00A607282111581F00EDE432 /* MWURLRequestManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 00510FED20C51E2400E415BC /* MWURLRequestManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00A607292111581F00EDE432 /* MerculetEncrypteHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 002E2BE420CA7B870047C3B9 /* MerculetEncrypteHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00A6072A2111581F00EDE432 /* MerculetSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 00510FD320C51D6A00E415BC /* MerculetSDK.h */; };
+		00A6072B2111581F00EDE432 /* MW_ConnectionSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051100520C51E2400E415BC /* MW_ConnectionSessionManager.h */; };
+		00A6072C2111581F00EDE432 /* MWSQLiteManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 002E2BA320C8FD820047C3B9 /* MWSQLiteManager.h */; };
+		00A6072D2111581F00EDE432 /* MWLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051101B20C51E2500E415BC /* MWLog.h */; };
+		00A6072E2111581F00EDE432 /* MWCompositeEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 00510FFF20C51E2400E415BC /* MWCompositeEvent.h */; };
+		00A6072F2111581F00EDE432 /* MWStrategyConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A80CB4210EEE0F0050B640 /* MWStrategyConfig.h */; };
+		00A607302111581F00EDE432 /* MWSendStrategyManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051100420C51E2400E415BC /* MWSendStrategyManager.h */; };
+		00A607312111581F00EDE432 /* MWDeviceUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051101E20C51E2500E415BC /* MWDeviceUtil.h */; };
+		00A607322111581F00EDE432 /* MWCommonService.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051100820C51E2400E415BC /* MWCommonService.h */; };
+		00A607332111581F00EDE432 /* MWNSKeyedArchiverUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051100D20C51E2500E415BC /* MWNSKeyedArchiverUtils.h */; };
+		00A607342111581F00EDE432 /* MWReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051101C20C51E2500E415BC /* MWReachability.h */; };
+		00A607352111581F00EDE432 /* MW_ConnectionSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051100020C51E2400E415BC /* MW_ConnectionSession.h */; };
+		00A607362111581F00EDE432 /* MWTrackingDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051100220C51E2400E415BC /* MWTrackingDefine.h */; };
+		00A607372111581F00EDE432 /* MWRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051100120C51E2400E415BC /* MWRequestOperation.h */; };
+		00A607382111581F00EDE432 /* MWTimerManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 00510FF520C51E2400E415BC /* MWTimerManager.h */; };
+		00A607392111581F00EDE432 /* MWCommonUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051101220C51E2500E415BC /* MWCommonUtil.h */; };
+		00A6073A2111581F00EDE432 /* MWBlockChainDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 00510FF320C51E2400E415BC /* MWBlockChainDefine.h */; };
+		00A6073B2111581F00EDE432 /* MWDictionaryUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051101720C51E2500E415BC /* MWDictionaryUtils.h */; };
+		00A6073C2111581F00EDE432 /* MWFacade.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051100920C51E2500E415BC /* MWFacade.h */; };
+		00A6073D2111581F00EDE432 /* MWBlockChain.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051100620C51E2400E415BC /* MWBlockChain.h */; };
+		00A6073E2111581F00EDE432 /* MWHttpResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 00510FEE20C51E2400E415BC /* MWHttpResponse.h */; };
+		00A6073F2111581F00EDE432 /* MWNSFileManagerUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051101120C51E2500E415BC /* MWNSFileManagerUtils.h */; };
+		00A607402111581F00EDE432 /* MWEventInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 00510FFE20C51E2400E415BC /* MWEventInfo.h */; };
+		00A607492111582600EDE432 /* MWEventInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 00510FF920C51E2400E415BC /* MWEventInfo.m */; };
+		00A6074A2111582600EDE432 /* MWCompositeEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 00510FF820C51E2400E415BC /* MWCompositeEvent.m */; };
+		00A6074B2111582600EDE432 /* MWReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0051101520C51E2500E415BC /* MWReachability.m */; };
+		00A6074C2111582600EDE432 /* MWCommonService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0051100B20C51E2500E415BC /* MWCommonService.m */; };
+		00A6074D2111582600EDE432 /* MWNSKeyedArchiverUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0051101820C51E2500E415BC /* MWNSKeyedArchiverUtils.m */; };
+		00A6074E2111582600EDE432 /* MWAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 00510FF120C51E2400E415BC /* MWAPI.m */; };
+		00A6074F2111582600EDE432 /* MWStrategyConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A80CB5210EEE0F0050B640 /* MWStrategyConfig.m */; };
+		00A607502111582600EDE432 /* MWTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00510FFD20C51E2400E415BC /* MWTimerManager.m */; };
+		00A607512111582600EDE432 /* MWNSStringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0051101D20C51E2500E415BC /* MWNSStringUtils.m */; };
+		00A607522111582600EDE432 /* MWSQLiteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 002E2BA420C8FD820047C3B9 /* MWSQLiteManager.m */; };
+		00A607532111582600EDE432 /* MWNSFileManagerUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0051101A20C51E2500E415BC /* MWNSFileManagerUtils.m */; };
+		00A607542111582600EDE432 /* MWRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 00510FF620C51E2400E415BC /* MWRequestOperation.m */; };
+		00A607552111582600EDE432 /* MWCommonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0051101920C51E2500E415BC /* MWCommonUtil.m */; };
+		00A607562111582600EDE432 /* MWLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 0051101020C51E2500E415BC /* MWLog.m */; };
+		00A607572111582600EDE432 /* MWFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 0051100A20C51E2500E415BC /* MWFacade.m */; };
+		00A607582111582600EDE432 /* MWDictionaryUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0051100E20C51E2500E415BC /* MWDictionaryUtils.m */; };
+		00A607592111582600EDE432 /* MW_ConnectionSessionManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 00510FFC20C51E2400E415BC /* MW_ConnectionSessionManager.mm */; };
+		00A6075A2111582600EDE432 /* MWHttpResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 00510FEC20C51E2400E415BC /* MWHttpResponse.m */; };
+		00A6075B2111582600EDE432 /* MWDeviceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0051101320C51E2500E415BC /* MWDeviceUtil.m */; };
+		00A6075C2111582600EDE432 /* MWURLRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00510FEF20C51E2400E415BC /* MWURLRequestManager.m */; };
+		00A6075D2111582600EDE432 /* MWSendStrategyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00510FFA20C51E2400E415BC /* MWSendStrategyManager.m */; };
+		00A6075E2111582600EDE432 /* MW_ConnectionSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 00510FF720C51E2400E415BC /* MW_ConnectionSession.m */; };
+		00A607602111582600EDE432 /* libMerculetEncrypte.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 002E2BE220CA7B810047C3B9 /* libMerculetEncrypte.a */; };
+		00A607622111582600EDE432 /* MWAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 00510FF220C51E2400E415BC /* MWAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00A607632111582600EDE432 /* MWNSStringUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051101420C51E2500E415BC /* MWNSStringUtils.h */; };
+		00A607642111582600EDE432 /* MWURLRequestManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 00510FED20C51E2400E415BC /* MWURLRequestManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00A607652111582600EDE432 /* MerculetEncrypteHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 002E2BE420CA7B870047C3B9 /* MerculetEncrypteHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00A607662111582600EDE432 /* MerculetSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 00510FD320C51D6A00E415BC /* MerculetSDK.h */; };
+		00A607672111582600EDE432 /* MW_ConnectionSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051100520C51E2400E415BC /* MW_ConnectionSessionManager.h */; };
+		00A607682111582600EDE432 /* MWSQLiteManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 002E2BA320C8FD820047C3B9 /* MWSQLiteManager.h */; };
+		00A607692111582600EDE432 /* MWLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051101B20C51E2500E415BC /* MWLog.h */; };
+		00A6076A2111582600EDE432 /* MWCompositeEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 00510FFF20C51E2400E415BC /* MWCompositeEvent.h */; };
+		00A6076B2111582600EDE432 /* MWStrategyConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A80CB4210EEE0F0050B640 /* MWStrategyConfig.h */; };
+		00A6076C2111582600EDE432 /* MWSendStrategyManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051100420C51E2400E415BC /* MWSendStrategyManager.h */; };
+		00A6076D2111582600EDE432 /* MWDeviceUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051101E20C51E2500E415BC /* MWDeviceUtil.h */; };
+		00A6076E2111582600EDE432 /* MWCommonService.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051100820C51E2400E415BC /* MWCommonService.h */; };
+		00A6076F2111582600EDE432 /* MWNSKeyedArchiverUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051100D20C51E2500E415BC /* MWNSKeyedArchiverUtils.h */; };
+		00A607702111582600EDE432 /* MWReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051101C20C51E2500E415BC /* MWReachability.h */; };
+		00A607712111582600EDE432 /* MW_ConnectionSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051100020C51E2400E415BC /* MW_ConnectionSession.h */; };
+		00A607722111582600EDE432 /* MWTrackingDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051100220C51E2400E415BC /* MWTrackingDefine.h */; };
+		00A607732111582600EDE432 /* MWRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051100120C51E2400E415BC /* MWRequestOperation.h */; };
+		00A607742111582600EDE432 /* MWTimerManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 00510FF520C51E2400E415BC /* MWTimerManager.h */; };
+		00A607752111582600EDE432 /* MWCommonUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051101220C51E2500E415BC /* MWCommonUtil.h */; };
+		00A607762111582600EDE432 /* MWBlockChainDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 00510FF320C51E2400E415BC /* MWBlockChainDefine.h */; };
+		00A607772111582600EDE432 /* MWDictionaryUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051101720C51E2500E415BC /* MWDictionaryUtils.h */; };
+		00A607782111582600EDE432 /* MWFacade.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051100920C51E2500E415BC /* MWFacade.h */; };
+		00A607792111582600EDE432 /* MWBlockChain.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051100620C51E2400E415BC /* MWBlockChain.h */; };
+		00A6077A2111582600EDE432 /* MWHttpResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 00510FEE20C51E2400E415BC /* MWHttpResponse.h */; };
+		00A6077B2111582600EDE432 /* MWNSFileManagerUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051101120C51E2500E415BC /* MWNSFileManagerUtils.h */; };
+		00A6077C2111582600EDE432 /* MWEventInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 00510FFE20C51E2400E415BC /* MWEventInfo.h */; };
+		00A60798211159AE00EDE432 /* MagicWindowUAVSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 0093322321104A6B002FEC19 /* MagicWindowUAVSDK.h */; };
+		00A60799211159D600EDE432 /* MagicWindowUAVSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 0093322321104A6B002FEC19 /* MagicWindowUAVSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00A6079A211159E900EDE432 /* MagicWindowUAVSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 0093322321104A6B002FEC19 /* MagicWindowUAVSDK.h */; };
+		00A6079D21115D2C00EDE432 /* MerculetSDKBitcode.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A6079C21115CD800EDE432 /* MerculetSDKBitcode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00A6079E21115D2C00EDE432 /* MagicWindowUAVSDKBitcode.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A6079B21115CC600EDE432 /* MagicWindowUAVSDKBitcode.h */; };
+		00A6079F21115D4800EDE432 /* MagicWindowUAVSDKBitcode.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A6079B21115CC600EDE432 /* MagicWindowUAVSDKBitcode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00A80CB6210EEE0F0050B640 /* MWStrategyConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A80CB4210EEE0F0050B640 /* MWStrategyConfig.h */; };
+		00A80CB7210EEE0F0050B640 /* MWStrategyConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A80CB5210EEE0F0050B640 /* MWStrategyConfig.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,7 +278,28 @@
 			remoteGlobalIDString = 00510FCF20C51D6A00E415BC;
 			remoteInfo = MerculetSDK;
 		};
-		0051106720C51FF400E415BC /* PBXContainerItemProxy */ = {
+		00A607902111594700EDE432 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00510FC720C51D6A00E415BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00A606CF2111554000EDE432;
+			remoteInfo = MerculetSDKBitcode;
+		};
+		00A607942111595700EDE432 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00510FC720C51D6A00E415BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00A607472111582600EDE432;
+			remoteInfo = MagicWindowUAVSDKBitcode;
+		};
+		00A607AB21117C0300EDE432 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00510FC720C51D6A00E415BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00A6070B2111581F00EDE432;
+			remoteInfo = MagicWindowUAVSDK;
+		};
+		00A607B221117C9100EDE432 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 00510FC720C51D6A00E415BC /* Project object */;
 			proxyType = 1;
@@ -149,6 +364,24 @@
 		0051101E20C51E2500E415BC /* MWDeviceUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWDeviceUtil.h; sourceTree = "<group>"; };
 		0051105F20C51EC100E415BC /* MWDictionaryUtilsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWDictionaryUtilsTest.m; sourceTree = "<group>"; };
 		0051106020C51EC100E415BC /* MWURLRequestManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWURLRequestManagerTest.m; sourceTree = "<group>"; };
+		009331CA21104066002FEC19 /* MerculetSDK copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MerculetSDK copy-Info.plist"; path = "/Users/oudaikichi/merculet_ios_sdk/MerculetSDKWorkSpace/MerculetSDK/MerculetSDK copy-Info.plist"; sourceTree = "<absolute>"; };
+		00933219211049E3002FEC19 /* MerculetSDK copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MerculetSDK copy2-Info.plist"; path = "/Users/oudaikichi/merculet_ios_sdk/MerculetSDKWorkSpace/MerculetSDK/MerculetSDK copy2-Info.plist"; sourceTree = "<absolute>"; };
+		0093322321104A6B002FEC19 /* MagicWindowUAVSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MagicWindowUAVSDK.h; sourceTree = "<group>"; };
+		00A606AB211153CF00EDE432 /* MerculetSDK copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MerculetSDK copy2-Info.plist"; path = "/Users/oudaikichi/merculet_ios_sdk/MerculetSDKWorkSpace/MerculetSDK/MerculetSDK copy2-Info.plist"; sourceTree = "<absolute>"; };
+		00A606B3211154B800EDE432 /* MerculetSDKBitcode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MerculetSDKBitcode.h; sourceTree = "<group>"; };
+		00A606B4211154B800EDE432 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00A607092111554000EDE432 /* MerculetSDKBitcode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MerculetSDKBitcode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		00A6070A2111554000EDE432 /* MerculetSDK copy3-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MerculetSDK copy3-Info.plist"; path = "/Users/oudaikichi/merculet_ios_sdk/MerculetSDKWorkSpace/MerculetSDK/MerculetSDK copy3-Info.plist"; sourceTree = "<absolute>"; };
+		00A607452111581F00EDE432 /* MagicWindowUAVSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MagicWindowUAVSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		00A607462111582000EDE432 /* MerculetSDKBitcode copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MerculetSDKBitcode copy-Info.plist"; path = "/Users/oudaikichi/merculet_ios_sdk/MerculetSDKWorkSpace/MerculetSDK/MerculetSDKBitcode copy-Info.plist"; sourceTree = "<absolute>"; };
+		00A607812111582600EDE432 /* MagicWindowUAVSDKBitcode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MagicWindowUAVSDKBitcode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		00A607822111582600EDE432 /* MagicWindowUAVSDK copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MagicWindowUAVSDK copy-Info.plist"; path = "/Users/oudaikichi/merculet_ios_sdk/MerculetSDKWorkSpace/MerculetSDK/MagicWindowUAVSDK copy-Info.plist"; sourceTree = "<absolute>"; };
+		00A6079B21115CC600EDE432 /* MagicWindowUAVSDKBitcode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MagicWindowUAVSDKBitcode.h; sourceTree = "<group>"; };
+		00A6079C21115CD800EDE432 /* MerculetSDKBitcode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MerculetSDKBitcode.h; sourceTree = "<group>"; };
+		00A80CB4210EEE0F0050B640 /* MWStrategyConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MWStrategyConfig.h; sourceTree = "<group>"; };
+		00A80CB5210EEE0F0050B640 /* MWStrategyConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MWStrategyConfig.m; sourceTree = "<group>"; };
+		00D4F66B21114FF10032BE38 /* MagicWindowUAVSDK copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MagicWindowUAVSDK copy-Info.plist"; path = "/Users/oudaikichi/merculet_ios_sdk/MerculetSDKWorkSpace/MerculetSDK/MagicWindowUAVSDK copy-Info.plist"; sourceTree = "<absolute>"; };
+		00D4F6ED211150B80032BE38 /* MerculetSDK copy3-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MerculetSDK copy3-Info.plist"; path = "/Users/oudaikichi/merculet_ios_sdk/MerculetSDKWorkSpace/MerculetSDK/MerculetSDK copy3-Info.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +401,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		00A606E72111554000EDE432 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00A606E82111554000EDE432 /* libMerculetEncrypte.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00A607232111581F00EDE432 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00A607242111581F00EDE432 /* libMerculetEncrypte.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00A6075F2111582600EDE432 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00A607602111582600EDE432 /* libMerculetEncrypte.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -176,7 +433,16 @@
 			children = (
 				00510FD220C51D6A00E415BC /* MerculetSDK */,
 				00510FDD20C51D6B00E415BC /* MerculetSDKTests */,
+				00A606B2211154B800EDE432 /* MerculetSDKBitcode */,
 				00510FD120C51D6A00E415BC /* Products */,
+				009331CA21104066002FEC19 /* MerculetSDK copy-Info.plist */,
+				00933219211049E3002FEC19 /* MerculetSDK copy2-Info.plist */,
+				00D4F66B21114FF10032BE38 /* MagicWindowUAVSDK copy-Info.plist */,
+				00D4F6ED211150B80032BE38 /* MerculetSDK copy3-Info.plist */,
+				00A606AB211153CF00EDE432 /* MerculetSDK copy2-Info.plist */,
+				00A6070A2111554000EDE432 /* MerculetSDK copy3-Info.plist */,
+				00A607462111582000EDE432 /* MerculetSDKBitcode copy-Info.plist */,
+				00A607822111582600EDE432 /* MagicWindowUAVSDK copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -185,6 +451,9 @@
 			children = (
 				00510FD020C51D6A00E415BC /* MerculetSDK.framework */,
 				00510FD920C51D6B00E415BC /* MerculetSDKTests.xctest */,
+				00A607092111554000EDE432 /* MerculetSDKBitcode.framework */,
+				00A607452111581F00EDE432 /* MagicWindowUAVSDK.framework */,
+				00A607812111582600EDE432 /* MagicWindowUAVSDKBitcode.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -212,9 +481,12 @@
 		00510FEA20C51E2400E415BC /* BlockChain */ = {
 			isa = PBXGroup;
 			children = (
+				00510FD320C51D6A00E415BC /* MerculetSDK.h */,
+				00A6079C21115CD800EDE432 /* MerculetSDKBitcode.h */,
+				0093322321104A6B002FEC19 /* MagicWindowUAVSDK.h */,
+				00A6079B21115CC600EDE432 /* MagicWindowUAVSDKBitcode.h */,
 				002E2BE420CA7B870047C3B9 /* MerculetEncrypteHelper.h */,
 				002E2BE220CA7B810047C3B9 /* libMerculetEncrypte.a */,
-				00510FD320C51D6A00E415BC /* MerculetSDK.h */,
 				0051100620C51E2400E415BC /* MWBlockChain.h */,
 				00510FF320C51E2400E415BC /* MWBlockChainDefine.h */,
 				00510FEB20C51E2400E415BC /* Network */,
@@ -264,6 +536,8 @@
 				00510FFA20C51E2400E415BC /* MWSendStrategyManager.m */,
 				0051100520C51E2400E415BC /* MW_ConnectionSessionManager.h */,
 				00510FFC20C51E2400E415BC /* MW_ConnectionSessionManager.mm */,
+				00A80CB4210EEE0F0050B640 /* MWStrategyConfig.h */,
+				00A80CB5210EEE0F0050B640 /* MWStrategyConfig.m */,
 			);
 			path = Tracking;
 			sourceTree = "<group>";
@@ -304,6 +578,15 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		00A606B2211154B800EDE432 /* MerculetSDKBitcode */ = {
+			isa = PBXGroup;
+			children = (
+				00A606B3211154B800EDE432 /* MerculetSDKBitcode.h */,
+				00A606B4211154B800EDE432 /* Info.plist */,
+			);
+			path = MerculetSDKBitcode;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -313,13 +596,14 @@
 			files = (
 				0051102420C51E2500E415BC /* MWAPI.h in Headers */,
 				0051104320C51E2500E415BC /* MWNSStringUtils.h in Headers */,
+				0051102020C51E2500E415BC /* MWURLRequestManager.h in Headers */,
 				002E2BE520CA7B870047C3B9 /* MerculetEncrypteHelper.h in Headers */,
 				00510FE120C51D6B00E415BC /* MerculetSDK.h in Headers */,
-				0051102020C51E2500E415BC /* MWURLRequestManager.h in Headers */,
 				0051103620C51E2500E415BC /* MW_ConnectionSessionManager.h in Headers */,
 				002E2BA520C8FD820047C3B9 /* MWSQLiteManager.h in Headers */,
 				0051104A20C51E2500E415BC /* MWLog.h in Headers */,
 				0051103020C51E2500E415BC /* MWCompositeEvent.h in Headers */,
+				00A80CB6210EEE0F0050B640 /* MWStrategyConfig.h in Headers */,
 				0051103520C51E2500E415BC /* MWSendStrategyManager.h in Headers */,
 				0051104D20C51E2500E415BC /* MWDeviceUtil.h in Headers */,
 				0051103820C51E2500E415BC /* MWCommonService.h in Headers */,
@@ -337,6 +621,114 @@
 				0051102120C51E2500E415BC /* MWHttpResponse.h in Headers */,
 				0051104020C51E2500E415BC /* MWNSFileManagerUtils.h in Headers */,
 				0051102F20C51E2500E415BC /* MWEventInfo.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00A606E92111554000EDE432 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00A606EA2111554000EDE432 /* MWAPI.h in Headers */,
+				00A606EB2111554000EDE432 /* MWNSStringUtils.h in Headers */,
+				00A606EC2111554000EDE432 /* MWURLRequestManager.h in Headers */,
+				00A6079D21115D2C00EDE432 /* MerculetSDKBitcode.h in Headers */,
+				00A6079E21115D2C00EDE432 /* MagicWindowUAVSDKBitcode.h in Headers */,
+				00A606ED2111554000EDE432 /* MerculetEncrypteHelper.h in Headers */,
+				00A606EE2111554000EDE432 /* MerculetSDK.h in Headers */,
+				00A60798211159AE00EDE432 /* MagicWindowUAVSDK.h in Headers */,
+				00A606EF2111554000EDE432 /* MW_ConnectionSessionManager.h in Headers */,
+				00A606F02111554000EDE432 /* MWSQLiteManager.h in Headers */,
+				00A606F12111554000EDE432 /* MWLog.h in Headers */,
+				00A606F22111554000EDE432 /* MWCompositeEvent.h in Headers */,
+				00A606F32111554000EDE432 /* MWStrategyConfig.h in Headers */,
+				00A606F42111554000EDE432 /* MWSendStrategyManager.h in Headers */,
+				00A606F52111554000EDE432 /* MWDeviceUtil.h in Headers */,
+				00A606F62111554000EDE432 /* MWCommonService.h in Headers */,
+				00A606F72111554000EDE432 /* MWNSKeyedArchiverUtils.h in Headers */,
+				00A606F82111554000EDE432 /* MWReachability.h in Headers */,
+				00A606F92111554000EDE432 /* MW_ConnectionSession.h in Headers */,
+				00A606FA2111554000EDE432 /* MWTrackingDefine.h in Headers */,
+				00A606FB2111554000EDE432 /* MWRequestOperation.h in Headers */,
+				00A606FC2111554000EDE432 /* MWTimerManager.h in Headers */,
+				00A606FD2111554000EDE432 /* MWCommonUtil.h in Headers */,
+				00A606FE2111554000EDE432 /* MWBlockChainDefine.h in Headers */,
+				00A606FF2111554000EDE432 /* MWDictionaryUtils.h in Headers */,
+				00A607002111554000EDE432 /* MWFacade.h in Headers */,
+				00A607012111554000EDE432 /* MWBlockChain.h in Headers */,
+				00A607022111554000EDE432 /* MWHttpResponse.h in Headers */,
+				00A607032111554000EDE432 /* MWNSFileManagerUtils.h in Headers */,
+				00A607042111554000EDE432 /* MWEventInfo.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00A607252111581F00EDE432 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00A607262111581F00EDE432 /* MWAPI.h in Headers */,
+				00A607272111581F00EDE432 /* MWNSStringUtils.h in Headers */,
+				00A607282111581F00EDE432 /* MWURLRequestManager.h in Headers */,
+				00A607292111581F00EDE432 /* MerculetEncrypteHelper.h in Headers */,
+				00A60799211159D600EDE432 /* MagicWindowUAVSDK.h in Headers */,
+				00A6072A2111581F00EDE432 /* MerculetSDK.h in Headers */,
+				00A6072B2111581F00EDE432 /* MW_ConnectionSessionManager.h in Headers */,
+				00A6072C2111581F00EDE432 /* MWSQLiteManager.h in Headers */,
+				00A6072D2111581F00EDE432 /* MWLog.h in Headers */,
+				00A6072E2111581F00EDE432 /* MWCompositeEvent.h in Headers */,
+				00A6072F2111581F00EDE432 /* MWStrategyConfig.h in Headers */,
+				00A607302111581F00EDE432 /* MWSendStrategyManager.h in Headers */,
+				00A607312111581F00EDE432 /* MWDeviceUtil.h in Headers */,
+				00A607322111581F00EDE432 /* MWCommonService.h in Headers */,
+				00A607332111581F00EDE432 /* MWNSKeyedArchiverUtils.h in Headers */,
+				00A607342111581F00EDE432 /* MWReachability.h in Headers */,
+				00A607352111581F00EDE432 /* MW_ConnectionSession.h in Headers */,
+				00A607362111581F00EDE432 /* MWTrackingDefine.h in Headers */,
+				00A607372111581F00EDE432 /* MWRequestOperation.h in Headers */,
+				00A607382111581F00EDE432 /* MWTimerManager.h in Headers */,
+				00A607392111581F00EDE432 /* MWCommonUtil.h in Headers */,
+				00A6073A2111581F00EDE432 /* MWBlockChainDefine.h in Headers */,
+				00A6073B2111581F00EDE432 /* MWDictionaryUtils.h in Headers */,
+				00A6073C2111581F00EDE432 /* MWFacade.h in Headers */,
+				00A6073D2111581F00EDE432 /* MWBlockChain.h in Headers */,
+				00A6073E2111581F00EDE432 /* MWHttpResponse.h in Headers */,
+				00A6073F2111581F00EDE432 /* MWNSFileManagerUtils.h in Headers */,
+				00A607402111581F00EDE432 /* MWEventInfo.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00A607612111582600EDE432 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00A607622111582600EDE432 /* MWAPI.h in Headers */,
+				00A607632111582600EDE432 /* MWNSStringUtils.h in Headers */,
+				00A607642111582600EDE432 /* MWURLRequestManager.h in Headers */,
+				00A6079F21115D4800EDE432 /* MagicWindowUAVSDKBitcode.h in Headers */,
+				00A607652111582600EDE432 /* MerculetEncrypteHelper.h in Headers */,
+				00A6079A211159E900EDE432 /* MagicWindowUAVSDK.h in Headers */,
+				00A607662111582600EDE432 /* MerculetSDK.h in Headers */,
+				00A607672111582600EDE432 /* MW_ConnectionSessionManager.h in Headers */,
+				00A607682111582600EDE432 /* MWSQLiteManager.h in Headers */,
+				00A607692111582600EDE432 /* MWLog.h in Headers */,
+				00A6076A2111582600EDE432 /* MWCompositeEvent.h in Headers */,
+				00A6076B2111582600EDE432 /* MWStrategyConfig.h in Headers */,
+				00A6076C2111582600EDE432 /* MWSendStrategyManager.h in Headers */,
+				00A6076D2111582600EDE432 /* MWDeviceUtil.h in Headers */,
+				00A6076E2111582600EDE432 /* MWCommonService.h in Headers */,
+				00A6076F2111582600EDE432 /* MWNSKeyedArchiverUtils.h in Headers */,
+				00A607702111582600EDE432 /* MWReachability.h in Headers */,
+				00A607712111582600EDE432 /* MW_ConnectionSession.h in Headers */,
+				00A607722111582600EDE432 /* MWTrackingDefine.h in Headers */,
+				00A607732111582600EDE432 /* MWRequestOperation.h in Headers */,
+				00A607742111582600EDE432 /* MWTimerManager.h in Headers */,
+				00A607752111582600EDE432 /* MWCommonUtil.h in Headers */,
+				00A607762111582600EDE432 /* MWBlockChainDefine.h in Headers */,
+				00A607772111582600EDE432 /* MWDictionaryUtils.h in Headers */,
+				00A607782111582600EDE432 /* MWFacade.h in Headers */,
+				00A607792111582600EDE432 /* MWBlockChain.h in Headers */,
+				00A6077A2111582600EDE432 /* MWHttpResponse.h in Headers */,
+				00A6077B2111582600EDE432 /* MWNSFileManagerUtils.h in Headers */,
+				00A6077C2111582600EDE432 /* MWEventInfo.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +771,60 @@
 			productReference = 00510FD920C51D6B00E415BC /* MerculetSDKTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		00A606CF2111554000EDE432 /* MerculetSDKBitcode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00A607062111554000EDE432 /* Build configuration list for PBXNativeTarget "MerculetSDKBitcode" */;
+			buildPhases = (
+				00A606D02111554000EDE432 /* Sources */,
+				00A606E72111554000EDE432 /* Frameworks */,
+				00A606E92111554000EDE432 /* Headers */,
+				00A607052111554000EDE432 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MerculetSDKBitcode;
+			productName = MerculetSDK;
+			productReference = 00A607092111554000EDE432 /* MerculetSDKBitcode.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		00A6070B2111581F00EDE432 /* MagicWindowUAVSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00A607422111581F00EDE432 /* Build configuration list for PBXNativeTarget "MagicWindowUAVSDK" */;
+			buildPhases = (
+				00A6070C2111581F00EDE432 /* Sources */,
+				00A607232111581F00EDE432 /* Frameworks */,
+				00A607252111581F00EDE432 /* Headers */,
+				00A607412111581F00EDE432 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MagicWindowUAVSDK;
+			productName = MerculetSDK;
+			productReference = 00A607452111581F00EDE432 /* MagicWindowUAVSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		00A607472111582600EDE432 /* MagicWindowUAVSDKBitcode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00A6077E2111582600EDE432 /* Build configuration list for PBXNativeTarget "MagicWindowUAVSDKBitcode" */;
+			buildPhases = (
+				00A607482111582600EDE432 /* Sources */,
+				00A6075F2111582600EDE432 /* Frameworks */,
+				00A607612111582600EDE432 /* Headers */,
+				00A6077D2111582600EDE432 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MagicWindowUAVSDKBitcode;
+			productName = MerculetSDK;
+			productReference = 00A607812111582600EDE432 /* MagicWindowUAVSDKBitcode.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -394,8 +840,17 @@
 					00510FD820C51D6B00E415BC = {
 						CreatedOnToolsVersion = 9.3.1;
 					};
-					0051106320C51FEC00E415BC = {
-						CreatedOnToolsVersion = 9.3.1;
+					00A607832111585000EDE432 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					00A6078B2111588500EDE432 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					00A607A721117BF800EDE432 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					00A607AE21117C8600EDE432 = {
+						CreatedOnToolsVersion = 9.4.1;
 					};
 				};
 			};
@@ -411,9 +866,15 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				00510FCF20C51D6A00E415BC /* MerculetSDK */,
 				00510FD820C51D6B00E415BC /* MerculetSDKTests */,
-				0051106320C51FEC00E415BC /* MerculetSDK-Universal */,
+				00510FCF20C51D6A00E415BC /* MerculetSDK */,
+				00A606CF2111554000EDE432 /* MerculetSDKBitcode */,
+				00A6070B2111581F00EDE432 /* MagicWindowUAVSDK */,
+				00A607472111582600EDE432 /* MagicWindowUAVSDKBitcode */,
+				00A607AE21117C8600EDE432 /* MerculetSDK-Universal */,
+				00A607832111585000EDE432 /* MerculetSDKBitcode-Universal */,
+				00A607A721117BF800EDE432 /* MagicWindowUAVSDK-Universal */,
+				00A6078B2111588500EDE432 /* MagicWindowUAVSDKBitcode-Universal */,
 			);
 		};
 /* End PBXProject section */
@@ -433,10 +894,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		00A607052111554000EDE432 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00A607412111581F00EDE432 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00A6077D2111582600EDE432 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0051106920C5205300E415BC /* ShellScript */ = {
+		00A6078F2111589600EDE432 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -447,7 +929,46 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Sets the target folders and the final framework product.\n# 如果工程名称和Framework的Target名称不一样的话，要自定义FMKNAME\nFMK_NAME=\"MerculetSDK\"\n# FMK_NAME=\"MagicWindowUAVSDK\"\n# Install dir will be the final output to the framework.\n# The following line create it in the root folder of the current project.\nINSTALL_DIR=${SRCROOT}/Products/${FMK_NAME}.framework\n# Working dir will be deleted after the framework creation.\nWRK_DIR=build\nDEVICE_DIR=${WRK_DIR}/Release-iphoneos/${FMK_NAME}.framework\nSIMULATOR_DIR=${WRK_DIR}/Release-iphonesimulator/${FMK_NAME}.framework\n# -configuration ${CONFIGURATION}\n# Clean and Building both architectures.\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphoneos clean build\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphonesimulator clean build\n# Cleaning the oldest.\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\nmkdir -p \"${INSTALL_DIR}\"\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\n# Uses the Lipo Tool to merge both binary files (i386 + armv6/armv7) into one Universal final product.\nlipo -create \"${DEVICE_DIR}/${FMK_NAME}\" \"${SIMULATOR_DIR}/${FMK_NAME}\" -output \"${INSTALL_DIR}/${FMK_NAME}\"\nrm -r \"${WRK_DIR}\"\nopen \"${INSTALL_DIR}\"";
+			shellScript = "# Sets the target folders and the final framework product.\n# 如果工程名称和Framework的Target名称不一样的话，要自定义FMKNAME\nFMK_NAME=\"MerculetSDKBitcode\"\n#FMK_NAME=\"MagicWindowUAVSDK\"\n# Install dir will be the final output to the framework.\n# The following line create it in the root folder of the current project.\nINSTALL_DIR=${SRCROOT}/Products/${FMK_NAME}.framework\n# Working dir will be deleted after the framework creation.\nWRK_DIR=build\nDEVICE_DIR=${WRK_DIR}/Release-iphoneos/${FMK_NAME}.framework\nSIMULATOR_DIR=${WRK_DIR}/Release-iphonesimulator/${FMK_NAME}.framework\n\n# -configuration ${CONFIGURATION}\n# Clean and Building both architectures.\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphoneos clean build\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphonesimulator clean build\n\n# Cleaning the oldest.\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\nmkdir -p \"${INSTALL_DIR}\"\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\n# Uses the Lipo Tool to merge both binary files (i386 + armv6/armv7) into one Universal final product.\nlipo -create \"${DEVICE_DIR}/${FMK_NAME}\" \"${SIMULATOR_DIR}/${FMK_NAME}\" -output \"${INSTALL_DIR}/${FMK_NAME}\"\nrm -r \"${WRK_DIR}\"\nopen \"${INSTALL_DIR}\"\n";
+		};
+		00A607972111597200EDE432 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Sets the target folders and the final framework product.\n# 如果工程名称和Framework的Target名称不一样的话，要自定义FMKNAME\n#FMK_NAME=\"MerculetSDK\"\nFMK_NAME=\"MagicWindowUAVSDKBitcode\"\n# Install dir will be the final output to the framework.\n# The following line create it in the root folder of the current project.\nINSTALL_DIR=${SRCROOT}/Products/${FMK_NAME}.framework\n# Working dir will be deleted after the framework creation.\nWRK_DIR=build\nDEVICE_DIR=${WRK_DIR}/Release-iphoneos/${FMK_NAME}.framework\nSIMULATOR_DIR=${WRK_DIR}/Release-iphonesimulator/${FMK_NAME}.framework\n\n# -configuration ${CONFIGURATION}\n# Clean and Building both architectures.\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphoneos clean build\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphonesimulator clean build\n\n# Cleaning the oldest.\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\nmkdir -p \"${INSTALL_DIR}\"\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\n# Uses the Lipo Tool to merge both binary files (i386 + armv6/armv7) into one Universal final product.\nlipo -create \"${DEVICE_DIR}/${FMK_NAME}\" \"${SIMULATOR_DIR}/${FMK_NAME}\" -output \"${INSTALL_DIR}/${FMK_NAME}\"\nrm -r \"${WRK_DIR}\"\nopen \"${INSTALL_DIR}\"\n";
+		};
+		00A607AD21117C0500EDE432 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Sets the target folders and the final framework product.\n# 如果工程名称和Framework的Target名称不一样的话，要自定义FMKNAME\n#FMK_NAME=\"MerculetSDK\"\nFMK_NAME=\"MagicWindowUAVSDK\"\n# Install dir will be the final output to the framework.\n# The following line create it in the root folder of the current project.\nINSTALL_DIR=${SRCROOT}/Products/${FMK_NAME}.framework\n# Working dir will be deleted after the framework creation.\nWRK_DIR=build\nDEVICE_DIR=${WRK_DIR}/Release-iphoneos/${FMK_NAME}.framework\nSIMULATOR_DIR=${WRK_DIR}/Release-iphonesimulator/${FMK_NAME}.framework\n\n# -configuration ${CONFIGURATION}\n# Clean and Building both architectures.\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphoneos clean build\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphonesimulator clean build\n\n# Cleaning the oldest.\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\nmkdir -p \"${INSTALL_DIR}\"\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\n# Uses the Lipo Tool to merge both binary files (i386 + armv6/armv7) into one Universal final product.\nlipo -create \"${DEVICE_DIR}/${FMK_NAME}\" \"${SIMULATOR_DIR}/${FMK_NAME}\" -output \"${INSTALL_DIR}/${FMK_NAME}\"\nrm -r \"${WRK_DIR}\"\nopen \"${INSTALL_DIR}\"\n";
+		};
+		00A607B421117C9300EDE432 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Sets the target folders and the final framework product.\n# 如果工程名称和Framework的Target名称不一样的话，要自定义FMKNAME\nFMK_NAME=\"MerculetSDK\"\n#FMK_NAME=\"MagicWindowUAVSDK\"\n# Install dir will be the final output to the framework.\n# The following line create it in the root folder of the current project.\nINSTALL_DIR=${SRCROOT}/Products/${FMK_NAME}.framework\n# Working dir will be deleted after the framework creation.\nWRK_DIR=build\nDEVICE_DIR=${WRK_DIR}/Release-iphoneos/${FMK_NAME}.framework\nSIMULATOR_DIR=${WRK_DIR}/Release-iphonesimulator/${FMK_NAME}.framework\n\n# -configuration ${CONFIGURATION}\n# Clean and Building both architectures.\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphoneos clean build\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphonesimulator clean build\n\n# Cleaning the oldest.\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\nmkdir -p \"${INSTALL_DIR}\"\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\n# Uses the Lipo Tool to merge both binary files (i386 + armv6/armv7) into one Universal final product.\nlipo -create \"${DEVICE_DIR}/${FMK_NAME}\" \"${SIMULATOR_DIR}/${FMK_NAME}\" -output \"${INSTALL_DIR}/${FMK_NAME}\"\nrm -r \"${WRK_DIR}\"\nopen \"${INSTALL_DIR}\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -462,6 +983,7 @@
 				0051103B20C51E2500E415BC /* MWCommonService.m in Sources */,
 				0051104720C51E2500E415BC /* MWNSKeyedArchiverUtils.m in Sources */,
 				0051102320C51E2500E415BC /* MWAPI.m in Sources */,
+				00A80CB7210EEE0F0050B640 /* MWStrategyConfig.m in Sources */,
 				0051102E20C51E2500E415BC /* MWTimerManager.m in Sources */,
 				0051104C20C51E2500E415BC /* MWNSStringUtils.m in Sources */,
 				002E2BA620C8FD820047C3B9 /* MWSQLiteManager.m in Sources */,
@@ -490,6 +1012,93 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		00A606D02111554000EDE432 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00A606D12111554000EDE432 /* MWEventInfo.m in Sources */,
+				00A606D22111554000EDE432 /* MWCompositeEvent.m in Sources */,
+				00A606D32111554000EDE432 /* MWReachability.m in Sources */,
+				00A606D42111554000EDE432 /* MWCommonService.m in Sources */,
+				00A606D52111554000EDE432 /* MWNSKeyedArchiverUtils.m in Sources */,
+				00A606D62111554000EDE432 /* MWAPI.m in Sources */,
+				00A606D72111554000EDE432 /* MWStrategyConfig.m in Sources */,
+				00A606D82111554000EDE432 /* MWTimerManager.m in Sources */,
+				00A606D92111554000EDE432 /* MWNSStringUtils.m in Sources */,
+				00A606DA2111554000EDE432 /* MWSQLiteManager.m in Sources */,
+				00A606DB2111554000EDE432 /* MWNSFileManagerUtils.m in Sources */,
+				00A606DC2111554000EDE432 /* MWRequestOperation.m in Sources */,
+				00A606DD2111554000EDE432 /* MWCommonUtil.m in Sources */,
+				00A606DE2111554000EDE432 /* MWLog.m in Sources */,
+				00A606DF2111554000EDE432 /* MWFacade.m in Sources */,
+				00A606E02111554000EDE432 /* MWDictionaryUtils.m in Sources */,
+				00A606E12111554000EDE432 /* MW_ConnectionSessionManager.mm in Sources */,
+				00A606E22111554000EDE432 /* MWHttpResponse.m in Sources */,
+				00A606E32111554000EDE432 /* MWDeviceUtil.m in Sources */,
+				00A606E42111554000EDE432 /* MWURLRequestManager.m in Sources */,
+				00A606E52111554000EDE432 /* MWSendStrategyManager.m in Sources */,
+				00A606E62111554000EDE432 /* MW_ConnectionSession.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00A6070C2111581F00EDE432 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00A6070D2111581F00EDE432 /* MWEventInfo.m in Sources */,
+				00A6070E2111581F00EDE432 /* MWCompositeEvent.m in Sources */,
+				00A6070F2111581F00EDE432 /* MWReachability.m in Sources */,
+				00A607102111581F00EDE432 /* MWCommonService.m in Sources */,
+				00A607112111581F00EDE432 /* MWNSKeyedArchiverUtils.m in Sources */,
+				00A607122111581F00EDE432 /* MWAPI.m in Sources */,
+				00A607132111581F00EDE432 /* MWStrategyConfig.m in Sources */,
+				00A607142111581F00EDE432 /* MWTimerManager.m in Sources */,
+				00A607152111581F00EDE432 /* MWNSStringUtils.m in Sources */,
+				00A607162111581F00EDE432 /* MWSQLiteManager.m in Sources */,
+				00A607172111581F00EDE432 /* MWNSFileManagerUtils.m in Sources */,
+				00A607182111581F00EDE432 /* MWRequestOperation.m in Sources */,
+				00A607192111581F00EDE432 /* MWCommonUtil.m in Sources */,
+				00A6071A2111581F00EDE432 /* MWLog.m in Sources */,
+				00A6071B2111581F00EDE432 /* MWFacade.m in Sources */,
+				00A6071C2111581F00EDE432 /* MWDictionaryUtils.m in Sources */,
+				00A6071D2111581F00EDE432 /* MW_ConnectionSessionManager.mm in Sources */,
+				00A6071E2111581F00EDE432 /* MWHttpResponse.m in Sources */,
+				00A6071F2111581F00EDE432 /* MWDeviceUtil.m in Sources */,
+				00A607202111581F00EDE432 /* MWURLRequestManager.m in Sources */,
+				00A607212111581F00EDE432 /* MWSendStrategyManager.m in Sources */,
+				00A607222111581F00EDE432 /* MW_ConnectionSession.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00A607482111582600EDE432 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00A607492111582600EDE432 /* MWEventInfo.m in Sources */,
+				00A6074A2111582600EDE432 /* MWCompositeEvent.m in Sources */,
+				00A6074B2111582600EDE432 /* MWReachability.m in Sources */,
+				00A6074C2111582600EDE432 /* MWCommonService.m in Sources */,
+				00A6074D2111582600EDE432 /* MWNSKeyedArchiverUtils.m in Sources */,
+				00A6074E2111582600EDE432 /* MWAPI.m in Sources */,
+				00A6074F2111582600EDE432 /* MWStrategyConfig.m in Sources */,
+				00A607502111582600EDE432 /* MWTimerManager.m in Sources */,
+				00A607512111582600EDE432 /* MWNSStringUtils.m in Sources */,
+				00A607522111582600EDE432 /* MWSQLiteManager.m in Sources */,
+				00A607532111582600EDE432 /* MWNSFileManagerUtils.m in Sources */,
+				00A607542111582600EDE432 /* MWRequestOperation.m in Sources */,
+				00A607552111582600EDE432 /* MWCommonUtil.m in Sources */,
+				00A607562111582600EDE432 /* MWLog.m in Sources */,
+				00A607572111582600EDE432 /* MWFacade.m in Sources */,
+				00A607582111582600EDE432 /* MWDictionaryUtils.m in Sources */,
+				00A607592111582600EDE432 /* MW_ConnectionSessionManager.mm in Sources */,
+				00A6075A2111582600EDE432 /* MWHttpResponse.m in Sources */,
+				00A6075B2111582600EDE432 /* MWDeviceUtil.m in Sources */,
+				00A6075C2111582600EDE432 /* MWURLRequestManager.m in Sources */,
+				00A6075D2111582600EDE432 /* MWSendStrategyManager.m in Sources */,
+				00A6075E2111582600EDE432 /* MW_ConnectionSession.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -498,10 +1107,25 @@
 			target = 00510FCF20C51D6A00E415BC /* MerculetSDK */;
 			targetProxy = 00510FDB20C51D6B00E415BC /* PBXContainerItemProxy */;
 		};
-		0051106820C51FF400E415BC /* PBXTargetDependency */ = {
+		00A607912111594700EDE432 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00A606CF2111554000EDE432 /* MerculetSDKBitcode */;
+			targetProxy = 00A607902111594700EDE432 /* PBXContainerItemProxy */;
+		};
+		00A607952111595700EDE432 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00A607472111582600EDE432 /* MagicWindowUAVSDKBitcode */;
+			targetProxy = 00A607942111595700EDE432 /* PBXContainerItemProxy */;
+		};
+		00A607AC21117C0300EDE432 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00A6070B2111581F00EDE432 /* MagicWindowUAVSDK */;
+			targetProxy = 00A607AB21117C0300EDE432 /* PBXContainerItemProxy */;
+		};
+		00A607B321117C9100EDE432 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 00510FCF20C51D6A00E415BC /* MerculetSDK */;
-			targetProxy = 0051106720C51FF400E415BC /* PBXContainerItemProxy */;
+			targetProxy = 00A607B221117C9100EDE432 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -628,14 +1252,14 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 9F96TWFKQY;
+				DEVELOPMENT_TEAM = PE79EJX2E2;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
 					"$(inherited)",
-					"ENCHINA=1",
+					"CHINA=0",
 				);
 				INFOPLIST_FILE = MerculetSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -651,6 +1275,7 @@
 				);
 				MACH_O_TYPE = staticlib;
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wangweilucky.MerculetSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -664,11 +1289,12 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 9F96TWFKQY;
+				DEVELOPMENT_TEAM = PE79EJX2E2;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREPROCESSOR_DEFINITIONS = "ENCHINA=1";
+				ENABLE_BITCODE = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = "CHINA=0";
 				INFOPLIST_FILE = MerculetSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -683,6 +1309,7 @@
 				);
 				MACH_O_TYPE = staticlib;
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wangweilucky.MerculetSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -724,27 +1351,302 @@
 			};
 			name = Release;
 		};
-		0051106520C51FED00E415BC /* Debug */ = {
+		00A607072111554000EDE432 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9F96TWFKQY;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = PE79EJX2E2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
 					"$(inherited)",
 					"ENCHINA=1",
 				);
+				INFOPLIST_FILE = "MerculetSDK copy3-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MerculetSDK/BlockChain",
+				);
+				MACH_O_TYPE = staticlib;
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-fembed-bitcode";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wangweilucky.MerculetSDK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		00A607082111554000EDE432 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = PE79EJX2E2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "ENCHINA=1";
+				INFOPLIST_FILE = "MerculetSDK copy3-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MerculetSDK/BlockChain",
+				);
+				MACH_O_TYPE = staticlib;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-fembed-bitcode";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wangweilucky.MerculetSDK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		00A607432111581F00EDE432 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = PE79EJX2E2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"CHINA=1",
+				);
+				INFOPLIST_FILE = "MerculetSDKBitcode copy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MerculetSDK/BlockChain",
+				);
+				MACH_O_TYPE = staticlib;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wangweilucky.MerculetSDK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		00A607442111581F00EDE432 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = PE79EJX2E2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = "CHINA=1";
+				INFOPLIST_FILE = "MerculetSDKBitcode copy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MerculetSDK/BlockChain",
+				);
+				MACH_O_TYPE = staticlib;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wangweilucky.MerculetSDK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		00A6077F2111582600EDE432 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = PE79EJX2E2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"CHINA=1",
+				);
+				INFOPLIST_FILE = "MagicWindowUAVSDK copy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MerculetSDK/BlockChain",
+				);
+				MACH_O_TYPE = staticlib;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-fembed-bitcode";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wangweilucky.MerculetSDK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		00A607802111582600EDE432 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = PE79EJX2E2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "CHINA=1";
+				INFOPLIST_FILE = "MagicWindowUAVSDK copy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MerculetSDK/BlockChain",
+				);
+				MACH_O_TYPE = staticlib;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-fembed-bitcode";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wangweilucky.MerculetSDK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		00A607842111585000EDE432 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PE79EJX2E2;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-fembed-bitcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		0051106620C51FED00E415BC /* Release */ = {
+		00A607852111585000EDE432 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9F96TWFKQY;
-				GCC_PREPROCESSOR_DEFINITIONS = "ENCHINA=1";
+				DEVELOPMENT_TEAM = PE79EJX2E2;
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-fembed-bitcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		00A6078D2111588500EDE432 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PE79EJX2E2;
+				ENABLE_BITCODE = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-fembed-bitcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		00A6078E2111588500EDE432 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PE79EJX2E2;
+				ENABLE_BITCODE = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-fembed-bitcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		00A607A821117BF800EDE432 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PE79EJX2E2;
+				ENABLE_BITCODE = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		00A607A921117BF800EDE432 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PE79EJX2E2;
+				ENABLE_BITCODE = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		00A607B021117C8600EDE432 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PE79EJX2E2;
+				ENABLE_BITCODE = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		00A607B121117C8600EDE432 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PE79EJX2E2;
+				ENABLE_BITCODE = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -779,11 +1681,65 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0051106420C51FED00E415BC /* Build configuration list for PBXAggregateTarget "MerculetSDK-Universal" */ = {
+		00A607062111554000EDE432 /* Build configuration list for PBXNativeTarget "MerculetSDKBitcode" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0051106520C51FED00E415BC /* Debug */,
-				0051106620C51FED00E415BC /* Release */,
+				00A607072111554000EDE432 /* Debug */,
+				00A607082111554000EDE432 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00A607422111581F00EDE432 /* Build configuration list for PBXNativeTarget "MagicWindowUAVSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00A607432111581F00EDE432 /* Debug */,
+				00A607442111581F00EDE432 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00A6077E2111582600EDE432 /* Build configuration list for PBXNativeTarget "MagicWindowUAVSDKBitcode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00A6077F2111582600EDE432 /* Debug */,
+				00A607802111582600EDE432 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00A607862111585000EDE432 /* Build configuration list for PBXAggregateTarget "MerculetSDKBitcode-Universal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00A607842111585000EDE432 /* Debug */,
+				00A607852111585000EDE432 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00A6078C2111588500EDE432 /* Build configuration list for PBXAggregateTarget "MagicWindowUAVSDKBitcode-Universal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00A6078D2111588500EDE432 /* Debug */,
+				00A6078E2111588500EDE432 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00A607AA21117BF800EDE432 /* Build configuration list for PBXAggregateTarget "MagicWindowUAVSDK-Universal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00A607A821117BF800EDE432 /* Debug */,
+				00A607A921117BF800EDE432 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00A607AF21117C8600EDE432 /* Build configuration list for PBXAggregateTarget "MerculetSDK-Universal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00A607B021117C8600EDE432 /* Debug */,
+				00A607B121117C8600EDE432 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

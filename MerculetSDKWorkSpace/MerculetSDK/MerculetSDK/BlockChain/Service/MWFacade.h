@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MWAPI.h"
 
 @interface MWFacade : NSObject
 
@@ -29,6 +30,8 @@
 - (void)cancelUserOpenId;
 
 - (void)setChinaEnable:(BOOL)enable;
+
+- (void)setSendMode:(MWSendConfigType)sendType;
 
 // 事件
 - (void)registerWithInvitationCode:(nonnull NSString *)invitationCode;

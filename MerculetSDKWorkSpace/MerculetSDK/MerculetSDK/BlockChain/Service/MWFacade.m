@@ -16,6 +16,7 @@
 #import "MWSendStrategyManager.h"
 #import "MWBlockChainDefine.h"
 #import "MWSQLiteManager.h"
+#import "MWStrategyConfig.h"
 
 
 @interface MWFacade ()
@@ -97,9 +98,15 @@
     [[MWCommonService sharedInstance] saveAndUpdateMWToken:token];
 }
 
+// 设置实时发送
+- (void)setSendMode:(MWSendConfigType)sendType {
+    MWStrategyConfig *mwConfig = [MWStrategyConfig sharedInstance];
+    MWSendConfig *sendConfig = mwConfig.sendConfig;
+    sendConfig.sendType = sendType;
+}
+
 
 - (void)cancelUserOpenId {
-    
     // 去掉本地的userOpenId 和 token
     NSString *token = [[MWCommonService sharedInstance] getMWToken];
     NSString *userID = [[MWCommonService sharedInstance] getuserOpenid];

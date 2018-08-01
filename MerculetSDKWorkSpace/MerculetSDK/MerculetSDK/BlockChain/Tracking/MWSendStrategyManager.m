@@ -11,6 +11,7 @@
 #import <UIKit/UIKit.h>
 #import "MWTimerManager.h"
 #import "MWCompositeEvent.h"
+#import "MWStrategyConfig.h"
 
 static NSString *MWTimer = @"MWTimer";
 //static NSString *MWTimer = @"MWTimer";
@@ -61,10 +62,9 @@ static NSString *MWTimer = @"MWTimer";
 {
     @try {
         
-//        MWStrategyConfig *mwConfig = [MWStrategyConfig sharedInstance];
-//        MWSendConfig *sendConfig = mwConfig.sendConfig;
-//        double period = 60 * 3;
-        double period = 60;
+        MWStrategyConfig *mwConfig = [MWStrategyConfig sharedInstance];
+        MWSendConfig *sendConfig = mwConfig.sendConfig;
+        double period = sendConfig.period;
         [[MWTimerManager shareInstance] scheduledDispatchTimerWithName:MWTimer
 //                                                          timeInterval:(double)sendConfig.period
                                                           timeInterval:period

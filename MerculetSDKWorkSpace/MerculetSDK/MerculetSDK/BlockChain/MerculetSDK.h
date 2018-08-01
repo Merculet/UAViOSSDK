@@ -18,3 +18,4 @@ FOUNDATION_EXPORT const unsigned char MerculetSDKVersionString[];
 
 #import <MerculetSDK/MWAPI.h>
 #import <MerculetSDK/MerculetEncrypteHelper.h>
+#import <MerculetSDK/MWURLRequestManager.h>

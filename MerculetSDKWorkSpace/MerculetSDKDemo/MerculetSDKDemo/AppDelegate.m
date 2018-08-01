@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <MerculetSDK/MWAPI.h>
 //#import <MagicWindowUAVSDK/MWAPI.h>
+#import "MWToast.h"
 
 @interface AppDelegate ()
 
@@ -26,15 +27,29 @@
     // log
     [MWAPI showLogEnable:YES];
     
-    // 设置国内
-//    [MWAPI setChinaEnable:YES];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushTokenExpired) name:MWTokenExpiredNotification object:nil];
+    // token失效
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(pushTokenExpired)
+                                                 name:MWTokenExpiredNotification
+                                               object:nil];
+    
+    // 实时的回调
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(pushTokenRealTimeExpired:)
+                                                 name:MWTokenExpiredRealTimeNotification
+                                               object:nil];
     
     return YES;
 }
 
 - (void)pushTokenExpired {
     NSLog(@"token 失效");
+}
+
+- (void)pushTokenRealTimeExpired:(NSNotification *)notification {
+    NSDictionary *userInfo = notification.userInfo;
+    NSLog(@"%@",userInfo);
+    [MWToast toastString:[NSString stringWithFormat:@"%@",userInfo]];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
