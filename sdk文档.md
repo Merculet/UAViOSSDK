@@ -61,6 +61,24 @@ libc++.tbd
 return YES;
 }
 ```
+## 实时事件回调
+在application:didFinishLaunchingWithOptions:方法中调用registerApp方法来初始化SDK，如下代码：
+```objc
+[MWAPI setSendMode:MWSendConfigTypeRealTime];// 实时回调
+```
+
+在AppDelegate.m文件中实现：
+```objc
+ // 监听发送事件成功
+[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushTokenRealTimeExpired:) name:MWTokenExpiredRealTimeNotification object:nil];
+```
+```objc
+ // 查看发送成功的事件
+ - (void)pushTokenRealTimeExpired:(NSNotification *)notification {
+    NSDictionary *userInfo = notification.userInfo;
+    NSLog(@"%@",userInfo);
+ }
+```
 
 # 自定义事件统计
 ## 自定义事件统计
@@ -89,3 +107,5 @@ eventName、KeyValue参数需要先在后台管理上注册，才能参与正常
 # 注意事项
 ## 支持ATS
 苹果：2017 年1月1日后所有iOS应用必须启用ATS。SDK已启用ATS。
+
+
