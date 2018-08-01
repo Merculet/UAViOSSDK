@@ -33,14 +33,16 @@
 
 - (void)setSendMode:(MWSendConfigType)sendType;
 
-// 事件
-- (void)registerWithInvitationCode:(nonnull NSString *)invitationCode;
+//// 事件
+//- (void)registerWithInvitationCode:(nonnull NSString *)invitationCode;
+//
+//- (void)chargeWithCount:(NSInteger)count;
+//
+//- (void)signin;
 
-- (void)chargeWithCount:(NSInteger)count;
-
-- (void)signin;
-
-- (void)setCustomEvent:(nonnull NSString *)eventId attributes:(nullable NSDictionary *)attributes;
+- (void)setCustomAction:(nonnull NSString *)action
+             attributes:(nullable NSDictionary *)attributes
+           realTimeData:(MWRealTimeBlock)realTimeBlock;
 
 // 切换用户时需要删除的东西
 - (void)removeConfig;

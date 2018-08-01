@@ -128,7 +128,9 @@
      [[MWCommonService sharedInstance] setChinaEnable:enable];
 }
 
-- (void)setCustomEvent:(nonnull NSString *)eventId attributes:(nullable NSDictionary *)attributes {
+- (void)setCustomEvent:(nonnull NSString *)eventId
+            attributes:(nullable NSDictionary *)attributes
+          realTimeData:(MWRealTimeBlock)realTimeBlock{
     @try {
         if ([MWCommonUtil isBlank:eventId])
         {
@@ -178,24 +180,23 @@
     }
 }
 
-
-- (void)registerWithInvitationCode:(nonnull NSString *)invitationCode {
-    
-    NSDictionary *dic = @{@"invitationCode":Value(invitationCode)};
-    [self setCustomEvent:@"register" attributes:dic];
-}
-
-- (void)chargeWithCount:(NSInteger)count {
-    
-    NSDictionary *dic = @{@"amount":@(count)};
-    [self setCustomEvent:@"charge" attributes:dic];
-}
-
-- (void)signin {
-    
-    NSDictionary *dic = nil;
-    [self setCustomEvent:@"signin" attributes:dic];
-}
+//- (void)registerWithInvitationCode:(nonnull NSString *)invitationCode {
+//
+//    NSDictionary *dic = @{@"invitationCode":Value(invitationCode)};
+//    [self setCustomEvent:@"register" attributes:dic ];
+//}
+//
+//- (void)chargeWithCount:(NSInteger)count {
+//
+//    NSDictionary *dic = @{@"amount":@(count)};
+//    [self setCustomEvent:@"charge" attributes:dic];
+//}
+//
+//- (void)signin {
+//
+//    NSDictionary *dic = nil;
+//    [self setCustomEvent:@"signin" attributes:dic];
+//}
 
 // 切换用户时需要删除的东西
 - (void)removeConfig {

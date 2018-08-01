@@ -68,20 +68,29 @@ NSString * const MWTokenExpiredRealTimeNotification = @"MWTokenExpiredRealTimeNo
 #pragma mark -
 #pragma mark - action
 
-+ (void)registerWithInvitationCode:(nullable NSString *)invitationCode {
-    [[MWFacade sharedInstance] registerWithInvitationCode:invitationCode];
+//+ (void)registerWithInvitationCode:(nullable NSString *)invitationCode {
+//    [[MWFacade sharedInstance] registerWithInvitationCode:invitationCode];
+//}
+//
+//+ (void)chargeWithCount:(NSInteger)count {
+//    [[MWFacade sharedInstance] chargeWithCount:count];
+//}
+//
+//+ (void)signin {
+//    [[MWFacade sharedInstance] signin];
+//}
+
++ (void)setCustomAction:(nonnull NSString *)action
+             attributes:(nullable NSDictionary *)attributes {
+    [[MWFacade sharedInstance] setCustomAction:action attributes:attributes realTimeData:^(id realTimeData) {
+        
+    }];
 }
 
-+ (void)chargeWithCount:(NSInteger)count {
-    [[MWFacade sharedInstance] chargeWithCount:count];
-}
-
-+ (void)signin {
-    [[MWFacade sharedInstance] signin];
-}
-
-+ (void)setCustomAction:(nonnull NSString *)action attributes:(nullable NSDictionary *)attributes {
-    [[MWFacade sharedInstance] setCustomEvent:action attributes:attributes];
++ (void)setCustomAction:(nonnull NSString *)action
+             attributes:(nullable NSDictionary *)attributes
+           realTimeData:(MWRealTimeBlock)realTimeBlock {
+    [[MWFacade sharedInstance] setCustomAction:action attributes:attributes realTimeData:realTimeBlock];
 }
 
 @end

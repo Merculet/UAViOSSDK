@@ -24,6 +24,7 @@ extern NSString * _Nonnull const MWTokenExpiredNotification;
  */
 extern NSString * _Nonnull const MWTokenExpiredRealTimeNotification;
 
+typedef void(^MWRealTimeBlock)(id realTimeData);
 
 @interface MWAPI : NSObject
 
@@ -77,5 +78,15 @@ extern NSString * _Nonnull const MWTokenExpiredRealTimeNotification;
  *  @param attributes 动态参数，最多可包含9个
  */
 + (void)setCustomAction:(nonnull NSString *)action attributes:(nullable NSDictionary *)attributes;
+
+/**
+ *  自定义事件，带回调
+ *  @param action 自定义事件的唯一标示，不能为空
+ *  @param attributes   动态参数，最多可包含9个
+ *  @param realTimeData 实时回调
+ */
++ (void)setCustomAction:(nonnull NSString *)action
+             attributes:(nullable NSDictionary *)attributes
+           realTimeData:(MWRealTimeBlock)realTimeBlock;
 
 @end
