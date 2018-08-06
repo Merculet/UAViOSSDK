@@ -17,9 +17,16 @@ or
 pod 'MagicWindowUAVSDK'// 国内版本
 ```
 
+**注意：**bitcode版本
+```c
+pod 'MerculetSDKBitcode'// 国际版本
+or
+pod 'MagicWindowUAVSDKBitcode'// 国内版本
+```
+
 - 手动下载SDK并集成
 
-将MagicWindowUAVSDK.framework 或者 MerculetSDK.framework 拖动到工程中，拖到工程中后，弹出以下对话框，勾选“Copy items into destination group's folder(if needed)”，并点击“Finish”按钮，如图：
+将下载的SDK拖动到工程中，拖到工程中后，弹出以下对话框，勾选“Copy items into destination group's folder(if needed)”，并点击“Finish”按钮，如图：
 
 ![image.png](https://sdk.mlinks.cc/merculet_doc_image_001.png)
 
@@ -61,24 +68,6 @@ libc++.tbd
 return YES;
 }
 ```
-## 实时事件回调
-在application:didFinishLaunchingWithOptions:方法中调用registerApp方法来初始化SDK，如下代码：
-```objc
-[MWAPI setSendMode:MWSendConfigTypeRealTime];// 实时回调
-```
-
-在AppDelegate.m文件中实现：
-```objc
- // 监听发送事件成功
-[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushTokenRealTimeExpired:) name:MWTokenExpiredRealTimeNotification object:nil];
-```
-```objc
- // 查看发送成功的事件
- - (void)pushTokenRealTimeExpired:(NSNotification *)notification {
-    NSDictionary *userInfo = notification.userInfo;
-    NSLog(@"%@",userInfo);
- }
-```
 
 # 自定义事件统计
 ## 自定义事件统计
@@ -101,7 +90,15 @@ return YES;
 eventName、KeyValue参数需要先在后台管理上注册，才能参与正常的数据统计
 
 ```objc
-[MWAPI setCustomAction:@"eventName" attributes:@{@"key1":@"value1",@"key2":@"value2",…}];
+[MWAPI event:@"eventName" attributes:@{@"key1":@"value1",@"key2":@"value2",…}];
+```
+## 实时事件回调
+```objc
+[MWAPI eventRealTime:@"eventName" attributes:@{@"key1":@"value1",@"key2":@"value2",…} success:^{
+            
+        } failure:^(MWHTTPURLResponse *response) {
+            
+        }];
 ```
 
 # 注意事项
