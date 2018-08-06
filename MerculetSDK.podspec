@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = "MerculetSDK"
-s.version      = "1.0.32.1"
+s.version      = "1.1.0"
 s.summary      = "MerculetSDK for Cocoapods convenience."
 s.homepage     = "http://open.mbc.magicwindow.cn/"
 s.license      = "MIT"
