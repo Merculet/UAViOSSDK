@@ -12,7 +12,16 @@
 @implementation MWToast
 
 + (void)toastString:(NSString *)text {
-    [SVProgressHUD showSuccessWithStatus:text];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [SVProgressHUD showSuccessWithStatus:text];
+    });
+}
+
++ (void)toastFailureString:(NSString *)text {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [SVProgressHUD showErrorWithStatus:text];
+    });
 }
 
 @end

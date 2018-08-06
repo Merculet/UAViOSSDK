@@ -198,31 +198,19 @@
 {
     @try {
         @synchronized (self) {
-            
-            MWSendConfigType sendType = _sendConfig.sendType;
-            [self.eventList addObject: event];
-            
-            switch (sendType) {
-                    // 实时的发送
-                case MWSendConfigTypeRealTime:
+            // 根据配置文件来发送
+            if ([MWCommonUtil isNotBlank:event])
+            {
+                [self.eventList addObject: event];
+                _sendSize = _sendConfig.batchSize;
+                
+                [MWLog logForDev:[NSString stringWithFormat:@"点击事件数量：%lu",(unsigned long)[self eventsCount]] ];
+                if ([self eventsCount] >= _sendSize)
+                {
                     [self tick];
-                    break;
-                    
-                default:
-                    // 根据配置文件来发送
-                    if ([MWCommonUtil isNotBlank:event])
-                    {
-//                        [self.eventList addObject: event];
-                        _sendSize = _sendConfig.batchSize;
-                        
-                        [MWLog logForDev:[NSString stringWithFormat:@"点击事件数量：%lu",(unsigned long)[self eventsCount]] ];
-                        if ([self eventsCount] >= _sendSize)
-                        {
-                            [self tick];
-                        }
-                    }
-                    break;
+                }
             }
+           
         }
         
     } @catch (NSException *exception) {
@@ -320,23 +308,6 @@
 #pragma mark - RequestOperationDelegate
 -(void)requestSuccess:(MWRequestOperation *)oper withParamDic:(NSDictionary *)paramDic
 {
-    // 发送请求成功后，回调出去
-    switch (self.sendConfig.sendType) {
-        case MWSendConfigTypeRealTime:
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [[NSNotificationCenter defaultCenter] postNotificationName:MWTokenExpiredRealTimeNotification
-                                                                    object:nil
-                                                                  userInfo:paramDic];
-            });
-            break;
-        }
-            
-        default:
-            break;
-    }
-    
-    
     if ([self.requestList containsObject:paramDic]) {
         [self.requestList removeObject:paramDic];
     }

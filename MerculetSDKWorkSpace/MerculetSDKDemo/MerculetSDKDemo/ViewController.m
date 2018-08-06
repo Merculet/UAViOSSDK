@@ -10,6 +10,7 @@
 #import <MerculetSDK/MWAPI.h>
 #import <MerculetSDK/MWURLRequestManager.h>
 #import "SVProgressHUD.h"
+#import "MWToast.h"
 
 @interface ViewController ()
 
@@ -36,11 +37,11 @@
 - (IBAction)realtimeAction:(UIButton *)realBtn {
     realBtn.selected = !realBtn.selected;
     
-    if (realBtn.selected) {
-        [MWAPI setSendMode:MWSendConfigTypeRealTime];
-    } else {
-        [MWAPI setSendMode:MWSendConfigTypeNormal];
-    }
+//    if (realBtn.selected) {
+//        [MWAPI setSendMode:MWSendConfigTypeRealTime];
+//    } else {
+//        [MWAPI setSendMode:MWSendConfigTypeNormal];
+//    }
 }
 
 - (void)viewDidLoad {
@@ -157,10 +158,15 @@
             break;
     }
     
-//    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-//        
-//    });
-    [MWAPI setCustomAction:customAction attributes:attributes];
+    if (self.realBtn.selected) {
+        [MWAPI eventRealTime:customAction attributes:attributes success:^{
+            [MWToast toastString:[NSString stringWithFormat:@"%@",attributes]];
+        } failure:^(MWHTTPURLResponse *response) {
+            [MWToast toastFailureString:@"网络请求失败"];
+        }];
+    } else {
+        [MWAPI event:customAction attributes:attributes];
+    }
     
 }
 

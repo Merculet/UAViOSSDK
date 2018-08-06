@@ -31,18 +31,13 @@
 
 - (void)setChinaEnable:(BOOL)enable;
 
-- (void)setSendMode:(MWSendConfigType)sendType;
-
-//// 事件
-//- (void)registerWithInvitationCode:(nonnull NSString *)invitationCode;
-//
-//- (void)chargeWithCount:(NSInteger)count;
-//
-//- (void)signin;
-
 - (void)setCustomAction:(nonnull NSString *)action
-             attributes:(nullable NSDictionary *)attributes
-           realTimeData:(MWRealTimeBlock)realTimeBlock;
+             attributes:(nullable NSDictionary *)attributes;
+
+- (void)setRealTimeCustomAction:(nonnull NSString *)action
+                     attributes:(nullable NSDictionary *)attributes
+                        success:(MWRealTimeSuccessBlock)successBlock
+                        failure:(MWRealTimeFailureBlock)failureBlock;
 
 // 切换用户时需要删除的东西
 - (void)removeConfig;

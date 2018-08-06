@@ -7,13 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MWAPI.h"
 
 @interface MWSendConfig : NSObject
 
 @property (nonatomic, assign) NSInteger batchSize;     //发送条数临界值
 @property (nonatomic, assign) NSInteger period;        //发送时间间隔
-@property (nonatomic, assign) MWSendConfigType sendType;
 
 @end
 

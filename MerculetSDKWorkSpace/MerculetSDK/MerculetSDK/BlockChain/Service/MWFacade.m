@@ -17,6 +17,14 @@
 #import "MWBlockChainDefine.h"
 #import "MWSQLiteManager.h"
 #import "MWStrategyConfig.h"
+#import "MWRequestOperation.h"
+
+#import "MerculetEncrypteHelper.h"
+#import "MWTrackingDefine.h"
+#import "MWCompositeEvent.h"
+#import "MWURLRequestManager.h"
+#import "MWHTTPURLResponse.h"
+#import "MWHttpResponse.h"
 
 
 @interface MWFacade ()
@@ -98,13 +106,6 @@
     [[MWCommonService sharedInstance] saveAndUpdateMWToken:token];
 }
 
-// 设置实时发送
-- (void)setSendMode:(MWSendConfigType)sendType {
-    MWStrategyConfig *mwConfig = [MWStrategyConfig sharedInstance];
-    MWSendConfig *sendConfig = mwConfig.sendConfig;
-    sendConfig.sendType = sendType;
-}
-
 
 - (void)cancelUserOpenId {
     // 去掉本地的userOpenId 和 token
@@ -128,38 +129,34 @@
      [[MWCommonService sharedInstance] setChinaEnable:enable];
 }
 
-- (void)setCustomEvent:(nonnull NSString *)eventId
-            attributes:(nullable NSDictionary *)attributes
-          realTimeData:(MWRealTimeBlock)realTimeBlock{
+- (NSDictionary *)checkEventId:(nonnull NSString *)eventId
+                       attributes:(nullable NSDictionary *)attributes  {
+    
     @try {
-        if ([MWCommonUtil isBlank:eventId])
-        {
-            [MWLog log:@"eventId不能为空"];
-            return;
-        }
         
         if (attributes != nil)
         {
             if (![attributes isKindOfClass:[NSDictionary class]])
             {
                 [MWLog log:@"attributes只能为NSDictionary"];
-                return;
+                return nil;
             }
             
             if (attributes.allKeys.count > 9)
             {
                 [MWLog log:@"attributes不能超过9个"];
-                return;
+                return nil;
             }
             
             id obj = [attributes objectForKey:@"action"];
             if (obj != nil)
             {
                 [MWLog log:@"attributes的key不能包含action"];
-                return;
+                return nil;
             }
         }
         
+        // 为事件添加所需要的内容
         NSMutableDictionary *parameter = [[NSMutableDictionary alloc] init];
         [parameter setValue:eventId forKey:@"action"];
         NSMutableDictionary *attributesMutable = [NSMutableDictionary dictionaryWithDictionary:attributes];
@@ -167,14 +164,102 @@
         NSTimeInterval timestamp = [dat timeIntervalSince1970]*1000;
         NSString *timeString = [NSString stringWithFormat:@"%0.f", timestamp];
         [attributesMutable setValue:timeString forKey:@"sp_timestamp"];
+        
         NSDictionary *dic = [MWDictionaryUtils reviewDic:attributesMutable];
+        
         if ([MWCommonUtil isNotBlank:dic]) {
             [parameter setValue:attributesMutable forKey:@"action_params"];
+            return parameter;
+        } else {
+            return nil;
+        }
+    } @catch (NSException *exception) {
+        //        [MWUncaughtExceptionHandler mwSDKException:exception WithMethodName:@"setCustomEvent:"];
+    } @finally {
+        
+    }
+}
+
+- (void)setCustomAction:(nonnull NSString *)eventId
+            attributes:(nullable NSDictionary *)attributes {
+    @try {
+        if ([MWCommonUtil isBlank:eventId])
+        {
+            [MWLog log:@"eventId不能为空"];
+            return;
         }
         
-        [[MW_ConnectionSessionManager sharedInstance] recordCustomEventDic:parameter];
+        NSDictionary *parameter = [self checkEventId:eventId attributes:attributes];
+        if ([MWCommonUtil isNotBlank:parameter]) {
+            [[MW_ConnectionSessionManager sharedInstance] recordCustomEventDic:parameter];
+        }
+        
     } @catch (NSException *exception) {
 //        [MWUncaughtExceptionHandler mwSDKException:exception WithMethodName:@"setCustomEvent:"];
+    } @finally {
+        
+    }
+}
+
+- (void)setRealTimeCustomAction:(nonnull NSString *)action
+             attributes:(nullable NSDictionary *)attributes
+                success:(MWRealTimeSuccessBlock)successBlock
+                failure:(MWRealTimeFailureBlock)failureBlock {
+    @try {
+        
+        NSString *token = [[MWCommonService sharedInstance] getMWToken];
+        if ([MWCommonUtil isBlank:token]) {return;}
+        
+        if ([MWCommonUtil isBlank:action])
+        {
+            [MWLog log:@"eventId不能为空"];
+            return;
+        }
+        NSDictionary *attributesCopy = [attributes copy];
+        NSDictionary *parameter = [self checkEventId:action attributes:attributesCopy];
+        if ([MWCommonUtil isNotBlank:parameter]) {
+            
+            // 发送新的事件
+            NSMutableArray *eventList = [[NSMutableArray alloc] init];
+            [eventList addObject: attributes];
+            MWCompositeEvent *comEvent = [[MWCompositeEvent alloc] init];
+            NSDictionary *dic = [comEvent getCompositeEventDicWithEventsNoUser:eventList];
+            
+            NSString *jsonString = [MWDictionaryUtils dictionaryToJson:dic];
+            NSDictionary *headers = [[[MWCompositeEvent alloc] init] headersWithParams:jsonString];
+            
+            if ([MWCommonUtil isBlank:headers] || [MWCommonUtil isBlank:jsonString]) {return;}
+            
+            /// body
+            NSDictionary *bodyParam = @{MW_POST_KEY_EVENT_MW_info: jsonString};
+            
+            /// url
+            NSString *urlDomain = [[MWCommonService sharedInstance] urlDomain];
+            NSMutableString *url = [NSMutableString stringWithString:urlDomain];
+            NSString *urlString = [url stringByAppendingString:MW_TRACKING_URL];
+            
+            [[MWURLRequestManager alloc] POST:urlString
+                                      headers:headers
+                                   parameters:bodyParam
+                                      success:^(NSURLResponse *response, id responseObject, NSData *data) {
+                                          
+                                          int code = [MWHttpResponse getResponseCode:responseObject];
+                                          NSString *message = [MWHttpResponse getResponseMessage:responseObject];
+                                          
+                                          if (code == 0) {
+                                              successBlock();
+                                          } else {
+                                              MWHTTPURLResponse *response = [MWHTTPURLResponse response:message code:code];
+                                              failureBlock(response);
+                                          }
+                                      } failure:^(NSURLResponse *response, NSError *error) {
+                                          MWHTTPURLResponse *res = [MWHTTPURLResponse response:@"" code:-1];
+                                          failureBlock(res);
+                                      }];
+        }
+        
+    } @catch (NSException *exception) {
+        
     } @finally {
         
     }

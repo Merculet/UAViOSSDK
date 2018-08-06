@@ -13,10 +13,16 @@
     // 将事件添加配置信息
 - (NSDictionary *)getCompositeEventDicWithEvents:(NSArray *)events;
 
+// 将事件添加配置信息, 没有userName
+- (NSDictionary *)getCompositeEventDicWithEventsNoUser:(NSArray *)events;
+
 
 + (NSDictionary *)getLoginToken;
 
 // 开发者是否传入用户数据
 + (BOOL)isUserLogin;
+
+// 获取网络请求的header
+- (NSMutableDictionary *)headersWithParams:(NSString *)jsonString;
 
 @end

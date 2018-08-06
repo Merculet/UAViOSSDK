@@ -18,6 +18,47 @@
 
 @implementation MWHttpResponse
 
+// 判断是否会JOSN解析code
++ (int)getResponseCode:(id)responseObj {
+    @try {
+        if (![responseObj isKindOfClass:[NSDictionary class]])
+        {
+            return -2;
+        }
+        // JSON 解析失败
+        NSDictionary *responseDic = (NSDictionary *)responseObj;
+        id statusObj = [responseDic objectForKey:MW_RECEIVE_CODE];
+        if (statusObj == nil) return -2;
+        
+        // 获取response返回的code
+        int status = [statusObj intValue];
+        return status;
+    } @catch (NSException *exception) {
+        
+    } @finally {
+        
+    }
+}
+
+// 判断是否会JOSN解析message
++ (NSString *)getResponseMessage:(id)responseObj {
+    @try {
+        int code = [MWHttpResponse getResponseCode:responseObj];
+        if (code == -2) {
+            return @"json解析报错";
+        } else {
+            NSDictionary *responseDic = (NSDictionary *)responseObj;
+            NSString *errorMsg = [responseDic objectForKey:MW_RECEIVE_ERROR_MESSAGE];
+            return errorMsg;
+        }
+        
+    } @catch (NSException *exception) {
+        
+    } @finally {
+        
+    }
+}
+
 + (BOOL)statusOK:(id)responseObj
 {
     @try {
@@ -36,9 +77,6 @@
         }
         
         if (statusObj == nil) return NO;
-//        
-//        [self pushTokenExpired:@(998) message:@"test"];
-//        return NO;
         
         NSInteger status = [statusObj integerValue];
         if (status != 0)

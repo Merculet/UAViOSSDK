@@ -23,10 +23,30 @@
 #import "MWNSStringUtils.h"
 #import "MWLog.h"
 #import <UIKit/UIKit.h>
-
+#import "MWFacade.h"
+#import "MerculetEncrypteHelper.h"
 
 @implementation MWCompositeEvent
 
+- (NSMutableDictionary *)headersWithParams:(NSString *)jsonString {
+    
+    NSMutableDictionary *headers = [NSMutableDictionary dictionary];
+    NSString *token = @"";
+    if ([[MWFacade sharedInstance] isLoginout]) {
+        token = [[MWFacade sharedInstance] preToken];
+    } else {
+        token = [[MWCommonService sharedInstance] getMWToken];
+    }
+    
+    NSString *sign = [MerculetEncrypteHelper generateString:jsonString];
+    if (token.length && sign.length) {
+        [headers setValue:token forKey:MW_POST_KEY_EVENT_MW_Token];
+        [headers setValue:sign  forKey:MW_POST_KEY_EVENT_MW_Sign];
+        return headers;
+    } else {
+        return nil;
+    }
+}
 
 - (NSDictionary *)getCompositeEventDicWithEvents:(NSArray *)events
 {
@@ -46,6 +66,26 @@
 //        [MWUncaughtExceptionHandler mwSDKException:exception WithMethodName:@"getCompositeEventDicWithEvents:"];
     } @finally {
 
+    }
+}
+
+- (NSDictionary *)getCompositeEventDicWithEventsNoUser:(NSArray *)events
+{
+    @try {
+        if ([MWCommonUtil isBlank:events])
+        {
+            return nil;
+        }
+        NSDictionary *dic = @{
+                              MW_POST_KEY_EVENT_device_info:Value_class([MWDeviceUtil getIDFA]),
+                              MW_POST_KEY_EVENT_actions:events
+                              };
+        
+        return [MWDictionaryUtils reviewDic:dic];
+    } @catch (NSException *exception) {
+        //        [MWUncaughtExceptionHandler mwSDKException:exception WithMethodName:@"getCompositeEventDicWithEvents:"];
+    } @finally {
+        
     }
 }
 

@@ -70,7 +70,7 @@
     
     /// 将请求的参数序列化，并加上key
     NSString *jsonString = [MWDictionaryUtils dictionaryToJson:self.paramMutiDic];
-    NSDictionary *headers = [self headersWithParams:jsonString];
+    NSDictionary *headers = [[[MWCompositeEvent alloc] init] headersWithParams:jsonString];
     
     if ([MWCommonUtil isBlank:headers] || [MWCommonUtil isBlank:jsonString]) {return;}
     
@@ -125,25 +125,25 @@
     return self;
 }
 
-- (NSMutableDictionary *)headersWithParams:(NSString *)jsonString {
-    
-    NSMutableDictionary *headers = [NSMutableDictionary dictionary];
-    NSString *token = @"";
-    if ([[MWFacade sharedInstance] isLoginout]) {
-        token = [[MWFacade sharedInstance] preToken];
-    } else {
-        token = [[MWCommonService sharedInstance] getMWToken];
-    }
-    
-    NSString *sign = [MerculetEncrypteHelper generateString:jsonString];
-    if (token.length && sign.length) {
-        [headers setValue:token forKey:MW_POST_KEY_EVENT_MW_Token];
-        [headers setValue:sign  forKey:MW_POST_KEY_EVENT_MW_Sign];
-        return headers;
-    } else {
-        return nil;
-    }
-}
+//- (NSMutableDictionary *)headersWithParams:(NSString *)jsonString {
+//    
+//    NSMutableDictionary *headers = [NSMutableDictionary dictionary];
+//    NSString *token = @"";
+//    if ([[MWFacade sharedInstance] isLoginout]) {
+//        token = [[MWFacade sharedInstance] preToken];
+//    } else {
+//        token = [[MWCommonService sharedInstance] getMWToken];
+//    }
+//    
+//    NSString *sign = [MerculetEncrypteHelper generateString:jsonString];
+//    if (token.length && sign.length) {
+//        [headers setValue:token forKey:MW_POST_KEY_EVENT_MW_Token];
+//        [headers setValue:sign  forKey:MW_POST_KEY_EVENT_MW_Sign];
+//        return headers;
+//    } else {
+//        return nil;
+//    }
+//}
 
 @end
 

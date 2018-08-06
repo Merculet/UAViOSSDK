@@ -33,12 +33,6 @@
                                                  name:MWTokenExpiredNotification
                                                object:nil];
     
-    // 实时的回调
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(pushTokenRealTimeExpired:)
-                                                 name:MWTokenExpiredRealTimeNotification
-                                               object:nil];
-    
     return YES;
 }
 

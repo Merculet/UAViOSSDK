@@ -19,7 +19,6 @@
     {
         _batchSize = SEND_STRATEGY_CHECK_NUM;
         _period = SEND_STRATEGY_CHECK_INTERVAL;
-        _sendType = MWSendConfigTypeNormal;
     }
     return self;
 }

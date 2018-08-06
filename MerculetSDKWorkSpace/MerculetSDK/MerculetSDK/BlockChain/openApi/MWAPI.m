@@ -10,10 +10,13 @@
 #import "MWFacade.h"
 #import "MWLog.h"
 
+#import "MWURLRequestManager.h"
+#import "MWBlockChainDefine.h"
+#import "MWCompositeEvent.h"
+#import "MWDictionaryUtils.h"
+
 // token失效回调
 NSString * const MWTokenExpiredNotification = @"MWTokenExpiredNotification";
-// 在实时模式下，发送网络请求成功回调
-NSString * const MWTokenExpiredRealTimeNotification = @"MWTokenExpiredRealTimeNotification";
 
 @interface MWAPI ()
 
@@ -46,10 +49,6 @@ NSString * const MWTokenExpiredRealTimeNotification = @"MWTokenExpiredRealTimeNo
     [[MWFacade sharedInstance] setToken:token userOpenId:userID];
 }
 
-+ (void)setSendMode:(MWSendConfigType)sendType {
-    [[MWFacade sharedInstance] setSendMode:sendType];
-}
-
 + (void)cancelUserOpenId {
     [[MWFacade sharedInstance] cancelUserOpenId];
 }
@@ -58,39 +57,47 @@ NSString * const MWTokenExpiredRealTimeNotification = @"MWTokenExpiredRealTimeNo
     [MWLog setDevLogEnable:enable];
 }
 
-/**
- *  设置是否是国内API
- */
-+ (void)setChinaEnable:(BOOL)enable {
-    [[MWFacade sharedInstance] setChinaEnable:enable];
-}
-
 #pragma mark -
 #pragma mark - action
 
-//+ (void)registerWithInvitationCode:(nullable NSString *)invitationCode {
-//    [[MWFacade sharedInstance] registerWithInvitationCode:invitationCode];
-//}
-//
-//+ (void)chargeWithCount:(NSInteger)count {
-//    [[MWFacade sharedInstance] chargeWithCount:count];
-//}
-//
-//+ (void)signin {
-//    [[MWFacade sharedInstance] signin];
-//}
++ (void)event:(nonnull NSString *)action
+   attributes:(nullable NSDictionary *)attributes {
+    [[MWFacade sharedInstance] setCustomAction:action attributes:attributes];
+}
+
++ (void)eventRealTime:(nonnull NSString *)action
+           attributes:(nullable NSDictionary *)attributes
+              success:(MWRealTimeSuccessBlock)successBlock
+              failure:(MWRealTimeFailureBlock)failureBlock {
+    [[[MWFacade alloc] init] setRealTimeCustomAction:action
+                                          attributes:attributes
+                                             success:successBlock
+                                             failure:failureBlock];
+}
+
+
+#pragma mark -
+#pragma mark - deprecated
 
 + (void)setCustomAction:(nonnull NSString *)action
              attributes:(nullable NSDictionary *)attributes {
-    [[MWFacade sharedInstance] setCustomAction:action attributes:attributes realTimeData:^(id realTimeData) {
-        
-    }];
+    [[MWFacade sharedInstance] setCustomAction:action attributes:attributes];
 }
 
 + (void)setCustomAction:(nonnull NSString *)action
              attributes:(nullable NSDictionary *)attributes
-           realTimeData:(MWRealTimeBlock)realTimeBlock {
-    [[MWFacade sharedInstance] setCustomAction:action attributes:attributes realTimeData:realTimeBlock];
+                success:(MWRealTimeSuccessBlock)successBlock
+                failure:(MWRealTimeFailureBlock)failureBlock {
+    
+    [[[MWFacade alloc] init] setRealTimeCustomAction:action
+                                          attributes:attributes
+                                             success:successBlock
+                                             failure:failureBlock];
+    
+}
+
++ (void)setChinaEnable:(BOOL)enable {
+    [[MWFacade sharedInstance] setChinaEnable:enable];
 }
 
 @end

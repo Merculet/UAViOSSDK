@@ -9,14 +9,19 @@
 #ifndef MWTrackingDefine_h
 #define MWTrackingDefine_h
 
+// json解析
+#define MW_POST_JSON_Code                     @"code"          // code
+#define MW_POST_JSON_Message                  @"message"           // message
+
 // 参数
 #define MW_POST_KEY_EVENT_app_key                      @"app_key"          // APP key
 #define MW_POST_KEY_EVENT_actions                      @"actions"           // 行为类型(注册，充值，兑换等)
 #define MW_POST_KEY_EVENT_external_user_id             @"external_user_id" // 用户在商户端id
 #define MW_POST_KEY_EVENT_device_info                  @"device_info"      // idfa, imei等
 #define MW_POST_KEY_EVENT_MW_Token                     @"mw-token"      // mw-token
-#define MW_POST_KEY_EVENT_MW_UserID                     @"mw-userid"      // mw-userid
-#define MW_POST_KEY_EVENT_MW_Sign                     @"mw-sign"      // mw-token
+#define MW_POST_KEY_EVENT_MW_UserID                    @"mw-userid"      // mw-userid
+#define MW_POST_KEY_EVENT_MW_Sign                      @"mw-sign"      // mw-token
+#define MW_POST_KEY_EVENT_MW_info                       @"info"      // info
 
 // token key值
 #define MW_POST_KEY_user_open_id                       @"user_open_id"          // 用户open_id

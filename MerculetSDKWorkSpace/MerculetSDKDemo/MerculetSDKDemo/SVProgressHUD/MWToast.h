@@ -10,7 +10,8 @@
 
 @interface MWToast : NSObject
 
-
 + (void)toastString:(NSString *)text;
+
++ (void)toastFailureString:(NSString *)text;
 
 @end
