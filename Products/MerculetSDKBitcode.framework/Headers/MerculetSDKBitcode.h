@@ -17,6 +17,5 @@ FOUNDATION_EXPORT const unsigned char MerculetSDKVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <MerculetSDK/PublicHeader.h>
 
 #import <MerculetSDKBitcode/MWAPI.h>
-#import <MerculetSDKBitcode/MerculetEncrypteHelper.h>
 #import <MerculetSDKBitcode/MWURLRequestManager.h>
 #import <MerculetSDKBitcode/MWHTTPURLResponse.h>
