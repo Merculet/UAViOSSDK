@@ -1,6 +1,0 @@
-framework module MerculetSDK {
-  umbrella header "MerculetSDK.h"
-
-  export *
-  module * { export * }
-}
