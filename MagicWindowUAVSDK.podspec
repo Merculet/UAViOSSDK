@@ -5,12 +5,12 @@ s.summary      = "MagicWindowUAVSDK for Cocoapods convenience."
 s.homepage     = "http://open.mbc.magicwindow.cn/"
 s.license      = "MIT"
 s.author       = { "MagicWindow" => "support@magicwindow.cn" }
-s.source       = { :git => "https://github.com/Merculet/UAViOSSDK.git", :tag => s.version }
+s.source       = { :git => "https://github.com/Merculet/UAViOSSDK.git", :tag => '1.1.4.1' }
 s.platform     = :ios
 s.ios.deployment_target = "7.0"
 s.requires_arc = true
 s.ios.vendored_frameworks = 'Products/MagicWindowUAVSDK.framework'
-s.frameworks = "AdSupport","CoreTelephony","CoreFoundation","SystemConfiguration",,"WebKit"
-s.resource     = "Products/MWSDKResource.bundle"
+s.frameworks = "AdSupport","CoreTelephony","CoreFoundation","SystemConfiguration","WebKit"
+s.resource_bundles = { 'MagicWindowUAVSDK' => ['Products/MWSDKResource.bundle'}
 s.library   = "c++"
 end
