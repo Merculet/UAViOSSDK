@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
 s.name         = "MagicWindowUAVSDKBitcode"
-s.version      = "1.1.4"
+s.version      = "1.1.4.3"
 s.summary      = "MagicWindowUAVSDKBitcode for Cocoapods convenience."
 s.homepage     = "http://open.mbc.magicwindow.cn/"
 s.license      = "MIT"
 s.author       = { "MagicWindow" => "support@magicwindow.cn" }
-s.source       = { :git => "https://github.com/Merculet/UAViOSSDK.git", :tag => '1.1.4.2' }
+s.source       = { :git => "https://github.com/Merculet/UAViOSSDK.git", :tag => s.version }
 s.platform     = :ios
 s.ios.deployment_target = "7.0"
 s.requires_arc = true
