@@ -1,0 +1,16 @@
+PODS:
+  - Toast (4.0.0)
+
+DEPENDENCIES:
+  - Toast
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Toast
+
+SPEC CHECKSUMS:
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
+
+PODFILE CHECKSUM: 86aeb36726ff5180ca4ada3d3121c6d5e932105e
+
+COCOAPODS: 1.5.3
