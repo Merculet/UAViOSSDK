@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = "MerculetCNUAV"
-s.version      = "1.1.4.41"
+s.version      = "1.1.4.42"
 s.summary      = "MerculetCNUAV for Cocoapods convenience."
 s.homepage     = "http://open.mbc.magicwindow.cn/"
 s.license      = "MIT"
@@ -11,6 +11,6 @@ s.ios.deployment_target = "7.0"
 s.requires_arc = true
 s.ios.vendored_frameworks = 'Products/MerculetCNUAV.framework'
 s.frameworks = "AdSupport","CoreTelephony","CoreFoundation","SystemConfiguration","WebKit"
-s.resource_bundles = { 'MerculetCNUAV' => ['Products/MerculetSDK.bundle'] }
+s.resource_bundles = { 'MerculetCNUAV' => ['Products/MerculetCNUAV.bundle'] }
 s.library   = "c++"
 end
