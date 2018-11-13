@@ -1,6 +1,0 @@
-framework module MagicWindowUAVSDKBitcode {
-  umbrella header "MagicWindowUAVSDKBitcode.h"
-
-  export *
-  module * { export * }
-}
