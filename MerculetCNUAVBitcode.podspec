@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = "MerculetCNUAVBitcode"
-s.version      = "1.1.4.48"
+s.version      = "1.1.4.49"
 s.summary      = "MerculetCNUAVBitcode for Cocoapods convenience."
 s.homepage     = "http://open.mbc.magicwindow.cn/"
 s.license      = "MIT"
