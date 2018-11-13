@@ -16,9 +16,9 @@
 		<data>
 		dJXS+OoUmrokENDpUVHHjNQgaM0=
 		</data>
-		<key>Headers/MerculetSDKBitcode.h</key>
+		<key>Headers/MerculetCNUAVBitcode.h</key>
 		<data>
-		yREvYiRHdLApB3b4AgyNK4jDa54=
+		SpZ8DmfOU2nb3GGBictMws028t0=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -64,15 +64,15 @@
 			5cKDoxZeArsirpqlKunkEpVRso3C+npqJ2NVQ8ViQMM=
 			</data>
 		</dict>
-		<key>Headers/MerculetSDKBitcode.h</key>
+		<key>Headers/MerculetCNUAVBitcode.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			yREvYiRHdLApB3b4AgyNK4jDa54=
+			SpZ8DmfOU2nb3GGBictMws028t0=
 			</data>
 			<key>hash2</key>
 			<data>
-			sC/sEeCf+uZAyeaoqU/7G2f8UL9swg8RaYY9UcviSaQ=
+			QcUqvUss/ihOvnM/IQ0SD4RGt0va/6n2ceJo4O6GsKE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
