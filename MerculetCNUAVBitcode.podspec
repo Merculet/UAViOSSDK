@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = "MerculetCNUAVBitcode"
-s.version      = "1.1.4.43"
+s.version      = "1.1.4.46"
 s.summary      = "MerculetCNUAVBitcode for Cocoapods convenience."
 s.homepage     = "http://open.mbc.magicwindow.cn/"
 s.license      = "MIT"
@@ -11,6 +11,6 @@ s.ios.deployment_target = "7.0"
 s.requires_arc = true
 s.ios.vendored_frameworks = 'Products/MerculetCNUAVBitcode.framework'
 s.frameworks = "AdSupport","CoreTelephony","CoreFoundation","SystemConfiguration","WebKit"
-s.resource_bundles = { 'MerculetCNUAVBitcode' => ['Products/MerculetSDK.bundle'] }
+s.resource = "Products/MerculetSDK.bundle"
 s.library   = "c++"
 end
