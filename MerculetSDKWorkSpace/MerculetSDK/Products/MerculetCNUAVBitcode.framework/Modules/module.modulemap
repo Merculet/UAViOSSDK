@@ -1,0 +1,6 @@
+framework module MerculetCNUAVBitcode {
+  umbrella header "MerculetCNUAVBitcode.h"
+
+  export *
+  module * { export * }
+}
