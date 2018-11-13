@@ -8,8 +8,9 @@
 [注册GAAS账号](http://open.merculet.cn/login)，并完成企业认证。
 
 #### 1.1.2 获取Key
-进入GAAS，先创建通证，再新增一个应用，获取以下三个基本参数：account_key、secret_code、app_key。
-![获取Key](https://mvpimg.mlinks.cc/merculetSDK/mw_doc_1.jpg)
+进入GAAS，"创建通证" -> "添加应用" -> "技术对接"，获取以下三个基本参数：AppKey、AccountKey、AccountSecret。
+![获取Key.png](https://img.merculet.cn/mw_doc_6.jpg)
+
 
 
 ### 1.2 导入SDK
@@ -19,13 +20,13 @@
 #### 方法1 使用 CocoaPods 安装 SDK
 
 ```c
-pod 'MagicWindowUAVSDK'
+pod 'MerculetCNUAV'
 ```
 
 如果项目要求支持bitcode，可导入**bitcode版本**
 
 ```c
-pod 'MagicWindowUAVSDKBitcode'
+pod 'MerculetCNUAVBitcode'
 ```
 
 #### 方法2 手动导入
@@ -44,11 +45,13 @@ CoreTelephony.framework
 
 libc++.tbd
 
+WebKit.framework
+
 **（2） 引入SDK资源**
 
-[前往SDK下载地址](https://mb-helpcenter.merculet.cn/doc/download)，将下载的framework拖动到工程中，拖到工程中后，弹出以下对话框，勾选“Copy items into destination group's folder(if needed)”，并点击“Finish”按钮，如图：
+[前往SDK下载地址](https://mb-helpcenter.merculet.cn/doc/download)，将下载的framework和bundle文件拖动到工程中，拖到工程中后，弹出以下对话框，勾选“Copy items into destination group's folder(if needed)”，并点击“Finish”按钮，如图：
 
-![引入SDK资源](https://mvpimg.mlinks.cc/merculetSDK/mw_doc_2.jpg)
+![image.png](https://sdk.mlinks.cc/merculet_doc_image_001.png)
 
 
 
@@ -63,13 +66,13 @@ libc++.tbd
 **Objective-C**
 
 ```objc
-#import <MagicWindowUAVSDK/MWAPI.h>
+#import <MerculetCNUAV/MWAPI.h>
 ```
 
 **Swift**
 
 ```swift
-import MagicWindowUAVSDK
+import MerculetCNUAV
 ```
 
 
@@ -80,7 +83,7 @@ import MagicWindowUAVSDK
 
 ```objc
 #import "AppDelegate.h"
-#import <MagicWindowUAVSDK/MWApi.h>
+#import <MerculetCNUAV/MWApi.h>
 
 @implementation AppDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -95,7 +98,7 @@ return YES;
 **Swift**
 
 ```swift
-import MagicWindowUAVSDK
+import MerculetCNUAV
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -118,11 +121,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 **（1）生成签名sign**
-根据```account_key```、```secret_code```、```app_key```、```nonce```（随机数）、```timestamp```（当前时间戳）、```user_open_id```（用户唯一标识）等六个参数，生成签名sign。
+
+
+**把除了sign以外所有参数名按照字母序排列, 将它们的值按照此顺序拼接, 空值拼空字符串。**
+
+根据```account_key```、```app_key```、```nonce```（随机数）、```timestamp```（当前时间戳）、```user_open_id```（用户唯一标识）、```account_secret```等六个参数，生成签名sign。
 
 
 可以使用[签名(sign)验证工具](http://open.merculet.cn/main/docking/sdk)，校验你生成签名sign是否正确，如图所示。
-![引入SDK资源](https://mvpimg.mlinks.cc/merculetSDK/mw_doc_3.jpg)
+![生成签名sign.pn](https://mvpimg.mlinks.cc/merculetSDK/mw_doc_4.jpg)
 
 
 
@@ -297,7 +304,7 @@ import CommonCrypto
         @"sign": sign
         };
     
-    [[MWURLRequestManager alloc] POST:@"https://openapi.magicwindow.cn/v1/user/login" parameters:dic success:^(NSURLResponse *response, id responseObject, NSData *data) {
+    [[MWURLRequestManager alloc] POST:@"https://openapi.merculet.cn/v1/user/login" parameters:dic success:^(NSURLResponse *response, id responseObject, NSData *data) {
         
         NSLog(@"%d", [responseObject[@"code"] intValue]);
         
@@ -347,7 +354,7 @@ import CommonCrypto
             "sign": sign 
             ] as [String : Any]
         
-        MWURLRequestManager().post("https://openapi.magicwindow.cn/v1/user/login", parameters: params, success: { (response, responseObject, data) in
+        MWURLRequestManager().post("https://openapi.merculet.cn/v1/user/login", parameters: params, success: { (response, responseObject, data) in
             
             guard let responseObject = responseObject as? [String: Any] else {
                 return
@@ -422,17 +429,19 @@ NotificationCenter.default.addObserver(self, selector: #selector(xxx), name: NSN
 
 ### 2.2 事件统计
 
-[登录GAAS系统](http://open.merculet.cn/main/docking/event-list)，“入驻管理” -> “应用入驻” -> “技术对接” -> “事件管理”，添加自定义事件，并配置事件名称、事件Key、事件属性等参数后，再进行事件统计。
+[登录GAAS系统](http://open.merculet.cn/main/docking/event-list)，"入驻管理" -> "应用列表" -> "技术对接" -> "事件管理" -> "添加事件"，添加自定义事件，并配置事件名称、事件Key、事件属性等参数后，再进行事件统计。
 
-![事件统计](https://mvpimg.mlinks.cc/merculetSDK/mw_doc_4.jpg)
+![](https://img.merculet.cn/mw_doc_7.jpg)
+
 
 **统计场景举例**
 
-如需在收集用户的分享事件：事件名称为“分享”，事件Key为”s_share“，事件属性分别为sp_content_type、p_content_id、sp_content_source、sp_content_channel，其配置如图所示。
+如需在收集用户的分享事件：事件名称为“分享”，事件Key为”s_share“，事件属性分别为sp_content_type、p_content_id、sp_content_source、sp_content_channel。点击"添加自定义事件" -> "事件管理"，其配置如图所示。
 
-![统计场景举例](https://mvpimg.mlinks.cc/merculetSDK/mw_doc_5.jpg)
+![](https://img.merculet.cn/mw_doc_8.jpg)
 
-设置事件属性对应的value分别为"shareType"、"share_100"、"share_source_weibo"、"share_source_weixin"。
+
+在客户端设置事件属性对应的value分别为"shareType"、"share_100"、"share_source_weibo"、"share_source_weixin"。
 
 
 
@@ -460,22 +469,13 @@ MWAPI.event("s_share", attributes: ["sp_content_type":"shareType", "p_content_id
 **Objective-C**
 
 ```objc
-[MWAPI eventRealTime:@"s_share" attributes:@{@"sp_content_type":@"shareType",@"p_content_id":@"share_100",@"sp_content_source":@"share_source_weibo",@"sp_content_source":@"",@"sp_content_channel":@"share_source_weixin"} success:^{
-            
-        } failure:^(MWHTTPURLResponse *response) {
-            
-        }];
+[MWAPI eventRealTime:@"s_share" attributes:@{@"sp_content_type":@"shareType",@"p_content_id":@"share_100",@"sp_content_source":@"share_source_weibo",@"sp_content_source":@"",@"sp_content_channel":@"share_source_weixin"}];
 ```
 
 **Swift**
 
 ```swift
-MWAPI.eventRealTime("s_share" , attributes: ["sp_content_type":"shareType", "p_content_id":"share_100","sp_content_source":"share_source_weibo","sp_content_channel":"share_source_weixin"], success: {
-               
-            }) { (resonse) in
-                
-            }
-
+MWAPI.eventRealTime("s_share" , attributes: ["sp_content_type":"shareType", "p_content_id":"share_100","sp_content_source":"share_source_weibo","sp_content_channel":"share_source_weixin"])
 ```
 
 
