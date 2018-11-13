@@ -1,0 +1,6 @@
+framework module MerculetCNSDK {
+  umbrella header "MerculetCNSDK.h"
+
+  export *
+  module * { export * }
+}

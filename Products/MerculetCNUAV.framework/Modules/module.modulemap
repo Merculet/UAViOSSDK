@@ -1,6 +1,0 @@
-framework module MerculetCNUAV {
-  umbrella header "MerculetCNUAV.h"
-
-  export *
-  module * { export * }
-}

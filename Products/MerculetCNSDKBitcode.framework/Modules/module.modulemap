@@ -1,0 +1,6 @@
+framework module MerculetCNSDKBitcode {
+  umbrella header "MerculetCNSDKBitcode.h"
+
+  export *
+  module * { export * }
+}
