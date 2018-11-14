@@ -4,7 +4,7 @@ s.version      = "1.1.4"
 s.summary      = "MerculetCNSDKBitcode for Cocoapods convenience."
 s.homepage     = "https://open.merculet.cn/"
 s.license      = "MIT"
-s.author       = { "MagicWindow" => "support@magicwindow.cn" }
+s.author       = { "ios_support" => "ios_support@merculet.io" }
 s.source       = { :git => "https://github.com/Merculet/UAViOSSDK.git", :tag => s.version }
 s.platform     = :ios
 s.ios.deployment_target = "8.0"
