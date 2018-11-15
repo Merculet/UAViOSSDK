@@ -20,13 +20,13 @@
 #### 方法1 使用 CocoaPods 安装 SDK
 
 ```c
-pod 'MerculetCNUAV'
+pod 'MerculetCNSDK'
 ```
 
 如果项目要求支持bitcode，可导入**bitcode版本**
 
 ```c
-pod 'MerculetCNUAVBitcode'
+pod 'MerculetCNSDKBitcode'
 ```
 
 #### 方法2 手动导入
@@ -45,7 +45,6 @@ CoreTelephony.framework
 
 libc++.tbd
 
-WebKit.framework
 
 **（2） 引入SDK资源**
 
@@ -66,13 +65,13 @@ WebKit.framework
 **Objective-C**
 
 ```objc
-#import <MerculetCNUAV/MWAPI.h>
+#import <MerculetCNSDK/MWAPI.h>
 ```
 
 **Swift**
 
 ```swift
-import MerculetCNUAV
+import MerculetCNSDK
 ```
 
 
@@ -83,7 +82,7 @@ import MerculetCNUAV
 
 ```objc
 #import "AppDelegate.h"
-#import <MerculetCNUAV/MWApi.h>
+#import <MerculetCNSDK/MWApi.h>
 
 @implementation AppDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -98,7 +97,7 @@ return YES;
 **Swift**
 
 ```swift
-import MerculetCNUAV
+import MerculetCNSDK
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
